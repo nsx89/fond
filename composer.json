@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "tinymce/tinymce": "4.9.4",
+        "rosell-dk/webp-convert": "^2.9"
+    }
+}
