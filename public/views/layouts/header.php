@@ -16,6 +16,9 @@
 	<meta property="og:image" content = "https://<?= $_SERVER['SERVER_NAME'] ?>/public/src/images/logo.svg">
 
 	<link rel="preload" href="/public/src/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/public/src/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/public/src/fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/public/src/fonts/Inter-Thin.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="/public/src/fonts/BebasNeue.woff2" as="font" type="font/woff2" crossorigin>
 
 	<link rel="shortcut icon" href="/public/src/images/favicon.png" />

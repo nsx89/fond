@@ -57,22 +57,22 @@ body {
             background: url(/public/src/images/svg/quot-start.svg) no-repeat top center;
         }
     }
-    &-qr-wrap {
-        background: #20374D;
-        width: 214px;
-        margin: 20px 0px 0px;
-        padding: 5px 15px 0px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        .button {
-            width: 100%;
-        }
-    }
     &-qr {
-        margin: 25px 0px;
+        margin: 25px 0px 20px;
         display: block;
+    }
+}
+.button-wrap {
+    background: #20374D;
+    width: fit-content;
+    margin: 20px 0px 0px;
+    padding: 5px 15px 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .button {
+        width: 100%;
     }
 }
 .button {
@@ -82,7 +82,7 @@ body {
     font-size: 19px;
     line-height: 1.4em;
     border-radius: 10px;
-    padding: 17px 10px;
+    padding: 17px 35px;
     font-weight: 500;
     letter-spacing: 0.5px;
     box-shadow: 0px 10px 15px 0px #0000004D;
@@ -140,7 +140,7 @@ main {
     }
     &.active {
         background: url(/public/src/images/back/back2.jpg) no-repeat top center;
-        height: 72px;
+        height: 75px;
     }
 }
 .header-nav {
@@ -185,14 +185,94 @@ main {
     padding: 144px 0px 142px;
     .h2 {
         color: #fff;
+        margin-bottom: 24px;
+    }
+    &-eagle {
+        position: relative;
+        &:before {
+            content: "";
+            width: 230px;
+            height: 253px;
+            position: absolute;
+            left: -114px;
+            top: -112px;
+            background: url(/public/src/images/svg/eagle-big.svg) no-repeat top center;
+        }
+    }
+    &-text {
+        padding-right: 10%;
+        p, strong, ul {
+            display: block;
+            margin-bottom: 21px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 24px;
+            color: #fff;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+        strong {
+            font-size: 20px;
+            line-height: 26px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .button-wrap {
+            margin-top: 40px;
+        }
+    }
+}
+.columns {
+    display: flex;
+    align-items: center;
+    .column {
+        width: 50%;
+    }
+}
+.projects {
+    white-space: nowrap;
+    overflow: hidden;
+    &-slide {
+        border-radius: 10px;
+        overflow: hidden;
+        display: inline-block;
+        img {
+            display: block;
+            object-fit: cover;
+        }
+    }
+    &.swiper-initialized {
+        overflow: visible;
+    }
+}
+.h2-quot {
+    position: relative;
+    display: inline-block;
+    &:after {
+        content: '';
+        position: absolute;
+        right: -28px;
+        bottom: -3px;
+        width: 18px;
+        height: 18px;
+        background: url(/public/src/images/svg/quot-end.svg) no-repeat top center;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: -10px;
+        width: 18px;
+        height: 18px;
+        background: url(/public/src/images/svg/quot-start.svg) no-repeat top center;
     }
 }
 .h2 {
     font-family: "BebasNeue", sans-serif;
-    font-style: Bold;
     font-size: 80px;
     line-height: 90px;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 .footer {
     width: 100%;
