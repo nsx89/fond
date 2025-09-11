@@ -28,14 +28,12 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
         <form action='/<?= URI ?>' method='post' class='admin_edit_form' enctype='multipart/form-data'>
             <div class='flex top'>
                 <?= Form::makeCheckbox('show', $obj->show, 'Показывать', 1) ?>
-                <?= Form::makeInput('Рейтинг', 'rate', !empty($obj->rate) ? $obj->rate : '') ?>
             </div>
             <?= Form::makeCheckbox('menu', $obj->menu, 'Показывать в меню', 1) ?>
             <?= Form::makeCheckbox('menu_footer', $obj->menu_footer, 'Показывать в подвале', 1) ?>
             <?= Form::makeInput('Название', 'name', $obj->name, true) ?>
             <?= Form::makeInput('Ссылка (автоматически, если пусто)', 'url', $obj->url) ?>
-            <?= Form::makeSelect('Родительская страница', 'parent', Page::findWhere("WHERE `parent` = 0 AND `id` <> ".intval($id)." ORDER BY name ASC"), $obj->parent, true, '' , '') ?>
-
+            <? /* Form::makeSelect('Родительская страница', 'parent', Page::findWhere("WHERE `parent` = 0 AND `id` <> ".intval($id)." ORDER BY name ASC"), $obj->parent, true, '' , '') */ ?>
             <? switch ($obj->id) {
                 case 1: ?>
                     <? break;
@@ -43,6 +41,8 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
                     <?= Form::makeTextbox('Текст', 'text', $obj->text) ?>
                     <? break;
             } ?>
+            <?= Form::makeInput('Рейтинг', 'rate', !empty($obj->rate) ? $obj->rate : '') ?>
+            <?= Form::makeInput('Рейтинг в подвале', 'rate_footer', !empty($obj->rate_footer) ? $obj->rate_footer : '') ?>
             <?= Form::makeSubmit($id, $obj->id, 'Сохранить','') ?>
         </form>
     </div>
@@ -66,6 +66,7 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     $obj->parent = (int)$_POST['parent'];
     $obj->name = trim($_POST['name']);
     $obj->rate = (int)$_POST['rate'];
+    $obj->rate_footer = (int)$_POST['rate_footer'];
     $obj->text = trim($_POST['text']);
 
     $url = trim($_POST['url']) ?: Helpers::str2url($obj->name);

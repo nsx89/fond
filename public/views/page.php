@@ -1,4 +1,4 @@
-<?= $this->include('layouts/header') ?>
+<? include_once VIEWS.'/layouts/header.php' ?>
 
 <? $page = $this->page; ?>
 
@@ -17,4 +17,4 @@
     </div>
 </main>
 
-<?= $this->include('layouts/footer') ?>
+<? include_once VIEWS.'/layouts/footer.php' ?>

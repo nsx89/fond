@@ -29,6 +29,8 @@ class View
             $this->description = !empty($seo->description) ? $seo->description : $sitename;
 
             $this->edit_seo = Seo::edit($seo);
+
+            $this->footer_menu = Page::findWhere("WHERE `show` = 1 AND `menu_footer` = 1 ORDER BY rate_footer DESC, rate DESC");
         }
         $this->pages = Page::getArray();
     }

@@ -48,6 +48,13 @@ else: ?>
                 <?= Form::makeInput('Telegram', 'soc1', $obj->soc1) ?>
                 <?= Form::makeInput('Вконтакте', 'soc2', $obj->soc2) ?>
             </fieldset>
+            <fieldset class="input_block">
+                <legend>Тексты в подвале</legend>
+                <div class="columns">
+                    <?= Form::makeInput('Копирайт', 'copy', $obj->copy) ?>
+                    <?= Form::makeInput('Копирайт2', 'copy2', $obj->copy2) ?>
+                </div>
+            </fieldset>
          <?= Form::makeSubmit(1,1, 'Сохранить',null) ?>
         </form>
     </div>

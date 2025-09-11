@@ -12,13 +12,14 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.4em;
+    background: #1B2838;
 }
 .container {
     width: 1260px;
     padding: 0px 30px;
     margin: 0px auto;
 }
-.main-back {
+.main {
     width: 100%;
     height: 100vh;
     background: url(/public/src/images/back/back1.jpg) no-repeat top center;
@@ -32,6 +33,7 @@ body {
         line-height: 90px;
         color: #fff;
         position: relative;
+        margin-top: 140px;
         > span {
             color: $hover;
             position: relative;
@@ -55,18 +57,72 @@ body {
             background: url(/public/src/images/svg/quot-start.svg) no-repeat top center;
         }
     }
+    &-qr-wrap {
+        background: #20374D;
+        width: 214px;
+        margin: 20px 0px 0px;
+        padding: 5px 15px 0px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .button {
+            width: 100%;
+        }
+    }
+    &-qr {
+        margin: 25px 0px;
+        display: block;
+    }
+}
+.button {
+    background: #CC1011;
+    background: linear-gradient(124.25deg, #FF3434 20.06%, #C20909 78.98%);
+    color: #fff;
+    font-size: 19px;
+    line-height: 1.4em;
+    border-radius: 10px;
+    padding: 17px 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 10px 15px 0px #0000004D;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    &:hover {
+       opacity: 0.9;
+    }
+}
+.logo {
+    display: inline-block;
+    width: 147px;
+    height: 157px;
+    background: url(/public/src/images/svg/logo.svg) no-repeat center center;
+}
+main {
+    .logo {
+        position: absolute;
+        left: 48px;
+        left: 2.5%;
+        top: 40px;
+        z-index: 30;
+    }
 }
 .header {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
+    z-index: 100;
+    height: 100px;
+    transition: all 0.2s ease-in-out;
+    background: transparent;
     .container {
         display: flex;
         justify-content: space-between;
+        height: 100%;
+        align-items: center;
     }
     &-info {
-        padding-top: 34px;
         display: flex;
         align-items: center;
         gap: 15px;
@@ -76,14 +132,21 @@ body {
             font-weight: bold;
             color: #fff;
             margin-right: 1px;
+            transition: all 0.15s ease-in-out;
+            &:hover {
+                opacity: 0.9;
+            }
         }
+    }
+    &.active {
+        background: url(/public/src/images/back/back2.jpg) no-repeat top center;
+        height: 72px;
     }
 }
 .header-nav {
     display: flex;
     gap: 29px;
     align-items: flex-start;
-    margin-top: 43px;
     &-item {
         color: #fff;
         font-size: 17px;
@@ -92,7 +155,7 @@ body {
         cursor: pointer;
         transition: all 0.15s ease-in-out;
         border-bottom: 1px solid transparent;
-        &:hover {
+        &:hover, &.active {
             border-bottom: 1px solid #fff;
         }
     }
@@ -113,5 +176,117 @@ body {
     &2 {
         background: url(/public/src/images/svg/vk.svg) no-repeat center center;
         background-size: cover;
+    }
+}
+.main-projects {
+    width: 100%;
+    background: url(/public/src/images/back/back2.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 144px 0px 142px;
+    .h2 {
+        color: #fff;
+    }
+}
+.h2 {
+    font-family: "BebasNeue", sans-serif;
+    font-style: Bold;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 1px;
+}
+.footer {
+    width: 100%;
+    background: url(/public/src/images/back/footer.jpg) no-repeat top center;
+    background-size: cover;
+    padding: 72px 0px 92px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-center {
+        padding-right: 11%;
+    }
+    &-menu {
+        display: flex;
+        gap: 55px;
+        padding-top: 21px;
+        &-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        &-item {
+            color: #fff;
+            font-size: 18.4px;
+            line-height: 1.4em;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+            border-bottom: 1px solid transparent;
+            opacity: 0.7;
+            letter-spacing: 0.1px;
+            &:hover, &.active {
+                border-bottom: 1px solid #fff;
+            }
+        }
+    }
+    &-info {
+        padding-top: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        &:after {
+            content: '';
+            width: 148px;
+            height: 173px;
+            position: absolute;
+            right: -70px;
+            top: -13px;
+            background: url(/public/src/images/svg/eagle.svg) no-repeat top center;
+            z-index: 1;
+        }
+        .phone {
+            font-size: 18px;
+            line-height: 1.3em;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 1px;
+            transition: all 0.15s ease-in-out;
+            margin-bottom: 24px;
+            display: inline-block;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        .email {
+            font-size: 18px;
+            line-height: 1.3em;
+            font-weight: bold;
+            color: #FF3636;
+            transition: all 0.15s ease-in-out;
+            margin-bottom: 27px;
+            display: inline-block;
+            &:hover {
+                color: #dd2525;
+            }
+        }
+        .socs {
+            display: flex;
+            gap: 12px;
+            .soc {
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
+    &-copy {
+        color: #fff;
+        margin-top: 32px;
+        opacity: 0.5;
+        font-weight: 200;
+        letter-spacing: 0.4px;
+        font-size: 14.4px;
     }
 }

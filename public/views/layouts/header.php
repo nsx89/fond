@@ -15,6 +15,9 @@
 	<meta property="og:description" content= "<?= $this->description ?>">
 	<meta property="og:image" content = "https://<?= $_SERVER['SERVER_NAME'] ?>/public/src/images/logo.svg">
 
+	<link rel="preload" href="/public/src/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/public/src/fonts/BebasNeue.woff2" as="font" type="font/woff2" crossorigin>
+
 	<link rel="shortcut icon" href="/public/src/images/favicon.png" />
 
 	<link href="/public/src/css/style.css?<?= time() ?>" rel="stylesheet" />
@@ -25,7 +28,9 @@
 			<nav class="header-nav">
 				<? foreach ($this->pages AS $page) : ?>
 		            <? if ($page->menu <> 1 || !empty($page->parent)) continue; ?>
-					<a href="/<?= $page->url ?>" class="header-nav-item"><?= $page->name ?></a>
+					<a href="/<?= $page->url ?>" class="header-nav-item <?= URI == $page->url ? 'active' : '' ?>">
+						<?= $page->name ?>
+					</a>
 		        <? endforeach; ?>
 			</nav>
 			<div class="header-info">
