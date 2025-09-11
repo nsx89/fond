@@ -14,7 +14,8 @@ body {
     line-height: 1.4em;
 }
 .container {
-    width: 1200px;
+    width: 1260px;
+    padding: 0px 30px;
     margin: 0px auto;
 }
 .main-back {
@@ -30,6 +31,29 @@ body {
         font-size: 100px;
         line-height: 90px;
         color: #fff;
+        position: relative;
+        > span {
+            color: $hover;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                right: -20px;
+                bottom: 3px;
+                width: 18px;
+                height: 18px;
+                background: url(/public/src/images/svg/quot-end.svg) no-repeat top center;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: -13px;
+            width: 18px;
+            height: 18px;
+            background: url(/public/src/images/svg/quot-start.svg) no-repeat top center;
+        }
     }
 }
 .header {
@@ -37,14 +61,57 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-info {
+        padding-top: 34px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .phone {
+            font-size: 18px;
+            line-height: 1.3em;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 1px;
+        }
+    }
 }
-.nav {
+.header-nav {
     display: flex;
-    gap: 28px;
-    margin-top: 44px;
+    gap: 29px;
+    align-items: flex-start;
+    margin-top: 43px;
     &-item {
         color: #fff;
         font-size: 17px;
+        line-height: 1.4em;
         display: inline-block;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
+.soc {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    &:hover {
+        opacity: 0.9;
+    }
+    &1 {
+        background: url(/public/src/images/svg/tg.svg) no-repeat center center;
+        background-size: cover;
+    }
+    &2 {
+        background: url(/public/src/images/svg/vk.svg) no-repeat center center;
+        background-size: cover;
     }
 }

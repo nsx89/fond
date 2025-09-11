@@ -46,8 +46,7 @@ else: ?>
             <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>
                 <?= Form::makeInput('Telegram', 'soc1', $obj->soc1) ?>
-                <?= Form::makeInput('Youtube', 'soc2', $obj->soc2) ?>
-                <?= Form::makeInput('Дзен', 'soc3', $obj->soc3) ?>
+                <?= Form::makeInput('Вконтакте', 'soc2', $obj->soc2) ?>
             </fieldset>
          <?= Form::makeSubmit(1,1, 'Сохранить',null) ?>
         </form>
