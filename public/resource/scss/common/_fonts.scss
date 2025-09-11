@@ -9,114 +9,55 @@
 // - 900 - Black (Черный)
 
 @font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-Thin.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-Thin.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-Thin.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-Thin.eot?#iefix') format('eot');
-    font-weight: 100;
+    font-family: 'Inter';
+    src: local('InterRegularLocal'),
+  	   url('/public/src/fonts/Inter-Regular.woff2') format('woff2'),
+  	   url('/public/src/fonts/Inter-Regular.woff') format('woff'),
+  	   url('/public/src/fonts/Inter-Regular.ttf') format('ttf'),
+  	   url('/public/src/fonts/Inter-Regular.eot?#iefix') format('eot');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-ExtraLight.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-ExtraLight.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-ExtraLight.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-ExtraLight.eot?#iefix') format('eot');
-    font-weight: 200;
+    font-family: 'Inter';
+    src: local('InterBoldLocal'),
+  	   url('/public/src/fonts/Inter-Bold.woff2') format('woff2'),
+  	   url('/public/src/fonts/Inter-Bold.woff') format('woff'),
+  	   url('/public/src/fonts/Inter-Bold.ttf') format('ttf'),
+  	   url('/public/src/fonts/Inter-Bold.eot?#iefix') format('eot');
+    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-Light.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-Light.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-Light.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-Light.eot?#iefix') format('eot');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-Regular.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-Regular.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-Regular.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-Regular.eot?#iefix') format('eot');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-Medium.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-Medium.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-Medium.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-Medium.eot?#iefix') format('eot');
+    font-family: 'Inter';
+    src: local('InterMediumLocal'),
+  	   url('/public/src/fonts/Inter-Medium.woff2') format('woff2'),
+  	   url('/public/src/fonts/Inter-Medium.woff') format('woff'),
+  	   url('/public/src/fonts/Inter-Medium.ttf') format('ttf'),
+  	   url('/public/src/fonts/Inter-Medium.eot?#iefix') format('eot');
     font-weight: 500;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-SemiBold.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-SemiBold.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-SemiBold.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-SemiBold.eot?#iefix') format('eot');
-    font-weight: 600;
+    font-family: 'Inter';
+    src: local('InterLightLocal'),
+  	   url('/public/src/fonts/Inter-Light.woff2') format('woff2'),
+  	   url('/public/src/fonts/Inter-Light.woff') format('woff'),
+  	   url('/public/src/fonts/Inter-Light.ttf') format('ttf'),
+  	   url('/public/src/fonts/Inter-Light.eot?#iefix') format('eot');
+    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
-@font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-Bold.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-Bold.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-Bold.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-Bold.eot?#iefix') format('eot');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-ExtraBold.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-ExtraBold.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-ExtraBold.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-ExtraBold.eot?#iefix') format('eot');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geologica';
-    src: local('GeologicaLocal'),
-  	   url('/public/src/fonts/Geologica-Black.woff2') format('woff2'),
-  	   url('/public/src/fonts/Geologica-Black.woff') format('woff'),
-  	   url('/public/src/fonts/Geologica-Black.ttf') format('ttf'),
-  	   url('/public/src/fonts/Geologica-Black.eot?#iefix') format('eot');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-
 
 // - 100 - Thin (Тонкий)
 // - 200 - Extra Light (Ультратонкий)
@@ -129,37 +70,13 @@
 // - 900 - Black (Черный)
 
 @font-face {
-    font-family: 'Tenor Sans';
-    src: local('TenorSansLocal'),
-  	   url('/public/src/fonts/TenorSans.woff2') format('woff2'),
-  	   url('/public/src/fonts/TenorSans.woff') format('woff'),
-  	   url('/public/src/fonts/TenorSans.ttf') format('ttf'),
-  	   url('/public/src/fonts/TenorSans.eot?#iefix') format('eot');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-
-// - 100 - Thin (Тонкий)
-// - 200 - Extra Light (Ультратонкий)
-// - 300 - Light (Легкий)
-// - 400 - Regular (Обычный)
-// - 500 - Medium (Средний)
-// - 600 - Semi Bold (Полужирный)
-// - 700 - Bold (Жирный)
-// - 800 - Extra Bold (Ультражирный)
-// - 900 - Black (Черный)
-
-@font-face {
-    font-family: 'TTRamillas';
-    src: local('TTRamillasLocal'),
-  	   url('/public/src/fonts/TTRamillasTrl-Light.woff2') format('woff2'),
-  	   url('/public/src/fonts/TTRamillasTrl-Light.woff') format('woff'),
-  	   url('/public/src/fonts/TTRamillasTrl-Light.ttf') format('ttf'),
-  	   url('/public/src/fonts/TTRamillasTrl-Light.eot?#iefix') format('eot');
-    font-weight: 400;
+    font-family: 'BebasNeue';
+    src: local('BebasNeueLocal'),
+  	   url('/public/src/fonts/BebasNeue.woff2') format('woff2'),
+  	   url('/public/src/fonts/BebasNeue.woff') format('woff'),
+  	   url('/public/src/fonts/BebasNeue.ttf') format('ttf'),
+  	   url('/public/src/fonts/BebasNeue.eot?#iefix') format('eot');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

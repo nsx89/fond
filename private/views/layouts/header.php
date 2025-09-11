@@ -3,7 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>Панель управления сайтом</title>
-    <link rel='shortcut icon' href='/private/src/images/favicon.ico'>
+    <link rel='shortcut icon' href='/public/src/images/favicon.png'>
     <link rel='stylesheet' href='/private/src/css/chosen.css?v=<?= rand() ?>'>
     <link rel='stylesheet' href='/private/src/css/main.css?v=<?= rand() ?>'>
 </head>

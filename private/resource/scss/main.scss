@@ -161,7 +161,6 @@ legend {
 .admin_header {
 	background: #404040;
 	min-height: 45px;
-	padding-left: 22px;
 	padding-right: 20px;
 	display: flex;
 	justify-content: space-between;
@@ -175,7 +174,7 @@ legend {
     padding: 0px 0 3px 35px;
     color: rgba(255, 255, 255, 0.6);
 }
-.admin_logo a:before {
+/*.admin_logo a:before {
 	content: '';
     position: absolute;
     left: 0px;
@@ -184,7 +183,7 @@ legend {
     width: 27px;
     height: 18px;
     margin-top: -9px;
-}
+}*/
 .admin_logo a span {
 	border-bottom: 1px dotted;
 }

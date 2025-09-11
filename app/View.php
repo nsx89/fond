@@ -24,9 +24,9 @@ class View
 
             $this->settings = $settings;
 
-            $this->params['title'] = !empty($seo->title) ? $seo->title : $sitename;
-            $this->params['keywords'] = !empty($seo->keywords) ? $seo->keywords : $sitename;
-            $this->params['description'] = !empty($seo->description) ? $seo->description : $sitename;
+            $this->title = !empty($seo->title) ? $seo->title : $sitename;
+            $this->keywords = !empty($seo->keywords) ? $seo->keywords : $sitename;
+            $this->description = !empty($seo->description) ? $seo->description : $sitename;
 
             $this->edit_seo = Seo::edit($seo);
         }
