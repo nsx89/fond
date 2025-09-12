@@ -26,26 +26,27 @@
 	<link href="/public/src/css/style.css?<?= time() ?>" rel="stylesheet" />
 </head>
 <body class="<?= !empty($this->body_class) ? $this->body_class : '' ?>">
-	<header class="header">
-		<div class="container">
-			<nav class="header-nav">
-				<? foreach ($this->pages AS $page) : ?>
-		            <? if ($page->menu <> 1 || !empty($page->parent)) continue; ?>
-					<a href="/<?= $page->url ?>" class="header-nav-item <?= URI == $page->url ? 'active' : '' ?>">
-						<?= $page->name ?>
-					</a>
-		        <? endforeach; ?>
-			</nav>
-			<div class="header-info">
-				<? if (!empty($this->settings->phone)) : ?>
-					<a href="tel:<?= app\Helpers::clearPhone($this->settings->phone) ?>" class="phone"><?= $this->settings->phone ?></a>
-				<? endif; ?>
-				<? if (!empty($this->settings->soc1)) : ?>
-					<a class="soc soc1" href="<?= $this->settings->soc1 ?>" target="_blank" rel="nofollow" title="Наш Telegram"></a>
-				<? endif; ?>
-				<? if (!empty($this->settings->soc2)) : ?>
-					<a class="soc soc2" href="<?= $this->settings->soc2 ?>" target="_blank" rel="nofollow" title="Наш Вконтакте"></a>
-				<? endif; ?>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<nav class="header-nav">
+					<? foreach ($this->pages AS $page) : ?>
+			            <? if ($page->menu <> 1 || !empty($page->parent)) continue; ?>
+						<a href="/<?= $page->url ?>" class="header-nav-item <?= URI == $page->url ? 'active' : '' ?>">
+							<?= $page->name ?>
+						</a>
+			        <? endforeach; ?>
+				</nav>
+				<div class="header-info">
+					<? if (!empty($this->settings->phone)) : ?>
+						<a href="tel:<?= app\Helpers::clearPhone($this->settings->phone) ?>" class="phone"><?= $this->settings->phone ?></a>
+					<? endif; ?>
+					<? if (!empty($this->settings->soc1)) : ?>
+						<a class="soc soc1" href="<?= $this->settings->soc1 ?>" target="_blank" rel="nofollow" title="Наш Telegram"></a>
+					<? endif; ?>
+					<? if (!empty($this->settings->soc2)) : ?>
+						<a class="soc soc2" href="<?= $this->settings->soc2 ?>" target="_blank" rel="nofollow" title="Наш Вконтакте"></a>
+					<? endif; ?>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>

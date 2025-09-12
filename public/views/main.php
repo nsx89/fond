@@ -15,7 +15,7 @@
     </section>
     <section class="main-projects">
         <div class="container">
-            <div class="columns">
+            <div class="columns main-projects-columns">
                 <div class="column main-projects-eagle">
                     <h2 class="h2 h2-quot">О проекте</h2>
                     <div class="main-projects-text">
@@ -38,20 +38,94 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="projects swiper-container swiper1">
+                <div class="column projects">
+                    <div class="swiper-container swiper1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide projects-slide">
+                            <div class="swiper-slide">
                                 <img src="/public/src/images/projects/project1.jpg" alt="">
                             </div>
-                            <div class="swiper-slide projects-slide">
+                            <div class="swiper-slide">
+                                <img src="/public/src/images/projects/project1.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
                                 <img src="/public/src/images/projects/project1.jpg" alt="">
                             </div>
                         </div>
-                        <div class="swiper-button-prev"></div>
-            			<div class="swiper-button-next"></div>
-            			<div class="swiper-pagination"></div>
                     </div>
+                    <div class="swiper-button-prev swiper-button-prev-swiper1"></div>
+                    <div class="swiper-button-next swiper-button-next-swiper1"></div>
+                    <div class="swiper-pagination swiper-pagination-swiper1"></div>
+                </div>
+            </div>
+            <div class="videos-wrap">
+                <h2 class="h2">Благодаря вам они получили помощь</h2>
+                <div class="videos">
+                    <div class="swiper-container swiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/public/src/images/video/video1.jpg" alt="">
+                                <span class="video-play js-video-modal" title="Смотреть видео" data-video=""></span>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/public/src/images/video/video2.jpg" alt="">
+                                <span class="video-play js-video-modal" title="Смотреть видео" data-video=""></span>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/public/src/images/video/video1.jpg" alt="">
+                                <span class="video-play js-video-modal" title="Смотреть видео" data-video=""></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev-swiper2"></div>
+                    <div class="swiper-button-next swiper-button-next-swiper2"></div>
+                    <div class="swiper-pagination swiper-pagination-swiper2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pay">
+        <div class="pay-left"></div>
+        <div class="pay-right">
+            <div class="pay-form">
+                <h2 class="h2">Как внести вклад <span>в общее дело</span></h2>
+                <div class="pay-box">
+                    <div class="pay-box-items">
+                        <div class="pay-box-item" data-value="100">100<i>₽</i></div>
+                        <div class="pay-box-item" data-value="500">500<i>₽</i></div>
+                        <div class="pay-box-item" data-value="1000">1 000<i>₽</i></div>
+                        <div class="pay-box-item" data-value="5000">5 000<i>₽</i></div>
+                        <div class="pay-box-item" data-value="10000">10 000<i>₽</i></div>
+                        <div class="pay-box-item" data-value="50000">50 000<i>₽</i></div>
+                        <div class="pay-box-item pay-box-item-input placeholder-wrap">
+                            <span class="placeholder">Другая сумма</span>
+                            <input type="text" class="input js-input-number">
+                        </div>
+                    </div>
+                    <button class="button">Отправить помощь</button>
+                </div>
+                <div class="pay-box pay-box-link">
+                    <div class="pay-box-head">Оплата по <span>qr</span></div>
+                    <img class="pay-box-qr" src="/public/src/images/qr.png" alt=">Оплата по qr">
+                </div>
+                <div class="pay-box pay-box-link">
+                    <div class="pay-box-head">Оплата <span>по реквизитам</span></div>
+                    <img class="pay-box-arrow" src="/public/src/images/svg/arrow-left.svg" alt=">Оплата по qr">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-back">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h2 class="h2">Помогаем как делом <br><span>так и словом</span></h2>
+                    <div class="main-back-text">
+                        Официально ведем благотворительную деятельность и имеем все необходимые документы,
+                        чтобы ежедневно быть рядом с теми, кто защищает страну и рискует жизнями ради ее безопасности
+                    </div>
+                </div>
+                <div class="column main-back-logo-wrap">
+                    <div class="main-back-logo"></div>
                 </div>
             </div>
         </div>

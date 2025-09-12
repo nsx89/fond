@@ -25,4 +25,37 @@ $(window).scroll(function(){
      headerActive();
 });
 
+/* --- Input number --- */
+
+$('body').on('keyup', '.js-input-number', function () {
+    if (this.value.match(/[^0-9.]/g)) {
+        this.value = this.value.replace(/[^0-9.]/g, '');
+    }
+});
+
+/* --- Placeholder --- */
+
+$('body').on('focus', '.placeholder-wrap .input', function(){
+	var parent = $(this).parent();
+	$('.placeholder', parent).addClass('placeholder-act');
+});
+
+$('body').on('blur', '.placeholder-wrap .input', function(){
+	var val = $(this).val();
+	var parent = $(this).parent();
+	if (val == '') {
+		$('.placeholder', parent).removeClass('placeholder-act');
+	}
+});
+
+if ($('.placeholder-wrap .input').length > 0) {
+	$('.placeholder-wrap .input').each(function(){
+		var val = $(this).val();
+		var parent = $(this).parent();
+		if (val != '') {
+			$('.placeholder', parent).addClass('placeholder-act');
+		}
+	});
+}
+
 /* --- // --- */
