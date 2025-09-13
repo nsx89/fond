@@ -31,3 +31,20 @@ var swiper2 = new Swiper(".swiper2", {
 
     }
 });
+
+var swiper3 = new Swiper(".swiper3", {
+    navigation: {
+        prevEl: ".swiper-button-prev-swiper3",
+        nextEl: ".swiper-button-next-swiper3",
+    },
+    pagination: {
+        el: ".swiper-pagination-swiper3",
+        clickable: true
+    },
+    slidesPerView: '3',
+    spaceBetween: 22,
+    loop: false,
+    breakpoints: {
+
+    }
+});

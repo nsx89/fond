@@ -128,6 +128,39 @@
                     <div class="main-back-logo"></div>
                 </div>
             </div>
+            <div class="documents">
+                <div class="swiper-container swiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="documents-head">Документ о регистрации фонда</div>
+                            <div class="documents-text">Смотреть</div>
+                            <img class="documents-img" src="/public/src/images/documents/1.jpg" alt="">
+                            <div class="documents-arrow"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="documents-head">Благодарственное письмо волонтерам фонда</div>
+                            <div class="documents-text">От СГБУ «Центр содействия семейному воспитанию №15»</div>
+                            <img class="documents-img" src="/public/src/images/documents/2.jpg" alt="">
+                            <div class="documents-arrow"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="documents-head">Благодарственное письмо волонтерам фонда</div>
+                            <div class="documents-text">От ЛОГБУ «Волосовский ПНИ»</div>
+                            <img class="documents-img" src="/public/src/images/documents/3.jpg" alt="">
+                            <div class="documents-arrow"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="documents-head">Документ о регистрации фонда</div>
+                            <div class="documents-text">Смотреть</div>
+                            <img class="documents-img" src="/public/src/images/documents/1.jpg" alt="">
+                            <div class="documents-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-prev-swiper3"></div>
+                <div class="swiper-button-next swiper-button-next-swiper3"></div>
+                <div class="swiper-pagination swiper-pagination-swiper3"></div>
+            </div>
         </div>
     </section>
 </main>
