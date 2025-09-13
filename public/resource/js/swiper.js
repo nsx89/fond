@@ -48,3 +48,37 @@ var swiper3 = new Swiper(".swiper3", {
 
     }
 });
+
+var swiper4 = new Swiper(".swiper4", {
+    navigation: {
+        prevEl: ".swiper-button-prev-swiper4",
+        nextEl: ".swiper-button-next-swiper4",
+    },
+    pagination: {
+        el: ".swiper-pagination-swiper4",
+        clickable: true
+    },
+    slidesPerView: '2',
+    spaceBetween: 30,
+    loop: false,
+    breakpoints: {
+
+    }
+});
+
+var swiper5 = new Swiper(".swiper5", {
+    navigation: {
+        prevEl: ".swiper-button-prev-swiper5",
+        nextEl: ".swiper-button-next-swiper5",
+    },
+    pagination: {
+        el: ".swiper-pagination-swiper5",
+        clickable: true
+    },
+    slidesPerView: '6',
+    spaceBetween: 30,
+    loop: false,
+    breakpoints: {
+
+    }
+});

@@ -168,28 +168,145 @@
                 <div class="swiper-pagination swiper-pagination-swiper3"></div>
             </div>
 
-            <div class="medication">
+            <div class="medication-wrap">
                 <h2 class="h2">на благо героев <span>и будущего страны</span></h2>
-                <div class="swiper-container swiper4">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="medication-head">Документ о регистрации фонда</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="medication-head">Документ о регистрации фонда</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="medication-head">Документ о регистрации фонда</div>
+                <div class="medication">
+                    <div class="swiper-container swiper4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="medication-head dots">Лечение<br> и реабилитация</div>
+                                <div class="medication-items">
+                                    <span>лечение для военнослужащих</span>
+                                    <span>медицинское обслуживание</span>
+                                </div>
+                                <img class="medication-img" src="/public/src/images/medication/medication1.png" alt="">
+                                <div class="medication-link js-scroll-form">Отправить помощь</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="medication-head">Передаем<br> гуманитарную помощь</div>
+                                <div class="medication-items">
+                                    <span>строительные материалы</span>
+                                    <span>оптика</span>
+                                    <span>генераторы</span>
+                                    <span>технические средства</span>
+                                    <span>технические средства</span>
+                                    <span>технические средства</span>
+                                </div>
+                                <img class="medication-img" src="/public/src/images/medication/medication2.png" alt="">
+                                <div class="medication-link js-scroll-form">Отправить помощь</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="medication-head">Лечение и реабилитация</div>
+                                <img class="medication-img" src="/public/src/images/medication/medication1.png" alt="">
+                                <div class="medication-link js-scroll-form">Отправить помощь</div>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-button-prev swiper-button-prev-swiper4"></div>
+                    <div class="swiper-button-next swiper-button-next-swiper4"></div>
+                    <div class="swiper-pagination swiper-pagination-swiper4"></div>
                 </div>
-                <div class="swiper-button-prev swiper-button-prev-swiper4"></div>
-                <div class="swiper-button-next swiper-button-next-swiper4"></div>
-                <div class="swiper-pagination swiper-pagination-swiper4"></div>
+            </div>
+
+            <div class="partners-wrap">
+                <h2 class="h2">Наши партнеры</h2>
+                <div class="partners">
+                    <div class="swiper-container swiper5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner1.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner2.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner3.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner4.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner2.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner1.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner5.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner3.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="partners-img">
+                                    <img src="/public/src/images/partners/partner4.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev-swiper5"></div>
+                    <div class="swiper-button-next swiper-button-next-swiper5"></div>
+                    <div class="swiper-pagination swiper-pagination-swiper5"></div>
+                </div>
             </div>
 
         </div>
     </section>
+
+    <section class="main-victory">
+        <div class="container">
+            <div class="h2-wrap">
+                <h2 class="h2">Приближаем победу <span>вместе</span></h2>
+                <div class="h2-link">
+                    Смотреть все
+                </div>
+            </div>
+            <div class="victory">
+                <div class="swiper-container swiper6">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/public/src/images/victory/victory1.jpg" alt="">
+                            <div class="victory-box">
+                                <div class="victory-head dots">Важность помощи ближнему</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/public/src/images/victory/victory2.jpg" alt="">
+                            <div class="victory-box">
+                                <div class="victory-head dots">Социальная ответственность</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/public/src/images/victory/victory1.jpg" alt="">
+                            <div class="victory-box">
+                                <div class="victory-head dots">Важность помощи ближнему</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-prev-swiper6"></div>
+                <div class="swiper-button-next swiper-button-next-swiper6"></div>
+                <div class="swiper-pagination swiper-pagination-swiper6"></div>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <? include_once VIEWS.'/layouts/footer.php' ?>
