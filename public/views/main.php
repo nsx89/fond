@@ -2,6 +2,7 @@
 
 <main>
     <div class="logo"></div>
+
     <section class="main">
         <div class="container">
             <div class="main-text">
@@ -13,6 +14,7 @@
             </div>
         </div>
     </section>
+
     <section class="main-projects">
         <div class="container">
             <div class="columns main-projects-columns">
@@ -83,6 +85,7 @@
             </div>
         </div>
     </section>
+
     <section class="pay">
         <div class="pay-left"></div>
         <div class="pay-right">
@@ -114,11 +117,13 @@
             </div>
         </div>
     </section>
+
     <section class="main-back">
         <div class="container">
+
             <div class="columns">
                 <div class="column">
-                    <h2 class="h2">Помогаем как делом <br><span>так и словом</span></h2>
+                    <h2 class="h2 h2-back">Помогаем как делом <br><span>так и словом</span></h2>
                     <div class="main-back-text">
                         Официально ведем благотворительную деятельность и имеем все необходимые документы,
                         чтобы ежедневно быть рядом с теми, кто защищает страну и рискует жизнями ради ее безопасности
@@ -128,30 +133,31 @@
                     <div class="main-back-logo"></div>
                 </div>
             </div>
+
             <div class="documents">
                 <div class="swiper-container swiper3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="documents-head">Документ о регистрации фонда</div>
-                            <div class="documents-text">Смотреть</div>
+                            <div class="documents-head dots">Документ о регистрации фонда</div>
+                            <div class="documents-text dots">Смотреть</div>
                             <img class="documents-img" src="/public/src/images/documents/1.jpg" alt="">
                             <div class="documents-arrow"></div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="documents-head">Благодарственное письмо волонтерам фонда</div>
-                            <div class="documents-text">От СГБУ «Центр содействия семейному воспитанию №15»</div>
+                            <div class="documents-head dots">Благодарственное письмо волонтерам фонда агодарственное письмо волонтерам фонда</div>
+                            <div class="documents-text dots">От СГБУ «Центр содействия семейному воспитанию №15» >От СГБУ «Центр содействия семейному воспитанию №15»</div>
                             <img class="documents-img" src="/public/src/images/documents/2.jpg" alt="">
                             <div class="documents-arrow"></div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="documents-head">Благодарственное письмо волонтерам фонда</div>
-                            <div class="documents-text">От ЛОГБУ «Волосовский ПНИ»</div>
+                            <div class="documents-head dots">Благодарственное письмо волонтерам фонда</div>
+                            <div class="documents-text dots">От ЛОГБУ «Волосовский ПНИ»</div>
                             <img class="documents-img" src="/public/src/images/documents/3.jpg" alt="">
                             <div class="documents-arrow"></div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="documents-head">Документ о регистрации фонда</div>
-                            <div class="documents-text">Смотреть</div>
+                            <div class="documents-head dots">Документ о регистрации фонда</div>
+                            <div class="documents-text dots">Смотреть</div>
                             <img class="documents-img" src="/public/src/images/documents/1.jpg" alt="">
                             <div class="documents-arrow"></div>
                         </div>
@@ -161,6 +167,27 @@
                 <div class="swiper-button-next swiper-button-next-swiper3"></div>
                 <div class="swiper-pagination swiper-pagination-swiper3"></div>
             </div>
+
+            <div class="medication">
+                <h2 class="h2">на благо героев <span>и будущего страны</span></h2>
+                <div class="swiper-container swiper4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="medication-head">Документ о регистрации фонда</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="medication-head">Документ о регистрации фонда</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="medication-head">Документ о регистрации фонда</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-prev-swiper4"></div>
+                <div class="swiper-button-next swiper-button-next-swiper4"></div>
+                <div class="swiper-pagination swiper-pagination-swiper4"></div>
+            </div>
+
         </div>
     </section>
 </main>

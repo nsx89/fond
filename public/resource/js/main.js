@@ -33,6 +33,12 @@ $('body').on('keyup', '.js-input-number', function () {
     }
 });
 
+/* --- Dotdotdot --- */
+
+if ($('.dots').length) {
+    $('.dots').dotdotdot();
+}
+
 /* --- Placeholder --- */
 
 $('body').on('focus', '.placeholder-wrap .input', function(){

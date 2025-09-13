@@ -606,7 +606,7 @@ main {
     background: url(/public/src/images/back/back2.jpg) no-repeat top center;
     background-size: cover;
     padding: 118px 0px 118px;
-    .h2 {
+    .h2-back {
         position: relative;
         color: #fff;
         margin-bottom: 30px;
@@ -684,10 +684,12 @@ main {
         width: 32.1%;
         height: 100%;
         padding: 36px 36px 0px 40px;
-        transition: background 0.2s ease-in-out;
+        transition: background, box-shadow 0.2s ease-in-out;
+        box-shadow: 0px 10px 15px 0px transparent;
         cursor: pointer;
         &:hover {
             background: #3973B2;
+            box-shadow: 0px 10px 15px 0px #0000004D;
             .documents-arrow {
                 background: #FF2727;
             }
@@ -700,6 +702,8 @@ main {
         line-height: 36px;
         letter-spacing: 0.4px;
         margin-bottom: 10px;
+        max-height: 108px;
+        overflow: hidden;
     }
     &-text {
         font-size: 18px;
@@ -707,6 +711,8 @@ main {
         color: #fff;
         opacity: 0.7;
         font-weight: 300;
+        max-height: 50px;
+        overflow: hidden;
     }
     &-img {
         position: absolute;
@@ -735,6 +741,58 @@ main {
             background: url(/public/src/images/svg/arrow.svg) no-repeat center center;
             margin-top: -10px;
             margin-left: -10px;
+        }
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}
+.medication {
+    position: relative;
+    margin: 48px 0px 0px;
+    height: 370px;
+    .h2 {
+        position: relative;
+        color: #fff;
+        margin-bottom: 30px;
+        letter-spacing: 0.4px;
+        > span {
+            display: inline-block;
+            color: $hover;
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 22px;
+    }
+    .swiper-initialized {
+        .swiper-wrapper {
+            gap: 0px;
+        }
+    }
+    .swiper-slide {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        background: #23354D;
+        background: url(/public/src/images/documents/documents.jpg) no-repeat center center;
+        background-size: cover;
+        width: 32.1%;
+        height: 100%;
+        padding: 36px 36px 0px 40px;
+        transition: background 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background: #3973B2;
+            .documents-arrow {
+                background: #FF2727;
+            }
         }
     }
 }

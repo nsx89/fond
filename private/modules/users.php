@@ -1,5 +1,4 @@
-/<?= URI ?><?php
-
+<?php
 use app\Models\Users;
 use app\Models\Users_class;
 use app\Helpers;
