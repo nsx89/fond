@@ -21,10 +21,14 @@ body {
 }
 .wrapper {
     overflow: hidden;
+    max-width: 1920px;
+    margin: 0px auto;
+    position: relative;
 }
 .main {
     width: 100%;
     height: 100vh;
+    max-height: 1000px;
     background: url(/public/src/images/back/back1.jpg) no-repeat top center;
     background-size: cover;
     display: flex;
@@ -918,7 +922,7 @@ main {
     width: 100%;
     background: url(/public/src/images/victory/victory.jpg) no-repeat top center;
     background-size: cover;
-    padding: 110px 0px 111px;
+    padding: 110px 0px 114px;
     .h2 {
         color: #fff;
         > span {
@@ -939,9 +943,12 @@ main {
     }
 }
 .victory {
+    position: relative;
     .swiper-container {
-        width: 100%;
-        height: 100%;
+        margin: -20px;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+        padding: 20px;
     }
     .swiper-wrapper {
         width: 100%;
@@ -974,11 +981,11 @@ main {
             object-fit: cover;
         }
     }
-    .swiper-button-prev, .swiper-button-next {
-        margin-top: -12px;
-    }
     .swiper-pagination.swiper-pagination-bullets {
-        bottom: -62px;
+        bottom: -20px;
+    }
+    &-box {
+        padding: 34px 34px 34px 42px;
     }
     &-head {
         font-family: "BebasNeue", sans-serif;
@@ -986,9 +993,155 @@ main {
         font-size: 38px;
         line-height: 38px;
         letter-spacing: 0.4px;
-        margin-bottom: 24px;
-        max-height: 77px;
-        max-width: 64%;
+        margin-bottom: 14px;
         overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &-text {
+        font-size: 18px;
+        line-height: 25px;
+        color: #fff;
+        opacity: 0.7;
+        font-weight: 300;
+        max-height: 80px;
+        overflow: hidden;
+        letter-spacing: -0.2px;
+        margin-bottom: 15px;
+    }
+    &-date {
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.1px;
+        color: #fff;
+        opacity: 0.7;
+    }
+}
+.main-contacts {
+    position: relative;
+    .contacts {
+        display: flex;
+        align-items: center;
+        background: url(/public/src/images/contacts/back.jpg) no-repeat top center;
+        width: 100%;
+        height: 816px;
+        &-text {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.1px;
+            color: #fff;
+        }
+        &-box {
+            width: 430px;
+            background: rgba(0,0,0,0.45);
+            padding: 60px 60px 57px 40px;
+            border-radius: 10px;
+            margin: 45px 0px 25px;
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 17px;
+                margin-bottom: 15px;
+                transition: all 0.15s ease-in-out;
+                justify-content: flex-start;
+                width: fit-content;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            &-icon {
+                display: block;
+                width: 42px;
+                height: 42px;
+                border-radius: 10px;
+                background: rgba(255,255,255,0.2);
+                position: relative;
+                overflow: hidden;
+                &-phone:after {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -11px;
+                    margin-left: -12px;
+                    background: url(/public/src/images/contacts/phone.svg) no-repeat top center;
+                }
+                &-email:after {
+                    content: '';
+                    width: 22px;
+                    height: 22px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -9px;
+                    margin-left: -11px;
+                    background: url(/public/src/images/contacts/email.svg) no-repeat top center;
+                }
+                &-soc1:after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    background: url(/public/src/images/contacts/tg.svg) no-repeat top center;
+                }
+                &-soc2:after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    background: url(/public/src/images/contacts/vk.svg) no-repeat top center;
+                }
+            }
+        }
+        &-phone {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 100%;
+            color: #fff;
+            letter-spacing: -0.4px;
+        }
+        &-email {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 100%;
+            color: #FF3636;
+            letter-spacing: -0.4px;
+        }
+        &-soc {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 100%;
+            color: #fff;
+            letter-spacing: -0.4px;
+        }
+        &-button-wrap {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-top: 24px;
+            .button {
+                padding-left: 48px;
+                padding-right: 48px;
+            }
+        }
+        &-qr {
+            width: 58px;
+            height: 58px;
+        }
+    }
+    .h2 {
+        color: #fff;
+        margin-bottom: 16px;
+        margin-left: -1px;
     }
 }

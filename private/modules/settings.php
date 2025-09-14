@@ -45,8 +45,14 @@ else: ?>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>
-                <?= Form::makeInput('Telegram', 'soc1', $obj->soc1) ?>
-                <?= Form::makeInput('Вконтакте', 'soc2', $obj->soc2) ?>
+                <div class="columns">
+                    <?= Form::makeInput('Telegram. Ссылка', 'soc1', $obj->soc1) ?>
+                    <?= Form::makeInput('Telegram. Название', 'soc_name1', $obj->soc_name1) ?>
+                </div>
+                <div class="columns">
+                    <?= Form::makeInput('Вконтакте. Ссылка', 'soc2', $obj->soc2) ?>
+                    <?= Form::makeInput('Вконтакте. Название', 'soc_name2', $obj->soc_name2) ?>
+                </div>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Тексты в подвале</legend>

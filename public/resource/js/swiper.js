@@ -82,3 +82,20 @@ var swiper5 = new Swiper(".swiper5", {
 
     }
 });
+
+var swiper5 = new Swiper(".swiper6", {
+    navigation: {
+        prevEl: ".swiper-button-prev-swiper6",
+        nextEl: ".swiper-button-next-swiper6",
+    },
+    pagination: {
+        el: ".swiper-pagination-swiper6",
+        clickable: true
+    },
+    slidesPerView: '2',
+    spaceBetween: 30,
+    loop: false,
+    breakpoints: {
+
+    }
+});

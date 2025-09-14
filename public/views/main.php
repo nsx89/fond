@@ -283,19 +283,36 @@
                         <div class="swiper-slide">
                             <img src="/public/src/images/victory/victory1.jpg" alt="">
                             <div class="victory-box">
-                                <div class="victory-head dots">Важность помощи ближнему</div>
+                                <div class="victory-head">Важность помощи ближнему</div>
+                                <div class="victory-text dots">
+                                    Помощь другим — это одна из основных человеческих ценностей.
+                                    Она играет ключевую роль в укреплении социальных связей
+                                    и создании сплоченного общества.
+                                </div>
+                                <div class="victory-date">16.08.2025</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="/public/src/images/victory/victory2.jpg" alt="">
                             <div class="victory-box">
-                                <div class="victory-head dots">Социальная ответственность</div>
+                                <div class="victory-head">Социальная ответственность</div>
+                                <div class="victory-text dots">
+                                    Помощь другим способствует развитию чувства социальной ответственности.
+                                    Когда мы помогаем другим, что заботимся о благополучии нашего общества.
+                                </div>
+                                <div class="victory-date">12.08.2025</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="/public/src/images/victory/victory1.jpg" alt="">
                             <div class="victory-box">
-                                <div class="victory-head dots">Важность помощи ближнему</div>
+                                <div class="victory-head">Важность помощи ближнему</div>
+                                <div class="victory-text dots">
+                                    Помощь другим — это одна из основных человеческих ценностей.
+                                    Она играет ключевую роль в укреплении социальных связей
+                                    и создании сплоченного общества.
+                                </div>
+                                <div class="victory-date">11.08.2025</div>
                             </div>
                         </div>
                     </div>
@@ -305,6 +322,45 @@
                 <div class="swiper-pagination swiper-pagination-swiper6"></div>
             </div>
         </div>
+    </section>
+
+    <section class="main-contacts">
+         <div class="contacts">
+             <div class="container">
+                 <h2 class="h2">Контакты</h2>
+                 <div class="contacts-text">Поддержите тех, кто стоит на защите Родины</div>
+                 <div class="contacts-box">
+                     <? if (!empty($this->settings->phone)) : ?>
+     					<a href="tel:<?= app\Helpers::clearPhone($this->settings->phone) ?>" class="contacts-box-item">
+                            <span class="contacts-box-icon contacts-box-icon-phone"></span>
+                            <span class="contacts-phone"><?= $this->settings->phone ?></span>
+                        </a>
+     				<? endif; ?>
+                    <? if (!empty($this->settings->email)) : ?>
+    					<a href="mailto:<?= $this->settings->email ?>" class="contacts-box-item">
+                            <span class="contacts-box-icon contacts-box-icon-email"></span>
+                            <span class="contacts-email"><?= $this->settings->email ?></span>
+                        </a>
+    				<? endif; ?>
+                    <? if (!empty($this->settings->soc1)) : ?>
+    					<a href="<?= $this->settings->soc1 ?>" target="_blank" rel="nofollow" title="Наш Telegram" class="contacts-box-item">
+                            <span class="contacts-box-icon contacts-box-icon-soc1"></span>
+                            <span class="contacts-soc contacts-soc1"><?= $this->settings->soc_name1 ?></span>
+                        </a>
+    				<? endif; ?>
+    				<? if (!empty($this->settings->soc2)) : ?>
+    					<a href="<?= $this->settings->soc2 ?>" target="_blank" rel="nofollow" title="Наш Вконтакте" class="contacts-box-item">
+                            <span class="contacts-box-icon contacts-box-icon-soc2"></span>
+                            <span class="contacts-soc contacts-soc2"><?= $this->settings->soc_name2 ?></span>
+                        </a>
+    				<? endif; ?>
+                    <div class="contacts-button-wrap">
+                        <button class="button">Пожертвования</button>
+                        <img class="contacts-qr" src="/public/src/images/qr.png" alt=">Поддержать">
+                    </div>
+                 </div>
+             </div>
+         </div>
     </section>
 
 </main>
