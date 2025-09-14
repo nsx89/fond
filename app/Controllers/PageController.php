@@ -25,6 +25,7 @@ class PageController extends Controller {
         $page = Page::findByUrl($url, true);
         if (!empty($page)) {
             $view->page = $page;
+            $view->body_class = 'body-page';
 
             $view->edit = Users::edit("pages?edit={$page->id}", $view->edit_seo);
 

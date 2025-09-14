@@ -1,8 +1,6 @@
 <? include_once VIEWS.'/layouts/header.php' ?>
 
 <main>
-    <div class="logo"></div>
-
     <section class="main">
         <div class="container">
             <div class="main-text">
