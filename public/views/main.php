@@ -267,60 +267,32 @@
         </div>
     </section>
 
-    <section class="main-articles">
-        <div class="container">
-            <div class="h2-wrap">
-                <h2 class="h2">Приближаем победу <span>вместе</span></h2>
-                <a href="/<?= $this->pages[6]->url ?>" class="h2-link">
-                    Смотреть все
-                </a>
-            </div>
-            <div class="articles">
-                <div class="swiper-container swiper6">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="/public/src/images/victory/victory1.jpg" alt="">
-                            <div class="articles-box">
-                                <div class="articles-head">Важность помощи ближнему</div>
-                                <div class="articles-text dots">
-                                    Помощь другим — это одна из основных человеческих ценностей.
-                                    Она играет ключевую роль в укреплении социальных связей
-                                    и создании сплоченного общества.
-                                </div>
-                                <div class="articles-date">16.08.2025</div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/public/src/images/victory/victory2.jpg" alt="">
-                            <div class="articles-box">
-                                <div class="articles-head">Социальная ответственность</div>
-                                <div class="articles-text dots">
-                                    Помощь другим способствует развитию чувства социальной ответственности.
-                                    Когда мы помогаем другим, что заботимся о благополучии нашего общества.
-                                </div>
-                                <div class="articles-date">12.08.2025</div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="/public/src/images/victory/victory1.jpg" alt="">
-                            <div class="articles-box">
-                                <div class="articles-head">Важность помощи ближнему</div>
-                                <div class="articles-text dots">
-                                    Помощь другим — это одна из основных человеческих ценностей.
-                                    Она играет ключевую роль в укреплении социальных связей
-                                    и создании сплоченного общества.
-                                </div>
-                                <div class="articles-date">11.08.2025</div>
-                            </div>
+    <? if (!empty($this->articles)) : ?>
+        <section class="main-articles">
+            <div class="container">
+                <div class="h2-wrap">
+                    <h2 class="h2">Приближаем победу <span>вместе</span></h2>
+                    <a href="/<?= $this->pages[6]->url ?>" class="h2-link">
+                        Смотреть все
+                    </a>
+                </div>
+                <div class="articles">
+                    <div class="swiper-container swiper6">
+                        <div class="swiper-wrapper">
+                            <? foreach ($this->articles AS $item) : ?>
+                            
+                                <?= $this->include('articles/item', $item, $this) ?>
+
+                            <? endforeach; ?>
                         </div>
                     </div>
+                    <div class="swiper-button-prev swiper-button-prev-swiper6"></div>
+                    <div class="swiper-button-next swiper-button-next-swiper6"></div>
+                    <div class="swiper-pagination swiper-pagination-swiper6"></div>
                 </div>
-                <div class="swiper-button-prev swiper-button-prev-swiper6"></div>
-                <div class="swiper-button-next swiper-button-next-swiper6"></div>
-                <div class="swiper-pagination swiper-pagination-swiper6"></div>
             </div>
-        </div>
-    </section>
+        </section>
+    <? endif; ?>
 
     <section class="main-contacts">
          <div class="contacts">

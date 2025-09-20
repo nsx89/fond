@@ -34,8 +34,8 @@ class ArticlesController extends Controller {
         $breadcrumbs[] = array($page->name);
         $view->breadcrumbs = $breadcrumbs;
 
-        $count = 1;
-        $data = Articles::paginate("WHERE `show` = 1 {$where} ORDER BY rate DESC, id ASC", $count);
+        $count = 8;
+        $data = Articles::paginate("WHERE `show` = 1 ORDER BY rate DESC, date DESC, id ASC", $count);
         $view->total = $data['total'];
         $view->paginate = $data['paginate'];
         $view->articles = $data['list'];
@@ -53,7 +53,19 @@ class ArticlesController extends Controller {
         $article = Articles::findUrl($url);
         if (empty($article)) return $view->show('errors/404.php');
 
-        $view->edit = Users::edit("articles?edit=".$article->id, $view->edit_seo);
+        $article_id = $article->id;
+
+        $view->edit = Users::edit("articles?edit=".$article_id, $view->edit_seo);
+
+        $name = !empty($article->h1) ? $article->h1 : $article->name;
+
+        $views = (array)$_SESSION['views'];
+        if (!in_array($article_id, $views)) {
+            $article->views = intval($article->views) + 1;
+            $article->save();
+            $views[] = $article_id;
+            $_SESSION['views'] = $views;
+        }
 
         /* --- SEO --- */
 
@@ -64,9 +76,13 @@ class ArticlesController extends Controller {
         $breadcrumbs = [];
         $breadcrumbs[] = array('Главная', '/');
         $breadcrumbs[] = array($page->name, '/'.$page->url);
+        $breadcrumbs[] = array($name);
         $view->breadcrumbs = $breadcrumbs;
 
         $view->article = $article;
+
+        //other
+        $view->articles = Articles::getOther($article->id, $article->other);
 
         return $view->show('articles/detail.php');
     }

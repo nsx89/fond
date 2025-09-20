@@ -8,6 +8,7 @@ use app\Models\Page;
 use app\Models\Settings;
 use app\Models\Seo;
 use app\Models\Users;
+use app\Models\Articles;
 
 class PageController extends Controller {
     protected function handle(...$params) {
@@ -40,7 +41,7 @@ class PageController extends Controller {
 
     protected static function main($view){
 
-
+        $view->articles = Articles::findWhere("WHERE `show` = 1 ORDER BY rate DESC, date DESC, id ASC LIMIT 8");
 
         return $view->show('main.php');
     }

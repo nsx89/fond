@@ -43,7 +43,9 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
         $_SESSION['notice'] = 'Добавлено';
     }
 
-    $seo->url = trim($_POST['url']);
+    $url = trim($_POST['url']);
+    if ($url <> '/') $url = trim($url, '/');
+    $seo->url = $url;
     $seo->title = trim($_POST['title']);
     $seo->keywords = trim($_POST['keywords']);
     $seo->description = trim($_POST['description']);

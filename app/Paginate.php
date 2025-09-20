@@ -63,8 +63,8 @@ class Paginate
         $URI = strtok($_SERVER["REQUEST_URI"], '?');
 
 		$prev = $next = '';
-		if ($this->page > 1) $prev .= "<a href='".$URI."?page=".($this->page-1).$this->query."' class='pagination-link'>‹</a>";
-		if ($this->page < $this->num_pages) $next .= "<a href='".$URI."?page=".($this->page+1).$this->query."' class='pagination-link'>›</a>";
+		if ($this->page > 1) $prev .= "<a href='".$URI."?page=".($this->page-1).$this->query."' class='pagination-link pagination-link-prev'>‹</a>";
+		if ($this->page < $this->num_pages) $next .= "<a href='".$URI."?page=".($this->page+1).$this->query."' class='pagination-link pagination-link-next'>›</a>";
 
 		if ($this->num_pages < 2) return;
 

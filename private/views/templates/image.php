@@ -4,10 +4,8 @@
     <label for='image_<?= $name ?>'>Выбрать файл</label>
 
     <?
-        $old_name = $name;
-       if(substr($name,0,16) == 'PricesLink-image') $name = 'image';
-       if(substr($name,0,17) == 'PricesStage-image') $name = 'image';
-       if(substr($name,0,10) == 'link_image') $name = 'image';
+    $old_name = $name;
+    if(substr($name,0,10) == 'link_image') $name = 'image';
     ?>
 
     <?php if (!empty($object->$name)): ?>
