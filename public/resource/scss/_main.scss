@@ -16,6 +16,9 @@ body {
     background: url(/public/src/images/back/back2.jpg) repeat top center;
     background-size: cover;
 }
+strong, b {
+    font-weight: bold;
+}
 .container {
     width: 1260px;
     padding: 0px 30px;
@@ -109,6 +112,9 @@ main {
     width: 147px;
     height: 157px;
     background: url(/public/src/images/svg/logo.svg) no-repeat center center;
+    &:active {
+        transform: translateY(1px);
+    }
 }
 .header-logo {
     position: absolute;
@@ -172,6 +178,9 @@ main {
         border-bottom: 1px solid transparent;
         &:hover, &.active {
             color: $hover;
+        }
+        &:active {
+            transform: translateY(1px);
         }
     }
 }
@@ -340,6 +349,14 @@ main {
         background: url(/public/src/images/svg/quot-start.svg) no-repeat top center;
     }
 }
+.h1 {
+    font-family: "BebasNeue", sans-serif;
+    font-size: 80px;
+    line-height: 66px;
+    letter-spacing: 1.2px;
+    color: #fff;
+    margin: 0px 0px 45px -1px;
+}
 .h2 {
     font-family: "BebasNeue", sans-serif;
     font-size: 80px;
@@ -389,7 +406,8 @@ main {
         flex-direction: column;
         align-items: flex-end;
         position: relative;
-        &:after {
+        z-index: 1;
+        &:before {
             content: '';
             width: 148px;
             height: 173px;
@@ -397,7 +415,7 @@ main {
             right: -70px;
             top: -13px;
             background: url(/public/src/images/svg/eagle.svg) no-repeat top center;
-            z-index: 1;
+            z-index: -1;
         }
         .phone {
             font-size: 18px;
@@ -928,7 +946,7 @@ main {
         }
     }
 }
-.main-victory {
+.main-articles {
     width: 100%;
     background: url(/public/src/images/victory/victory.jpg) no-repeat top center;
     background-size: cover;
@@ -949,10 +967,15 @@ main {
             font-size: 18px;
             line-height: 20px;
             margin-bottom: 6px;
+            border-bottom: 1px solid transparent;
+            transition: all 0.15s ease-in-out;
+            &:hover {
+                border-bottom: 1px solid $hover;
+            }
         }
     }
 }
-.victory {
+.articles {
     position: relative;
     .swiper-container {
         margin: -20px;
@@ -984,11 +1007,14 @@ main {
         &:hover {
             background: #3973B2;
             box-shadow: 0px 10px 15px 0px #0000004D;
-
+            img {
+                opacity: 0.9;
+            }
         }
         img {
             display: block;
             object-fit: cover;
+            transition: all 0.15s ease-in-out;
         }
     }
     .swiper-pagination.swiper-pagination-bullets {
@@ -1026,6 +1052,11 @@ main {
         letter-spacing: -0.1px;
         color: #fff;
         opacity: 0.7;
+    }
+}
+.articles-list {
+    .swiper-wrapper {
+        flex-wrap: wrap;
     }
 }
 .main-contacts {
@@ -1162,5 +1193,57 @@ main {
     }
     .header-menu {
         border-bottom: 1px solid #333F4F;
+    }
+}
+.page {
+    padding: 187px 0px 70px;
+}
+.page-404 {
+    color: #fff;
+    h1 {
+        margin: 30px 0px 20px 0px;
+        font-size: 35px;
+        font-weight: bold;
+        line-height: 1;
+    }
+    h2 {
+        margin: 0px 0px 30px 0px;
+        font-size: 26px;
+        line-height: 1;
+    }
+    h3 {
+        margin: 0px 0px 20px 0px;
+        font-size: 15px;
+        line-height: 1;
+        a {
+            color: #a7acb2;
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+}
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 29px;
+    gap: 20px;
+    font-weight: 300;
+    letter-spacing: -0.1px;
+    &-item {
+        color: #fff;
+        opacity: 0.95;
+        position: relative;
+        &:after {
+            content: '/';
+            position: absolute;
+            right: -12px;
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+    a {
+        opacity: 0.6;
     }
 }

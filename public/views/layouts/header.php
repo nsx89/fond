@@ -27,7 +27,7 @@
 </head>
 <body class="<?= !empty($this->body_class) ? $this->body_class : '' ?>">
 	<div class="wrapper">
-		<div class="logo header-logo"></div>
+		<a href="/" class="logo header-logo"></a>
 		<header class="header">
 			<div class="container">
 				<div class="header-menu">

@@ -92,7 +92,7 @@ class Form
         return $html;
     }
 
-    public static function makeImage($title, $name, $object, $required)
+    public static function makeImage($title, $name, $object, $required = false)
     {
         if(empty($required)) $required = false;
 

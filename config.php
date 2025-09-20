@@ -9,12 +9,15 @@ return [
         'cms' => 'admin',
         'helpers/([a-zA-Z0-9-/]+)' => 'HelpersController/$1',
         'user/ajax' => 'userAjax',
+        'statii' => 'ArticlesController',
+        'statii/([a-zA-Z0-9-/]+)' => 'ArticlesController/$1',
         '/' => 'PageController',
         '^([a-zA-Z0-9-._/]+)$' => 'PageController/$1',
         '(.*)' => 'error',
     ],
     'adminPanel' => [
         'pages' => 'Страницы',
+        'articles' => 'Статьи',
         'users' => [
             '' => 'Пользователи',
             'users' => 'Пользователи',

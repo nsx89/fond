@@ -267,50 +267,50 @@
         </div>
     </section>
 
-    <section class="main-victory">
+    <section class="main-articles">
         <div class="container">
             <div class="h2-wrap">
                 <h2 class="h2">Приближаем победу <span>вместе</span></h2>
-                <div class="h2-link">
+                <a href="/<?= $this->pages[6]->url ?>" class="h2-link">
                     Смотреть все
-                </div>
+                </a>
             </div>
-            <div class="victory">
+            <div class="articles">
                 <div class="swiper-container swiper6">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="/public/src/images/victory/victory1.jpg" alt="">
-                            <div class="victory-box">
-                                <div class="victory-head">Важность помощи ближнему</div>
-                                <div class="victory-text dots">
+                            <div class="articles-box">
+                                <div class="articles-head">Важность помощи ближнему</div>
+                                <div class="articles-text dots">
                                     Помощь другим — это одна из основных человеческих ценностей.
                                     Она играет ключевую роль в укреплении социальных связей
                                     и создании сплоченного общества.
                                 </div>
-                                <div class="victory-date">16.08.2025</div>
+                                <div class="articles-date">16.08.2025</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="/public/src/images/victory/victory2.jpg" alt="">
-                            <div class="victory-box">
-                                <div class="victory-head">Социальная ответственность</div>
-                                <div class="victory-text dots">
+                            <div class="articles-box">
+                                <div class="articles-head">Социальная ответственность</div>
+                                <div class="articles-text dots">
                                     Помощь другим способствует развитию чувства социальной ответственности.
                                     Когда мы помогаем другим, что заботимся о благополучии нашего общества.
                                 </div>
-                                <div class="victory-date">12.08.2025</div>
+                                <div class="articles-date">12.08.2025</div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <img src="/public/src/images/victory/victory1.jpg" alt="">
-                            <div class="victory-box">
-                                <div class="victory-head">Важность помощи ближнему</div>
-                                <div class="victory-text dots">
+                            <div class="articles-box">
+                                <div class="articles-head">Важность помощи ближнему</div>
+                                <div class="articles-text dots">
                                     Помощь другим — это одна из основных человеческих ценностей.
                                     Она играет ключевую роль в укреплении социальных связей
                                     и создании сплоченного общества.
                                 </div>
-                                <div class="victory-date">11.08.2025</div>
+                                <div class="articles-date">11.08.2025</div>
                             </div>
                         </div>
                     </div>

@@ -49,4 +49,26 @@ class Seo extends Model
 
         return "<a href='/admin/seo?add&url={$url}' target='_blank'>SEO</a>";
     }
+
+    //SEO META по умолчанию
+   public static function default($view, $name) {
+
+       $name = strip_tags($name);
+
+       $seo = $view->seo;
+       if (empty($seo)) $seo = (object)[];
+
+       if (empty($seo->title) || empty($seo->keywords) || empty($seo->description)) {
+           $settings = Settings::findById(1);
+           $title = $keywords = $description = $settings->title;
+       }
+
+       if (empty($seo->title)) $seo->title = $name.' | '.$title;
+       if (empty($seo->keywords)) $seo->keywords = $name.' | '.$keywords;
+       if (empty($seo->description)) $seo->description = $name.' | '.$description;
+
+       $view->seo = $seo;
+
+       return $view;
+   }
 }
