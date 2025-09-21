@@ -33,7 +33,7 @@ class Articles extends Model
             $order = "RAND(),";
         }
 
-        $list = self::findWhere("WHERE `show` = 1 {$where} ORDER BY {$order} date DESC, rate DESC, id ASC LIMIT {$limit}");
+        $list = self::findWhere("WHERE `show` = 1 {$where} ORDER BY {$order} rate DESC, date DESC, id ASC LIMIT {$limit}");
 
         return $list;
     }

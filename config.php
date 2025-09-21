@@ -18,6 +18,8 @@ return [
     'adminPanel' => [
         'pages' => 'Страницы',
         'articles' => 'Статьи',
+        'volunteers' => 'Волонтеры',
+        'medal' => 'Медали',
         'users' => [
             '' => 'Пользователи',
             'users' => 'Пользователи',

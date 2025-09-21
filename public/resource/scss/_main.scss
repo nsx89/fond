@@ -16,6 +16,10 @@ body {
     background: url(/public/src/images/back/back2.jpg) repeat top center;
     background-size: cover;
 }
+.body-page {
+    background: url(/public/src/images/page/back.jpg) repeat top center;
+    background-size: cover;
+}
 strong, b {
     font-weight: bold;
 }
@@ -120,6 +124,7 @@ img {
     display: inline-block;
     width: 147px;
     height: 157px;
+    z-index: 150;
     background: url(/public/src/images/svg/logo.svg) no-repeat center center;
     &:active {
         transform: translateY(1px);
@@ -130,7 +135,7 @@ img {
     left: 48px;
     left: 2.5%;
     top: 40px;
-    z-index: 30;
+    z-index: 150;
 }
 .header {
     position: fixed;
@@ -171,6 +176,7 @@ img {
     &.active {
         background: url(/public/src/images/back/back2.jpg) no-repeat top center;
         height: 75px;
+        z-index: 200;
     }
 }
 .header-nav {
@@ -241,8 +247,7 @@ img {
         p {
             font-size: 18px;
             line-height: 24px;
-            color: #fff;
-            opacity: 0.7;
+            color: rgba(255, 255, 255, 0.7);
             font-weight: 300;
         }
         strong {
@@ -402,7 +407,7 @@ img {
             cursor: pointer;
             transition: all 0.15s ease-in-out;
             border-bottom: 1px solid transparent;
-            opacity: 0.7;
+            color: rgba(255, 255, 255, 0.7);
             letter-spacing: 0.1px;
             &:hover, &.active {
                 color: $hover;
@@ -684,8 +689,7 @@ img {
         font-weight: 300;
         font-size: 18px;
         line-height: 25px;
-        color: #fff;
-        opacity: 0.7;
+        color: rgba(255, 255, 255, 0.7);
         padding-right: 1%;
     }
     &-logo-wrap {
@@ -757,8 +761,7 @@ img {
     &-text {
         font-size: 18px;
         line-height: 24px;
-        color: #fff;
-        opacity: 0.7;
+        color: rgba(255, 255, 255, 0.7);
         font-weight: 300;
         max-height: 50px;
         overflow: hidden;
@@ -1046,8 +1049,7 @@ img {
     &-text {
         font-size: 18px;
         line-height: 25px;
-        color: #fff;
-        opacity: 0.7;
+        color: rgba(255, 255, 255, 0.7);
         font-weight: 300;
         /*max-height: 80px;
         overflow: hidden;*/
@@ -1059,8 +1061,7 @@ img {
         font-size: 16px;
         line-height: 25px;
         letter-spacing: -0.1px;
-        color: #fff;
-        opacity: 0.7;
+        color: rgba(255, 255, 255, 0.7);
     }
 }
 .articles-list {
@@ -1395,7 +1396,7 @@ img {
     }
 }
 .not-found {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1403,7 +1404,6 @@ img {
     min-height: 120px;
     font-weight: 300;
     font-size: 15px;
-    opacity: 0.7;
 }
 .pagination {
 	display: flex;

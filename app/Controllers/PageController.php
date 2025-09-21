@@ -9,6 +9,7 @@ use app\Models\Settings;
 use app\Models\Seo;
 use app\Models\Users;
 use app\Models\Articles;
+use app\Models\Volunteers;
 
 class PageController extends Controller {
     protected function handle(...$params) {
@@ -30,8 +31,13 @@ class PageController extends Controller {
 
             $view->edit = Users::edit("pages?edit={$page->id}", $view->edit_seo);
 
+            $breadcrumbs = [];
+            $breadcrumbs[] = array('Главная', '/');
+            $breadcrumbs[] = array($page->name);
+            $view->breadcrumbs = $breadcrumbs;
+
             switch ($page->id) {
-                //case 2: return self::shops($view); break; //магазины
+                case 7: return self::volunteers($view); break; //волонтеры
                 default: return $view->show('page.php'); break; //страницы
             }
         }
@@ -44,5 +50,18 @@ class PageController extends Controller {
         $view->articles = Articles::findWhere("WHERE `show` = 1 ORDER BY rate DESC, date DESC, id ASC LIMIT 8");
 
         return $view->show('main.php');
+    }
+
+    protected static function volunteers($view){
+
+        $count = 9;
+        $data = Volunteers::paginate("WHERE `show` = 1 ORDER BY rate DESC, id ASC", $count);
+        $view->total = $data['total'];
+        $view->paginate = $data['paginate'];
+        $view->volunteers = $data['list'];
+
+        $view->edit = Users::edit("volunteers", $view->edit_seo);
+
+        return $view->show('pages/volunteers.php');
     }
 }
