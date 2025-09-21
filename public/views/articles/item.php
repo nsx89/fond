@@ -3,7 +3,7 @@
         <? if (!empty($item->image)) : ?>
             <img src="<?= $item->image ?>" alt="<?= $item->name ?>">
         <? else: ?>
-            <img src="/publis/src/images/no-photo.jpg" alt="Нет фото">
+            <img src="/public/src/images/no-photo.jpg" alt="Нет фото">
         <? endif; ?>
         <div class="articles-box">
             <div class="articles-head"><?= $item->name ?></div>

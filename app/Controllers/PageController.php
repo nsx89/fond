@@ -12,6 +12,7 @@ use app\Models\Articles;
 use app\Models\Volunteers;
 use app\Models\Medals;
 use app\Models\Banners;
+use app\Models\Video;
 
 class PageController extends Controller {
     protected function handle(...$params) {
@@ -53,8 +54,11 @@ class PageController extends Controller {
 
         $view->banners = Banners::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 1");
 
+        $view->video = Video::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 10");
+
         $view->edit_banners = Users::edit("banners");
         $view->edit_project = Users::edit("pages?edit=3");
+        $view->edit_video = Users::edit("video");
 
         return $view->show('main.php');
     }

@@ -56,6 +56,10 @@ else: ?>
                 <?= Form::makeInput('Ссылка', 'link', $obj->link) ?>
             </fieldset>
             <fieldset class="input_block">
+                <legend>Блоки на главной</legend>
+                <?= Form::makeInput('Заголовок перед Видео', 'head', $obj->head) ?>
+            </fieldset>
+            <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>
                 <div class="columns">
                     <?= Form::makeInput('Telegram. Ссылка', 'soc1', $obj->soc1) ?>

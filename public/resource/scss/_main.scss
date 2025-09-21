@@ -491,9 +491,18 @@ img {
         overflow: hidden;
         position: relative;
         width: auto;
+        cursor: pointer;
         img {
             display: block;
             object-fit: cover;
+        }
+        &:hover {
+           .video-play {
+               opacity: 0.8;
+           }
+           img {
+               opacity: 0.95;
+           }
         }
     }
     .video-play {
@@ -508,9 +517,6 @@ img {
         cursor: pointer;
         background: url(/public/src/images/svg/play.svg) no-repeat top center;
         transition: all 0.15s ease-in-out;
-        &:hover {
-           opacity: 0.9;
-        }
     }
 }
 .pay {

@@ -54,30 +54,29 @@
                     <? endif; ?>
                 </div>
             </div>
-            <div class="videos-wrap">
-                <h2 class="h2">Благодаря вам они получили помощь</h2>
-                <div class="videos">
-                    <div class="swiper-container swiper2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="/public/src/images/video/video1.jpg" alt="">
-                                <span class="video-play js-video-modal" title="Смотреть видео" data-video=""></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="/public/src/images/video/video2.jpg" alt="">
-                                <span class="video-play js-video-modal" title="Смотреть видео" data-video=""></span>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="/public/src/images/video/video1.jpg" alt="">
-                                <span class="video-play js-video-modal" title="Смотреть видео" data-video=""></span>
+
+            <? if (!empty($this->video)) : ?>
+                <div class="videos-wrap">
+                    <h2 class="h2"><?= $this->settings->head ?></h2>
+                    <div class="videos">
+                        <?= $this->edit_video ?>
+                        <div class="swiper-container swiper2">
+                            <div class="swiper-wrapper">
+                                <? foreach ($this->video AS $item) : ?>
+                                    <div class="swiper-slide" title="Смотреть видео">
+                                        <img src="<?= !empty($item->image) ? $item->image  : '/public/src/images/no-photo.jpg' ?>" alt="<?= $item->name ?>">
+                                        <span class="video-play js-video-modal" data-video="<?= $item->video ?>"></span>
+                                    </div>
+                                <? endforeach; ?>
                             </div>
                         </div>
+                        <div class="swiper-button-prev swiper-button-prev-swiper2"></div>
+                        <div class="swiper-button-next swiper-button-next-swiper2"></div>
+                        <div class="swiper-pagination swiper-pagination-swiper2"></div>
                     </div>
-                    <div class="swiper-button-prev swiper-button-prev-swiper2"></div>
-                    <div class="swiper-button-next swiper-button-next-swiper2"></div>
-                    <div class="swiper-pagination swiper-pagination-swiper2"></div>
                 </div>
-            </div>
+            <? endif; ?>
+
         </div>
     </section>
 

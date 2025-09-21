@@ -146,7 +146,7 @@ else :
                 if (!empty($item->rate)) $rate = 'Рейтинг: '.$item->rate;
 
                 if (!empty($item->image)) $image = $item->image;
-                else $image = '/publis/src/images/no-photo.jpg';
+                else $image = '/public/src/images/no-photo.jpg';
 
                 $date = '';
                 if (!empty($item->date)) $date = date('d.m.Y', $item->date);

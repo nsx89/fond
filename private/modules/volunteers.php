@@ -119,7 +119,7 @@ else :
                 if (!empty($item->rate)) $rate = 'Рейтинг: '.$item->rate;
 
                 if (!empty($item->image)) $image = $item->image;
-                else $image = '/publis/src/images/no-photo.jpg';
+                else $image = '/public/src/images/no-photo.jpg';
                 ?>
 
                 <?= Form::makeItem($item, $item->name, [$rate], true, true, $image) ?>

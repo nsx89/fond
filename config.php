@@ -18,6 +18,7 @@ return [
     'adminPanel' => [
         'pages' => 'Страницы',
         'banners' => 'Баннеры',
+        'video' => 'Видео',
         'articles' => 'Статьи',
         'volunteers' => 'Волонтеры',
         'medals' => 'Медали',

@@ -1,22 +1,22 @@
 <?php
 
 use app\Models\Page;
-use app\Models\Banners;
+use app\Models\Video;
 use app\Models\Users;
 use app\Helpers;
 use app\FileUpload;
 use app\Form;
 
-$add = 'баннера';
+$add = 'видео';
 
 if (isset($_GET['add']) || isset($_GET['edit'])) :
 
-    $obj = new Banners();
+    $obj = new Video();
     $obj->show = 1;
 
     $id = $_GET['edit'] ?? false;
 
-    if ($id) $obj = Banners::findById($id);
+    if ($id) $obj = Video::findById($id);
     ?>
     <h1><?= $id ? "Редактирование $add" : "Добавление $add" ?></h1>
     <a href='/<?= URI ?>' class='edit_links'>Назад к списку</a>
@@ -26,9 +26,9 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
             <div class='flex top'>
                 <?= Form::makeCheckbox('show', $obj->show, 'Показывать', 1) ?>
             </div>
-            <?= Form::makeTextarea('Заголовок', 'name', $obj->name, 60) ?>
-            <?= Form::makeTextarea('Заголовок2', 'name2', $obj->name2, 60) ?>
-            <?= Form::makeImage('Баннер (1920x901px)', 'image', $obj) ?>
+            <?= Form::makeInput('Название', 'name', $obj->name, 60) ?>
+            <?= Form::makeImage('Картинка превью (585x400px)', 'image', $obj) ?>
+            <?= Form::makeFile('Видео (в формате .mp4)', 'video', $obj, '') ?>
             <?= Form::makeInput('Рейтинг', 'rate', !empty($obj->rate) ? $obj->rate : '') ?>
             <?= Form::makeSubmit($id, $obj->id, 'Сохранить','') ?>
         </form>
@@ -37,11 +37,11 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
 <?php
 elseif (isset($_POST['add']) || isset($_POST['edit'])) :
 
-    $obj = new Banners();
+    $obj = new Video();
 
     if (isset($_POST['edit'])) {
         $_SESSION['notice'] = 'Сохранено';
-        $obj = Banners::findById($_POST['edit']);
+        $obj = Video::findById($_POST['edit']);
     }
     else {
         $_SESSION['notice'] = 'Добавлено';
@@ -49,20 +49,21 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
 
     $obj->show = (int)$_POST['show'];
     $obj->name = trim($_POST['name']);
-    $obj->name2 = trim($_POST['name2']);
     $obj->rate = (int)$_POST['rate'];
 
     $obj = FileUpload::deleteImageFile($obj);
 
     $obj->save();
 
-    FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 1920, 901, '/public/src/images/banners/', 0);
+    FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 585, 400, '/public/src/images/video/', 0);
+
+    FileUpload::uploadFile('video', get_class($obj), 'video', $obj->id, '/public/src/files/video/');
 
     header("Location: {$_SERVER['REQUEST_URI']}?edit={$obj->id}");
     exit;
 elseif (isset($_GET['delete'])) :
 
-    $obj = Banners::findById($_GET['delete']);
+    $obj = Video::findById($_GET['delete']);
     unlink(ROOT.$obj->image);
 
     $obj->delete();
@@ -72,7 +73,7 @@ elseif (isset($_GET['delete'])) :
     header("Location: {$_SERVER['REDIRECT_URL']}");
     exit;
 else :
-    $title = 'Баннеры';
+    $title = 'Видео';
     $filter = true;
     include ROOT . '/private/views/layouts/head.php';
 
@@ -82,7 +83,7 @@ else :
         $where .= " AND `name` like '%{$search}%'";
     }
 
-    $data = Banners::paginate("WHERE 1=1 {$where} ORDER BY id DESC");
+    $data = Video::paginate("WHERE 1=1 {$where} ORDER BY id DESC");
     $total = $data['total'];
     $paginate = $data['paginate'];
     $list = $data['list'];
@@ -99,7 +100,7 @@ else :
                 else $image = '/public/src/images/no-photo.jpg';
                 ?>
 
-                <?= Form::makeItem($item, $item->name, [$rate], $item->id > 1, $item->id > 1, $image) ?>
+                <?= Form::makeItem($item, $item->name, [$rate], true, true, $image) ?>
 
             <?endforeach;?>
         </div>
