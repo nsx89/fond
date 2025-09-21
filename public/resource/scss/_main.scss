@@ -1409,7 +1409,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    margin: 4px 0px 0px;
+    margin: 5px 0px 0px;
     gap: 20px;
     width: 100%;
 	&-item, &-link {
@@ -1469,6 +1469,74 @@ img {
         &:after {
             transform: rotate(180deg);
             margin-left: -8px;
+        }
+    }
+}
+.volunteers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    &-item {
+        background: #1D242D;
+        margin-bottom: 30px;
+        color: #fff;
+        width: 380px;
+        width: 31.666666%;
+        border-radius: 13px;
+        transition: all 0.15s ease-in-out;
+        box-shadow: 0px 10px 15px 0px #0000004D;
+        img {
+            max-width: 100%;
+        }
+        &:hover {
+            background: #121317;
+            box-shadow: 0px 10px 15px 0px #0000004D;
+            img {
+                opacity: 0.9;
+            }
+        }
+    }
+    &-box {
+        padding: 40px 24px 23px 41px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    &-name {
+        font-family: "BebasNeue", sans-serif;
+        color: #fff;
+        font-size: 38px;
+        line-height: 38px;
+        letter-spacing: 0.2px;
+        margin-bottom: 8px;
+    }
+    &-short {
+        font-size: 18px;
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 300;
+        padding-right: 10%;
+    }
+    &-medals {
+        padding: 24px 24px 24px 41px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+    &-medal {
+        position: relative;
+        padding-left: 31px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 200;
+        color: rgba(255, 255, 255, 0.7);
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 20px;
+            height: 20px;
+            background: url(/public/src/images/svg/medal.svg) no-repeat center center;
         }
     }
 }

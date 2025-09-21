@@ -3,7 +3,7 @@
 use app\Models\Page;
 use app\Models\Volunteers;
 use app\Models\Users;
-use app\Models\Medal;
+use app\Models\Medals;
 use app\Helpers;
 use app\FileUpload;
 use app\Form;
@@ -36,7 +36,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
                 <legend>Превью</legend>
                 <?= Form::makeImage('Картинка для превью (281x259px)', 'image', $obj) ?>
                 <?= Form::makeTextarea('Краткое описание', 'short', $obj->short, 90) ?>
-                <?= Form::makeMultiple('Медали', 'medals', Medal::findWhere("ORDER BY rate DESC, name ASC"), $obj->medals) ?>
+                <?= Form::makeMultiple('Медали', 'medals', Medals::findWhere("ORDER BY rate DESC, name ASC"), $obj->medals) ?>
             </fieldset>
             <?= Form::makeInput('Рейтинг', 'rate', !empty($obj->rate) ? $obj->rate : '') ?>
             <?= Form::makeSubmit($id, $obj->id, 'Сохранить','') ?>

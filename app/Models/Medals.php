@@ -6,7 +6,7 @@ use app\Db;
 use app\Model;
 use app\Helpers;
 
-class Medal extends Model
+class Medals extends Model
 {
-    public const TABLE = 'medal';
+    public const TABLE = 'medals';
 }

@@ -1,5 +1,5 @@
 <?php
-use app\Models\Medal;
+use app\Models\Medals;
 use app\Helpers;
 use app\FileUpload;
 use app\Form;
@@ -8,12 +8,12 @@ $add = 'медали';
 
 if (isset($_GET['add']) || isset($_GET['edit'])) :
 
-    $obj = new Medal();
+    $obj = new Medals();
     $obj->show = 1;
 
     $id = $_GET['edit'] ?? false;
 
-    if ($id) $obj = Medal::findById($id);
+    if ($id) $obj = Medals::findById($id);
     ?>
     <h1><?= $id ? "Редактирование $add" : "Добавление $add" ?></h1>
     <a href='/<?= URI ?>' class='edit_links'>Назад к списку</a>
@@ -32,11 +32,11 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
 <?php
 elseif (isset($_POST['add']) || isset($_POST['edit'])) :
 
-    $obj = new Medal();
+    $obj = new Medals();
 
     if (isset($_POST['edit'])) {
         $_SESSION['notice'] = 'Сохранено';
-        $obj = Medal::findById($_POST['edit']);
+        $obj = Medals::findById($_POST['edit']);
     }
     else {
         $_SESSION['notice'] = 'Добавлено';
@@ -51,7 +51,7 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     exit;
 elseif (isset($_GET['delete'])) :
 
-    $obj = Medal::findById($_GET['delete']);
+    $obj = Medals::findById($_GET['delete']);
     $obj->delete();
 
     $_SESSION['notice'] = 'Удалено';
@@ -69,7 +69,7 @@ else :
         $where .= " AND `name` like '%{$search}%'";
     }
 
-    $data = Medal::paginate("WHERE 1=1 {$where} ORDER BY id DESC");
+    $data = Medals::paginate("WHERE 1=1 {$where} ORDER BY id DESC");
     $total = $data['total'];
     $paginate = $data['paginate'];
     $list = $data['list'];

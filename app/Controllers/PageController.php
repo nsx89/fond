@@ -10,6 +10,7 @@ use app\Models\Seo;
 use app\Models\Users;
 use app\Models\Articles;
 use app\Models\Volunteers;
+use app\Models\Medals;
 
 class PageController extends Controller {
     protected function handle(...$params) {
@@ -59,6 +60,8 @@ class PageController extends Controller {
         $view->total = $data['total'];
         $view->paginate = $data['paginate'];
         $view->volunteers = $data['list'];
+
+        $view->medals = Medals::findArray();
 
         $view->edit = Users::edit("volunteers", $view->edit_seo);
 
