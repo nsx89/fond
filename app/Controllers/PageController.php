@@ -11,6 +11,7 @@ use app\Models\Users;
 use app\Models\Articles;
 use app\Models\Volunteers;
 use app\Models\Medals;
+use app\Models\Banners;
 
 class PageController extends Controller {
     protected function handle(...$params) {
@@ -49,6 +50,11 @@ class PageController extends Controller {
     protected static function main($view){
 
         $view->articles = Articles::findWhere("WHERE `show` = 1 ORDER BY rate DESC, date DESC, id ASC LIMIT 8");
+
+        $view->banners = Banners::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 1");
+
+        $view->edit_banners = Users::edit("banners");
+        $view->edit_project = Users::edit("pages?edit=3");
 
         return $view->show('main.php');
     }

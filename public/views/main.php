@@ -1,60 +1,57 @@
 <? include_once VIEWS.'/layouts/header.php' ?>
 
 <main>
-    <section class="main">
-        <div class="container">
-            <div class="main-text">
-                Помогаем фронту<br> и заботимся<br> <span>о героях</span>
+
+    <? foreach ($this->banners AS $banner) : ?>
+        <section class="main" style="background: url(<?= $banner->image ?>) no-repeat top center; background-size: cover;">
+            <div class="container">
+                <div class="main-text">
+                    <?= $this->edit_banners ?>
+                    <?= nl2br($banner->name) ?><br> <span><?= nl2br($banner->name2) ?></span>
+                </div>
+                <? if (!empty($this->settings->link)) : ?>
+                    <div class="button-wrap">
+                        <a href="<?= $this->settings->link ?>" target="_blank" rel="nofollow" class="button">Поддержать</a>
+                        <? if (!empty($this->settings->image)) : ?>
+                            <img class="main-qr" src="<?= $this->settings->image ?>" alt=">Поддержать">
+                        <? endif; ?>
+                    </div>
+                <? endif; ?>
             </div>
-            <div class="button-wrap">
-                <button class="button">Поддержать</button>
-                <img class="main-qr" src="/public/src/images/qr.png" alt=">Поддержать">
-            </div>
-        </div>
-    </section>
+        </section>
+    <? endforeach; ?>
 
     <section class="main-projects">
         <div class="container">
             <div class="columns main-projects-columns">
                 <div class="column main-projects-eagle">
-                    <h2 class="h2 h2-quot">О проекте</h2>
+                    <?= $this->edit_project ?>
+                    <h2 class="h2 h2-quot"><?= $this->pages[3]->name ?></h2>
                     <div class="main-projects-text">
-                        <p>
-                            Фонд был основан для того, чтобы каждый из нас мог внести свою лепту
-                            в достижение Победы и спасение жизней наших защитников, которые
-                            в данный момент подвергают свои жизни и здоровье большому риску.
-                        </p>
-                        <strong>
-                            Мы являемся мостом между теми, кто хочет
-                            оказать помощь, и военнослужащими, нуждающимися в поддержке.
-                        </strong>
-                        <p>
-                            Каждая отправленная на фронт партия гуманитарной
-                            помощи, каждый переведенный рубль и каждое
-                            поддерживающее слово приближают нас к Победе.
-                        </p>
-                        <div class="button-wrap">
-                            <button class="button">Хочу поддержать</button>
-                        </div>
+                        <?= $this->pages[3]->short ?>
+                        <? if (!empty($this->settings->link)) : ?>
+                            <div class="button-wrap">
+                                <a href="<?= $this->settings->link ?>" target="_blank" rel="nofollow" class="button">Хочу поддержать</a>
+                            </div>
+                        <? endif; ?>
                     </div>
                 </div>
                 <div class="column projects">
-                    <div class="swiper-container swiper1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="/public/src/images/projects/project1.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="/public/src/images/projects/project1.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="/public/src/images/projects/project1.jpg" alt="">
+                    <? $gallery = app\Models\Gallery::findGallery('page', $this->pages[3]->id, 10); ?>
+                    <? if (!empty($gallery)) : ?>
+                        <div class="swiper-container swiper1">
+                            <div class="swiper-wrapper">
+                                <? foreach ($gallery AS $photo) : ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?= $photo->image_small ?>" alt="<?= $this->pages[3]->name ?><?= $photo->id ?>">
+                                    </div>
+                                <? endforeach; ?>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-button-prev swiper-button-prev-swiper1"></div>
-                    <div class="swiper-button-next swiper-button-next-swiper1"></div>
-                    <div class="swiper-pagination swiper-pagination-swiper1"></div>
+                        <div class="swiper-button-prev swiper-button-prev-swiper1"></div>
+                        <div class="swiper-button-next swiper-button-next-swiper1"></div>
+                        <div class="swiper-pagination swiper-pagination-swiper1"></div>
+                    <? endif; ?>
                 </div>
             </div>
             <div class="videos-wrap">
@@ -280,7 +277,7 @@
                     <div class="swiper-container swiper6">
                         <div class="swiper-wrapper">
                             <? foreach ($this->articles AS $item) : ?>
-                            
+
                                 <?= $this->include('articles/item', $item, $this) ?>
 
                             <? endforeach; ?>

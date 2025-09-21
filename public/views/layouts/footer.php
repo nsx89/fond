@@ -1,6 +1,6 @@
     <footer class="footer">
         <div class="container">
-            <a href="/" class="logo"></a>
+            <a href="/" class="logo" style="background: url(<?= $this->settings->logo ?>) no-repeat center center;"></a>
             <div class="footer-center">
                 <div class="footer-menu">
                     <?

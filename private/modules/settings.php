@@ -22,8 +22,11 @@ if (isset($_POST['edit'])) :
          $obj->$name = trim($value);
     }
 
+    $obj = FileUpload::deleteImageFile($obj);
+
     $obj->save();
 
+    FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 108, 108, '/public/src/images/settings/', 0);
     FileUpload::uploadFile('logo', get_class($obj), 'logo', $obj->id, '/public/src/files/settings/');
 
     $_SESSION['notice'] = 'Сохранено';
@@ -42,6 +45,15 @@ else: ?>
                 <?= Form::makeInput('Email для отображения на сайте', 'email', $obj->email) ?>
                 <?= Form::makeInput('Email для сообщений с сайта', 'email_send', $obj->email_send) ?>
                 <?= Form::makeInput('Телефон', 'phone', $obj->phone) ?>
+            </fieldset>
+            <fieldset class="input_block">
+                <legend>Логотип</legend>
+                <?= Form::makeFile('Логотип', 'logo', $obj, '') ?>
+            </fieldset>
+            <fieldset class="input_block">
+                <legend>Оплата</legend>
+                <?= Form::makeImage('Картинка QR кода (108x108px)', 'image', $obj) ?>
+                <?= Form::makeInput('Ссылка', 'link', $obj->link) ?>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>

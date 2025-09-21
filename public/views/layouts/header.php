@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<title><?= $this->title ?></title>
@@ -27,7 +27,7 @@
 </head>
 <body class="<?= !empty($this->body_class) ? $this->body_class : '' ?>">
 	<div class="wrapper">
-		<a href="/" class="logo header-logo"></a>
+		<a href="/" class="logo header-logo" style="background: url(<?= $this->settings->logo ?>) no-repeat center center;"></a>
 		<header class="header">
 			<div class="container">
 				<div class="header-menu">

@@ -35,7 +35,10 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
             <?= Form::makeInput('Ссылка (автоматически, если пусто)', 'url', $obj->url) ?>
             <? /* Form::makeSelect('Родительская страница', 'parent', Page::findWhere("WHERE `parent` = 0 AND `id` <> ".intval($id)." ORDER BY name ASC"), $obj->parent, true, '' , '') */ ?>
             <? switch ($obj->id) {
-                case 1: ?>
+                case 3: ?>
+                    <?= Form::makeTextbox('Краткое описание', 'short', $obj->short) ?>
+                    <?= Form::makeGallery('Галерея фото (600x542px)', 'gallery', Gallery::findGallery('page', $obj->id)) ?>
+                    <?= Form::makeTextbox('Текст', 'text', $obj->text) ?>
                     <? break;
                 default: ?>
                     <?= Form::makeTextbox('Текст', 'text', $obj->text) ?>
@@ -69,6 +72,8 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     $obj->rate_footer = (int)$_POST['rate_footer'];
     $obj->text = trim($_POST['text']);
 
+    $obj->short = trim($_POST['short']);
+
     $url = trim($_POST['url']) ?: Helpers::str2url($obj->name);
     if(!empty($url)) {
         $page = Page::findWhere("WHERE url='{$url}' AND id <> '{$obj->id}' LIMIT 1");
@@ -82,6 +87,13 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     $obj = FileUpload::deleteImageFile($obj);
 
     $obj->save();
+
+    FileUpload::deleteGallery();
+    switch ($obj->id) {
+        case '3':
+            FileUpload::uploadGallery('gallery', 'page', $obj->id, 600, 542, '/public/src/images/gallery/page/', 600, 542, 0);
+            break;
+    }
 
     //FileUpload::uploadImage('image4', get_class($obj), 'image4', $obj->id, 256, 250, '/public/src/images/page/', 1);
 
