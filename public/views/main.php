@@ -63,9 +63,9 @@
                         <div class="swiper-container swiper2">
                             <div class="swiper-wrapper">
                                 <? foreach ($this->video AS $item) : ?>
-                                    <div class="swiper-slide" title="Смотреть видео">
+                                    <div class="swiper-slide js-video-modal" title="Смотреть видео" data-video="<?= $item->video ?>">
                                         <img src="<?= !empty($item->image) ? $item->image  : '/public/src/images/no-photo.jpg' ?>" alt="<?= $item->name ?>">
-                                        <span class="video-play js-video-modal" data-video="<?= $item->video ?>"></span>
+                                        <span class="video-play"></span>
                                     </div>
                                 <? endforeach; ?>
                             </div>

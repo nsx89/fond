@@ -97,6 +97,7 @@ function modal_close(){
     $('#modal-wrap').fadeOut(300);
     $('#modal-mod').removeClass('anime-mod-show');
     $('body').css('overflow', 'auto');
+    $('#modal-modbox').html('');
 }
 $('body').on('click', '#modal-close', function(){
     modal_close();
@@ -109,6 +110,10 @@ $(window).resize(function(){
 
 /* --- Video modal --- */
 
-//<video preload="" loop muted playsinline autoplay><source src="/public/files/video/1604496878.mp4" type="video/mp4">
+$('body').on('click', '.js-video-modal', function(){
+	var video = $(this).attr('data-video') || '';
+    var html = '<video class="modal-video" preload="" loop muted playsinline controls autoplay><source src="'+video+'" type="video/mp4">';
+    modal(html);
+});
 
 /* --- // --- */
