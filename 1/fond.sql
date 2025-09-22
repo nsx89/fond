@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 22 2025 г., 02:38
+-- Время создания: Сен 23 2025 г., 02:54
 -- Версия сервера: 5.7.33
 -- Версия PHP: 8.1.1
 
@@ -80,6 +80,32 @@ CREATE TABLE `banners` (
 
 INSERT INTO `banners` (`id`, `name`, `name2`, `show`, `rate`, `image`) VALUES
 (1, 'Помогаем фронту\r\nи заботимся', 'о героях', 1, 0, '/public/src/images/banners/68d05ef1e8f94.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `documents`
+--
+
+CREATE TABLE `documents` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `short` varchar(500) DEFAULT NULL,
+  `show` int(1) DEFAULT NULL,
+  `rate` int(11) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
+  `image_big` varchar(100) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `documents`
+--
+
+INSERT INTO `documents` (`id`, `name`, `short`, `show`, `rate`, `image`, `image_big`) VALUES
+(1, 'Документ о регистрации фонда', 'Смотреть', 1, 0, '/public/src/images/documents/68d1df7a68340.jpg', '/public/src/images/documents/68d1df7a68340_big.jpg'),
+(2, 'Благодарственное письмо волонтерам фонда агодарственное письмо волонтерам фонда', 'От СГБУ «Центр содействия семейному воспитанию №15» >От СГБУ «Центр содействия семейному воспитанию №15»', 1, 0, '/public/src/images/documents/68d1dfcd6f668.jpg', '/public/src/images/documents/68d1dfcd6f668_big.jpg'),
+(3, 'Благодарственное письмо волонтерам фонда', 'От ЛОГБУ «Волосовский ПНИ»', 1, 0, '/public/src/images/documents/68d1dfe2d1395.jpg', '/public/src/images/documents/68d1dfe2d1395_big.jpg'),
+(4, 'Документ о регистрации фонда', 'Смотреть', 1, 0, '/public/src/images/documents/68d1dff44a28a.jpg', '/public/src/images/documents/68d1dff44a28a_big.jpg');
 
 -- --------------------------------------------------------
 
@@ -243,6 +269,7 @@ CREATE TABLE `settings` (
   `phone2` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `logo` varchar(255) DEFAULT NULL,
+  `logo2` varchar(100) DEFAULT NULL,
   `soc1` varchar(255) DEFAULT NULL,
   `soc2` varchar(255) DEFAULT NULL,
   `soc_name1` varchar(255) DEFAULT NULL,
@@ -250,16 +277,23 @@ CREATE TABLE `settings` (
   `copy` varchar(255) DEFAULT NULL,
   `copy2` varchar(255) DEFAULT NULL,
   `image` varchar(100) DEFAULT NULL,
+  `image2` varchar(100) DEFAULT NULL,
   `link` varchar(500) DEFAULT NULL,
-  `head` varchar(255) DEFAULT NULL
+  `link2` varchar(500) DEFAULT NULL,
+  `head` varchar(255) DEFAULT NULL,
+  `head2` varchar(255) DEFAULT NULL,
+  `head3` varchar(255) DEFAULT NULL,
+  `head4` varchar(255) DEFAULT NULL,
+  `head5` varchar(255) DEFAULT NULL,
+  `short` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `settings`
 --
 
-INSERT INTO `settings` (`id`, `title`, `email`, `email_send`, `phone`, `phone2`, `address`, `logo`, `soc1`, `soc2`, `soc_name1`, `soc_name2`, `copy`, `copy2`, `image`, `link`, `head`) VALUES
-(1, 'Фонд поддержки ветеранов боевых действий', 'veec@bk.ru', 'veec@bk.ru', '+7 (911) 136 80 05', NULL, NULL, '/public/src/files/settings/68d06b87171b1.svg', 'https://t.me/volonterspb777', 'https://vk.com/club227952307', '@volonterspb777', 'Фонд «Северный Легион»', 'ООО Фонд поддержки ветеранов боевых действий,', 'Все права защищены.', '/public/src/images/settings/68d05d3524df6.png', '/', 'Благодаря вам они получили помощь');
+INSERT INTO `settings` (`id`, `title`, `email`, `email_send`, `phone`, `phone2`, `address`, `logo`, `logo2`, `soc1`, `soc2`, `soc_name1`, `soc_name2`, `copy`, `copy2`, `image`, `image2`, `link`, `link2`, `head`, `head2`, `head3`, `head4`, `head5`, `short`) VALUES
+(1, 'Фонд поддержки ветеранов боевых действий', 'veec@bk.ru', 'veec@bk.ru', '+7 (911) 136 80 05', NULL, NULL, '/public/src/files/settings/68d06b87171b1.svg', '/public/src/files/settings/68d1d88ce53f8.svg', 'https://t.me/volonterspb777', 'https://vk.com/club227952307', '@volonterspb777', 'Фонд «Северный Легион»', 'ООО Фонд поддержки ветеранов боевых действий,', 'Все права защищены.', '/public/src/images/settings/68d05d3524df6.png', '/public/src/images/settings/68d1bf57e302c.jpg', '/?pay=1', '/?requiresites=1', 'Благодаря вам они получили помощь', 'Как внести вклад', 'в общее дело', 'Помогаем как делом', 'так и словом', 'Официально ведем благотворительную деятельность и имеем все необходимые документы, чтобы ежедневно быть рядом с теми, кто защищает страну и рискует жизнями ради ее безопасности');
 
 -- --------------------------------------------------------
 
@@ -285,7 +319,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `hash`, `hash_forgot`, `class`, `date`, `date_visit`, `name`, `phone`) VALUES
-(1, 'test@test.ru', '$2y$10$XtyDvJE9Hj35l9r2uSDhWOQVg9Ad5HVNa27gTrizl2KSwBM/EiKlq', '1a2d7230e9de1a3de34464cc1bcf12d7', NULL, 1, 1748093726, 1758494358, 'Тест Тестов', '+7 (111) 111-11-39');
+(1, 'test@test.ru', '$2y$10$XtyDvJE9Hj35l9r2uSDhWOQVg9Ad5HVNa27gTrizl2KSwBM/EiKlq', '1a2d7230e9de1a3de34464cc1bcf12d7', NULL, 1, 1748093726, 1758585010, 'Тест Тестов', '+7 (111) 111-11-39');
 
 -- --------------------------------------------------------
 
@@ -401,6 +435,12 @@ ALTER TABLE `banners`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `documents`
+--
+ALTER TABLE `documents`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `forms`
 --
 ALTER TABLE `forms`
@@ -499,6 +539,12 @@ ALTER TABLE `articles`
 --
 ALTER TABLE `banners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `documents`
+--
+ALTER TABLE `documents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `forms`
