@@ -1,0 +1,74 @@
+#modal-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 9999999999;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+#modal-mod {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9995;
+    background: #fff;
+    border-radius: 13px;
+}
+#modal-black {
+    width: 100%;
+    height: 100%;
+}
+#modal-close {
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    z-index: 10;
+    -webkit-transition: all 0.6s
+    ease-out;
+    transition: all 0.6s
+    ease-out;
+    background: url(/public/src/images/close.svg) no-repeat top center;
+    background-size: cover;
+}
+#modal-close:hover {
+    opacity: 0.6;
+}
+#modal-modbox {
+    padding: 20px 20px 20px 20px;
+    color: #223846;
+    text-align: center;
+    line-height: 1.7em;
+    font-size: 16px;
+    min-width: 200px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anime-mod {
+    opacity: 0;
+    -webkit-transform: translateX(0px) translateY(20px) translateZ(0px);
+    -moz-transform: translateX(0px) translateY(20px) translateZ(0px);
+    -ms-transform: translateX(0px) translateY(20px) translateZ(0px);
+    -o-transform: translateX(0px) translateY(20px) translateZ(0px);
+    transform: translateX(0px) translateY(20px) translateZ(0px);
+    -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+    -moz-transition: opacity 300ms, transform 300ms;
+    -ms-transition: opacity 300ms, transform 300ms;
+    -o-transition: opacity 300ms, transform 300ms;
+    transition: opacity 300ms, transform 300ms;
+}
+.anime-mod-show {
+    opacity: 1;
+    -webkit-transform: translateX(0px) translateY(0px) translateZ(0px);
+    -moz-transform: translateX(0px) translateY(0px) translateZ(0px);
+    -ms-transform: translateX(0px) translateY(0px) translateZ(0px);
+    -o-transform: translateX(0px) translateY(0px) translateZ(0px);
+    transform: translateX(0px) translateY(0px) translateZ(0px);
+}

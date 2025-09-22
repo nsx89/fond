@@ -40,6 +40,16 @@
     </footer>
 </div>
 
+<div id="modal-wrap">
+    <div id="modal-black"></div>
+    <div id="modal-mod" class="anime-mod">
+        <div id="modal-close" title="Закрыть"></div>
+        <div id="modal-modbox">
+
+        </div>
+    </div>
+</div>
+
 <!-- JS -->
 <script src="/public/src/js/lib/jquery.js"></script>
 <script src="/public/src/js/lib/swiper.js"></script>
