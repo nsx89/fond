@@ -127,7 +127,7 @@ $('body').on('click', '.pay-box-item', function(){
 $('body').on('click', '.js-documents-open', function(){
 	var src = $(this).attr('data-src');
     if (src != '') {
-        var html = '<img class="documents-img" src="'+src+'" />';
+        var html = '<img class="modal-documents-img" src="'+src+'" />';
         modal(html);
     }
 });
