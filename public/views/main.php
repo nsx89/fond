@@ -81,10 +81,10 @@
     </section>
 
     <section class="pay">
-        <div class="pay-left"></div>
+        <div class="pay-left" style="<?= !empty($this->settings->image2) ? "background: url(".$this->settings->image2.") no-repeat center center; background-size: cover;" : '' ?>"></div>
         <div class="pay-right">
             <div class="pay-form">
-                <h2 class="h2">Как внести вклад <span>в общее дело</span></h2>
+                <h2 class="h2"><?= $this->settings->head2 ?> <span><?= $this->settings->head3 ?></span></h2>
                 <div class="pay-box">
                     <div class="pay-box-items">
                         <div class="pay-box-item" data-value="100">100<i>₽</i></div>
@@ -98,69 +98,56 @@
                             <input type="text" class="input js-input-number">
                         </div>
                     </div>
-                    <button class="button">Отправить помощь</button>
+                    <a href="<?= $this->settings->link ?>" target="_blank" rel="nofollow" class="button">Отправить помощь</a>
                 </div>
                 <div class="pay-box pay-box-link">
                     <div class="pay-box-head">Оплата по <span>qr</span></div>
                     <img class="pay-box-qr" src="/public/src/images/qr.png" alt=">Оплата по qr">
                 </div>
-                <div class="pay-box pay-box-link">
+                <a href="<?= $this->settings->link2 ?>" target="_blank" rel="nofollow" class="pay-box pay-box-link pay-box-link-href">
                     <div class="pay-box-head">Оплата <span>по реквизитам</span></div>
                     <img class="pay-box-arrow" src="/public/src/images/svg/arrow-left.svg" alt=">Оплата по qr">
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <section class="main-back">
         <div class="container">
-
+            <?= $this->edit_settings ?>
             <div class="columns">
                 <div class="column">
-                    <h2 class="h2 h2-back">Помогаем как делом <br><span>так и словом</span></h2>
+                    <h2 class="h2 h2-back"><?= $this->settings->head4 ?> <br><span><?= $this->settings->head5 ?></span></h2>
                     <div class="main-back-text">
-                        Официально ведем благотворительную деятельность и имеем все необходимые документы,
-                        чтобы ежедневно быть рядом с теми, кто защищает страну и рискует жизнями ради ее безопасности
+                        <?= nl2br($this->settings->short) ?>
                     </div>
                 </div>
                 <div class="column main-back-logo-wrap">
-                    <div class="main-back-logo"></div>
+                    <div class="main-back-logo" style="<?= !empty($this->settings->logo2) ? "background: url(".$this->settings->logo2.") no-repeat center center; background-size: contain;" : '' ?>"></div>
                 </div>
             </div>
 
-            <div class="documents">
-                <div class="swiper-container swiper3">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="documents-head dots">Документ о регистрации фонда</div>
-                            <div class="documents-text dots">Смотреть</div>
-                            <img class="documents-img" src="/public/src/images/documents/1.jpg" alt="">
-                            <div class="documents-arrow"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="documents-head dots">Благодарственное письмо волонтерам фонда агодарственное письмо волонтерам фонда</div>
-                            <div class="documents-text dots">От СГБУ «Центр содействия семейному воспитанию №15» >От СГБУ «Центр содействия семейному воспитанию №15»</div>
-                            <img class="documents-img" src="/public/src/images/documents/2.jpg" alt="">
-                            <div class="documents-arrow"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="documents-head dots">Благодарственное письмо волонтерам фонда</div>
-                            <div class="documents-text dots">От ЛОГБУ «Волосовский ПНИ»</div>
-                            <img class="documents-img" src="/public/src/images/documents/3.jpg" alt="">
-                            <div class="documents-arrow"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="documents-head dots">Документ о регистрации фонда</div>
-                            <div class="documents-text dots">Смотреть</div>
-                            <img class="documents-img" src="/public/src/images/documents/1.jpg" alt="">
-                            <div class="documents-arrow"></div>
+            <? if (!empty($this->documents)) : ?>
+                <div class="documents">
+                    <div class="swiper-container swiper3">
+                        <div class="swiper-wrapper">
+                            <? foreach ($this->documents AS $item) : ?>
+                                <div class="swiper-slide js-documents-open" data-src="<?= $item->image_big ?>">
+                                    <div class="documents-head dots"><?= $item->name ?></div>
+                                    <div class="documents-text dots"><?= $item->short ?></div>
+                                    <? if (!empty($item->image)) : ?>
+                                        <img class="documents-img" src="<?= $item->image ?>" alt="<?= $item->name ?>">
+                                    <? endif; ?>
+                                    <div class="documents-arrow"></div>
+                                </div>
+                            <? endforeach; ?>
                         </div>
                     </div>
+                    <div class="swiper-button-prev swiper-button-prev-swiper3"></div>
+                    <div class="swiper-button-next swiper-button-next-swiper3"></div>
+                    <div class="swiper-pagination swiper-pagination-swiper3"></div>
                 </div>
-                <div class="swiper-button-prev swiper-button-prev-swiper3"></div>
-                <div class="swiper-button-next swiper-button-next-swiper3"></div>
-                <div class="swiper-pagination swiper-pagination-swiper3"></div>
-            </div>
+            <? endif; ?>
 
             <div class="medication-wrap">
                 <h2 class="h2">на благо героев <span>и будущего страны</span></h2>

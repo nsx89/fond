@@ -94,26 +94,42 @@ function modal(html = ''){
     }, 100);
 }
 function modal_close(){
-    $('#modal-wrap').fadeOut(300);
+    $('#modal-wrap').fadeOut(300, function(){
+        $('#modal-modbox').html('');
+    });
     $('#modal-mod').removeClass('anime-mod-show');
     $('body').css('overflow', 'auto');
-    $('#modal-modbox').html('');
 }
-$('body').on('click', '#modal-close', function(){
+$('body').on('click', '#modal-close, #modal-black', function(){
     modal_close();
 });
 $(window).resize(function(){
     modal_auto();
 });
 
-/* --- // --- */
-
 /* --- Video modal --- */
 
 $('body').on('click', '.js-video-modal', function(){
 	var video = $(this).attr('data-video') || '';
-    var html = '<video class="modal-video" preload="" loop muted playsinline controls autoplay><source src="'+video+'" type="video/mp4">';
+    var html = '<video class="modal-video" preload="" playsinline controls autoplay><source src="'+video+'" type="video/mp4">';
     modal(html);
+});
+
+/* --- Pay box --- */
+
+$('body').on('click', '.pay-box-item', function(){
+	$('.pay-box-item').removeClass('active');
+	$(this).addClass('active');
+});
+
+/* --- Documents --- */
+
+$('body').on('click', '.js-documents-open', function(){
+	var src = $(this).attr('data-src');
+    if (src != '') {
+        var html = '<img class="documents-img" src="'+src+'" />';
+        modal(html);
+    }
 });
 
 /* --- // --- */

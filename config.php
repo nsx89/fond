@@ -17,11 +17,15 @@ return [
     ],
     'adminPanel' => [
         'pages' => 'Страницы',
-        'banners' => 'Баннеры',
-        'video' => 'Видео',
+        'modules' => [
+            '' => 'Модули',
+            'banners' => 'Баннеры',
+            'video' => 'Видео',
+            'volunteers' => 'Волонтеры',
+            'documents' => 'Документы',
+            'medals' => 'Медали',
+        ],
         'articles' => 'Статьи',
-        'volunteers' => 'Волонтеры',
-        'medals' => 'Медали',
         'users' => [
             '' => 'Пользователи',
             'users' => 'Пользователи',

@@ -104,6 +104,7 @@ img {
     }
 }
 .button {
+    display: inline-block;
     background: #CC1011;
     background: linear-gradient(124.25deg, #FF3434 20.06%, #C20909 78.98%);
     color: #fff;
@@ -582,7 +583,7 @@ img {
             width: 23.15%;
             transition: all 0.15s ease-in-out;
             cursor: pointer;
-            &:hover {
+            &:hover, &.active {
                 background: #397DC7;
             }
             i {
@@ -624,6 +625,12 @@ img {
             align-items: center;
             padding: 17px 25px 19px 25px;
             min-height: 110px;
+            transition: all 0.15s ease-in-out;
+        }
+        &-link-href {
+            &:hover, &.active {
+                background: #397DC7;
+            }
         }
         &-qr {
             width: 74px;
@@ -706,7 +713,7 @@ img {
     &-logo {
         width: 262px;
         height: 262px;
-        background: url(/public/src/images/svg/logo-big.svg) no-repeat center center;
+        /*background: url(/public/src/images/svg/logo-big.svg) no-repeat center center;*/
     }
 }
 .documents {
@@ -1547,6 +1554,6 @@ img {
     }
 }
 .modal-video {
-     width: 600px;
-     border-radius: 13px;
+     width: 90vw;
+     max-width: 1120px;
 }

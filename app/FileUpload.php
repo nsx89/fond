@@ -34,7 +34,7 @@ class FileUpload
         }
     }
 
-    public static function uploadImage($inputName, $class, $field, $id, $width, $height, $path, $f = 1, $flag = false)
+    public static function uploadImage($inputName, $class, $field, $id, $width, $height, $path, $f, $width2 = null, $height2 = null, $field2 = null)
     {
         if(empty($path)) $path = '/public/src/upload/';
 
@@ -43,16 +43,9 @@ class FileUpload
 
         if(empty($f)) $f = 0;
 
-        if ($flag) {
-            $filePath = $_FILES[$inputName]['tmp_name'][$id];
-            $fileName = $_FILES[$inputName]['name'][$id];
-            $errorCode = $_FILES[$inputName]['error'][$id];
-        }
-        else {
-            $filePath = $_FILES[$inputName]['tmp_name'];
-            $fileName = $_FILES[$inputName]['name'];
-            $errorCode = $_FILES[$inputName]['error'];
-        }
+        $filePath = $_FILES[$inputName]['tmp_name'];
+        $fileName = $_FILES[$inputName]['name'];
+        $errorCode = $_FILES[$inputName]['error'];
 
         // Проверим на ошибки
         if ($errorCode !== UPLOAD_ERR_OK || !is_uploaded_file($filePath)) {
@@ -88,6 +81,7 @@ class FileUpload
 
         // Сгенерируем новое имя файла на основе MD5-хеша
         $name = uniqid();
+        $name2 = $name.'_big';
 
         $serverPath = ROOT . $path . $name . $format;
 
@@ -103,6 +97,62 @@ class FileUpload
 
         $width = $imageinfo[0];
         $height = $imageinfo[1];
+
+        /* --- Вторая мелкая фотка --- */
+        $file2 = null;
+        if (!empty($width2) && !empty($height2)) {
+            $serverPathSmall = ROOT . $path . $name2 . $format;
+
+            copy($serverPath, $serverPathSmall);
+
+            $nwidth2 = $width2;
+            $nheight2 = $height2;
+
+            $nwidth = $nheight = 0;
+
+            if ($f == 1) {
+                if($height >= $nheight2) {
+                    $nheight = $nheight2;
+                    $nwidth = ($nheight/$height)*$width;
+
+                    if ($nwidth > $nwidth2)
+                    {
+                        $nwidth = $nwidth2;
+                        $nheight = ($nwidth/$width)*$height;
+                    }
+                }
+                else if ($width >= $nwidth2) {
+                    $nwidth = $nwidth2;
+                    $nheight = ($nwidth/$width)*$height;
+
+                    if($nheight > $nheight2)
+                    {
+                        $nheight = $nheight2;
+                        $nwidth = ($nheight/$height)*$width;
+                    }
+                }
+                if ($nwidth <> 0) exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 90 ".$serverPathSmall." ".$serverPathSmall."");
+            }
+            else {
+                $nheight = $nheight2;
+                $nwidth = ($nheight/$height)*$width;
+
+                if ($nwidth < $nwidth2)
+                {
+                    $nwidth = $nwidth2;
+                    $nheight = ($nwidth/$width)*$height;
+                }
+               else if ($nheight < $nheight2)
+               {
+                   $nheight = $nheight2;
+                   $nwidth = ($nheight/$height)*$width;
+               }
+
+                exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 90 ".$serverPathSmall." ".$serverPathSmall."");
+                exec("convert -gravity Center -crop ".$nwidth2."x".$nheight2."+0+0 +repage -quality 90 ".$serverPathSmall." ".$serverPathSmall."");
+            }
+        }
+        /* --- // --- */
 
         if (!empty($width) && !empty($height))
         {
@@ -161,7 +211,7 @@ class FileUpload
             if($nwidth <> 0) exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 100 ".$serverPath." ".$serverPath."");
         }
 
-        self::addToDb($id, $class, $field, $path, $name, $format);
+        self::addToDb($id, $class, $field, $path, $name, $format, $field2, $name2);
     }
 
     public static function uploadFile($inputName, $class, $field, $id, $path, $f_name = '')
@@ -217,7 +267,7 @@ class FileUpload
         self::addToDb($id, $class, $field, $path, $name, $format);
     }
 
-    protected static function addToDb($id, $class, $field, $path, $file,$ext)
+    protected static function addToDb($id, $class, $field, $path, $file,$ext, $field2 = null, $file2 = null)
     {
         $object = $class::findById($id);
 
@@ -225,6 +275,11 @@ class FileUpload
             unlink(ROOT.$object->$field);
         }
         $object->$field = $path.$file.$ext;
+
+        if (!empty($field2) && !empty($file2)) {
+            if (!empty($object->$field2)) unlink(ROOT.$object->$field2);
+            $object->$field2 = $path.$file2.$ext;
+        }
 
         $object->save();
     }
@@ -348,7 +403,7 @@ class FileUpload
                                 $nwidth = ($nheight/$height)*$width;
                             }
                         }
-                        if ($nwidth < 0) exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 100 ".$serverPathBig." ".$serverPathBig."");
+                        if ($nwidth <> 0) exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 100 ".$serverPathBig." ".$serverPathBig."");
                     }
                     else {
                         $nheight = $nheight1;
@@ -395,7 +450,7 @@ class FileUpload
                                 $nwidth = ($nheight/$height)*$width;
                             }
                         }
-                        if ($nwidth < 0) exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 100 ".$serverPathSmall." ".$serverPathSmall."");
+                        if ($nwidth <> 0) exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 100 ".$serverPathSmall." ".$serverPathSmall."");
                     }
                     else {
                         $nheight = $nheight2;
@@ -415,6 +470,9 @@ class FileUpload
                         exec("convert -resize ".round($nwidth)."x".round($nheight)." -quality 100 ".$serverPathSmall." ".$serverPathSmall."");
                         exec("convert -gravity Center -crop ".$nwidth2."x".$nheight2."+0+0 +repage -quality 100 ".$serverPathSmall." ".$serverPathSmall."");
                     }
+                }
+                else {
+                    $serverPathSmall = $serverPathBig;
                 }
 
                 self::addToGallery($id, $type, $path, $name.$format, $small, $big);
