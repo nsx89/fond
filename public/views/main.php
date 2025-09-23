@@ -129,14 +129,15 @@
 
             <? if (!empty($this->documents)) : ?>
                 <div class="documents">
+                    <?= $this->edit_documents ?>
                     <div class="swiper-container swiper3">
                         <div class="swiper-wrapper">
                             <? foreach ($this->documents AS $item) : ?>
-                                <div class="swiper-slide js-documents-open" data-src="<?= $item->image_big ?>">
+                                <div class="swiper-slide js-documents-open" data-src="<?= $item->image ?>">
                                     <div class="documents-head dots"><?= $item->name ?></div>
                                     <div class="documents-text dots"><?= $item->short ?></div>
-                                    <? if (!empty($item->image)) : ?>
-                                        <img class="documents-img" src="<?= $item->image ?>" alt="<?= $item->name ?>">
+                                    <? if (!empty($item->image_small)) : ?>
+                                        <img class="documents-img" src="<?= $item->image_small ?>" alt="<?= $item->name ?>">
                                     <? endif; ?>
                                     <div class="documents-arrow"></div>
                                 </div>
@@ -150,8 +151,9 @@
             <? endif; ?>
 
             <div class="medication-wrap">
-                <h2 class="h2">на благо героев <span>и будущего страны</span></h2>
+                <h2 class="h2"><?= $this->settings->head6 ?> <span><?= $this->settings->head7 ?></span></h2>
                 <div class="medication">
+                    <?= $this->edit_medication ?>
                     <div class="swiper-container swiper4">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">

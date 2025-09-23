@@ -1,22 +1,22 @@
 <?php
 
 use app\Models\Page;
-use app\Models\Documents;
+use app\Models\Medication;
 use app\Models\Users;
 use app\Helpers;
 use app\FileUpload;
 use app\Form;
 
-$add = 'документы';
+$add = 'блока';
 
 if (isset($_GET['add']) || isset($_GET['edit'])) :
 
-    $obj = new Documents();
+    $obj = new Medication();
     $obj->show = 1;
 
     $id = $_GET['edit'] ?? false;
 
-    if ($id) $obj = Documents::findById($id);
+    if ($id) $obj = Medication::findById($id);
     ?>
     <h1><?= $id ? "Редактирование $add" : "Добавление $add" ?></h1>
     <a href='/<?= URI ?>' class='edit_links'>Назад к списку</a>
@@ -26,9 +26,19 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
             <div class='flex top'>
                 <?= Form::makeCheckbox('show', $obj->show, 'Показывать', 1) ?>
             </div>
-            <?= Form::makeInput('Название', 'name', $obj->name, 60) ?>
-            <?= Form::makeTextarea('Краткое описание', 'short', $obj->short) ?>
-            <?= Form::makeImage('Картинка документа', 'image', $obj) ?>
+            <?= Form::makeTextarea('Название', 'name', $obj->name, 60) ?>
+            <?= Form::makeImage('Картинка превью', 'image', $obj) ?>
+            <fieldset>
+                <legend>Теги (необязательно)</legend>
+                <? for($i = 1; $i <= 5; $i++) : ?>
+                    <?= Form::makeInput('Тег'.$i, 'item'.$i, $obj->{'item'.$i}) ?>
+                <? endfor; ?>
+            </fieldset>
+            <fieldset>
+                <legend>Теги (необязательно)</legend>
+                <?= Form::makeInput('Ссылка', 'link', $obj->link) ?>
+                <?= Form::makeInput('Текст ссылки', 'link_name', !empty($obj->link_name) ? $obj->link_name : 'Отправить помощь') ?>
+            </fieldset>
             <?= Form::makeInput('Рейтинг', 'rate', !empty($obj->rate) ? $obj->rate : '') ?>
             <?= Form::makeSubmit($id, $obj->id, 'Сохранить','') ?>
         </form>
@@ -37,11 +47,11 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
 <?php
 elseif (isset($_POST['add']) || isset($_POST['edit'])) :
 
-    $obj = new Documents();
+    $obj = new Medication();
 
     if (isset($_POST['edit'])) {
         $_SESSION['notice'] = 'Сохранено';
-        $obj = Documents::findById($_POST['edit']);
+        $obj = Medication::findById($_POST['edit']);
     }
     else {
         $_SESSION['notice'] = 'Добавлено';
@@ -49,22 +59,27 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
 
     $obj->show = (int)$_POST['show'];
     $obj->name = trim($_POST['name']);
-    $obj->short = trim($_POST['short']);
     $obj->rate = (int)$_POST['rate'];
+
+    for($i = 1; $i <= 5; $i++) {
+        $obj->{'item'.$i} = trim($_POST['item'.$i]);
+    }
+
+    $obj->link = trim($_POST['link']);
+    $obj->link_name = trim($_POST['link_name']);
 
     $obj = FileUpload::deleteImageFile($obj);
 
     $obj->save();
 
-    FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 1600, 1600, '/public/src/images/documents/', 1, 240, 240, 'image_small');
+    FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 240, 333, '/public/src/images/medication/', 1);
 
     header("Location: {$_SERVER['REQUEST_URI']}?edit={$obj->id}");
     exit;
 elseif (isset($_GET['delete'])) :
 
-    $obj = Documents::findById($_GET['delete']);
+    $obj = Medication::findById($_GET['delete']);
     unlink(ROOT.$obj->image);
-    unlink(ROOT.$obj->image_small);
 
     $obj->delete();
 
@@ -73,7 +88,7 @@ elseif (isset($_GET['delete'])) :
     header("Location: {$_SERVER['REDIRECT_URL']}");
     exit;
 else :
-    $title = 'Документы';
+    $title = 'Блоки с ссылками на главной';
     $filter = true;
     include ROOT . '/private/views/layouts/head.php';
 
@@ -83,7 +98,7 @@ else :
         $where .= " AND `name` like '%{$search}%'";
     }
 
-    $data = Documents::paginate("WHERE 1=1 {$where} ORDER BY id DESC");
+    $data = Medication::paginate("WHERE 1=1 {$where} ORDER BY id DESC");
     $total = $data['total'];
     $paginate = $data['paginate'];
     $list = $data['list'];

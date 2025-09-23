@@ -72,6 +72,10 @@ else: ?>
                     <?= Form::makeInput('Заголовок перед документами (красный)', 'head5', $obj->head5) ?>
                 </div>
                 <?= Form::makeTextarea('Краткое описание перед документами', 'short', $obj->short, 80) ?>
+                <div class="columns">
+                    <?= Form::makeInput('Заголовок перед блоком с ссылками', 'head6', $obj->head6) ?>
+                    <?= Form::makeInput('Заголовок перед блоком с ссылками (красный)', 'head7', $obj->head7) ?>
+                </div>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>

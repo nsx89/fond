@@ -69,18 +69,18 @@ if ($('.placeholder-wrap .input').length > 0) {
 function modal_auto() {
     var w = $('#modal-mod').width();
     var w1 = w/2-w;
-    $('#modal-mod').css({'margin-left' : w1});
+    //$('#modal-mod').css({'margin-left' : w1});
     var h = $('#modal-mod').height();
     var h1 = h/2-h;
     w = $(window).height();
     if (h > w) {
-        $('#modal-mod').css({'top' : '0px'});
-        $('#modal-mod').css({'margin-top' : '7px'});
+        //$('#modal-mod').css({'top' : '0px'});
+        //$('#modal-mod').css({'margin-top' : '7px'});
         $('body').css('overflow', 'hidden');
     }
     else {
-        $('#modal-mod').css({'top' : '50%'});
-        $('#modal-mod').css({'margin-top' : h1});
+        //$('#modal-mod').css({'top' : '50%'});
+        //$('#modal-mod').css({'margin-top' : h1});
         $('body').css('overflow', 'auto');
     }
 }

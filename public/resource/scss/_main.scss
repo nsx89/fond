@@ -784,6 +784,8 @@ img {
         bottom: 0px;
         left: 40px;
         object-fit: cover;
+        max-height: 240px;
+        max-width: 240px;
     }
     &-arrow {
         width: 50px;
@@ -811,6 +813,9 @@ img {
     .swiper-pagination {
         display: none;
     }
+    .edit > div {
+        margin-bottom: -5px;
+    }
 }
 .medication-wrap {
     margin: 0px 0px 147px;
@@ -828,6 +833,9 @@ img {
 .medication {
     position: relative;
     height: 370px;
+    .edit > div {
+        margin-bottom: -5px;
+    }
     .swiper-container {
         margin: -20px;
         width: calc(100% + 40px);

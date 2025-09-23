@@ -24,6 +24,7 @@ return [
             'volunteers' => 'Волонтеры',
             'documents' => 'Документы',
             'medals' => 'Медали',
+            'medication' => 'Блоки с ссылками на главной',
         ],
         'articles' => 'Статьи',
         'users' => [

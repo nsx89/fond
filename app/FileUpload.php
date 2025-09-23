@@ -81,7 +81,7 @@ class FileUpload
 
         // Сгенерируем новое имя файла на основе MD5-хеша
         $name = uniqid();
-        $name2 = $name.'_big';
+        $name2 = $name.'_copy';
 
         $serverPath = ROOT . $path . $name . $format;
 

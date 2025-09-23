@@ -14,6 +14,7 @@ use app\Models\Medals;
 use app\Models\Banners;
 use app\Models\Video;
 use app\Models\Documents;
+use app\Models\Medication;
 
 class PageController extends Controller {
     protected function handle(...$params) {
@@ -52,17 +53,17 @@ class PageController extends Controller {
     protected static function main($view){
 
         $view->articles = Articles::findWhere("WHERE `show` = 1 ORDER BY rate DESC, date DESC, id ASC LIMIT 10");
-
         $view->banners = Banners::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 1");
-
         $view->video = Video::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 20");
-
         $view->documents = Documents::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 20");
+        $view->medication = Medication::findWhere("WHERE `show` = 1 ORDER BY rate DESC, id ASC LIMIT 20");
 
         $view->edit_banners = Users::edit("banners");
         $view->edit_project = Users::edit("pages?edit=3");
         $view->edit_video = Users::edit("video");
         $view->edit_settings = Users::edit("settings");
+        $view->edit_documents = Users::edit("documents");
+        $view->edit_medication = Users::edit("medication");
 
         return $view->show('main.php');
     }

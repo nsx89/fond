@@ -13,6 +13,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 9995;
     background: #fff;
     border-radius: 13px;
@@ -50,6 +51,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+        max-width: 89vw;
+        max-height: 89vh; 
+    }
 }
 .anime-mod {
     opacity: 0;
@@ -58,11 +63,11 @@
     -ms-transform: translateX(0px) translateY(20px) translateZ(0px);
     -o-transform: translateX(0px) translateY(20px) translateZ(0px);
     transform: translateX(0px) translateY(20px) translateZ(0px);
-    -webkit-transition: opacity 300ms, -webkit-transform 300ms;
-    -moz-transition: opacity 300ms, transform 300ms;
-    -ms-transition: opacity 300ms, transform 300ms;
-    -o-transition: opacity 300ms, transform 300ms;
-    transition: opacity 300ms, transform 300ms;
+    -webkit-transition: opacity 600ms, -webkit-transform 400ms;
+    -moz-transition: opacity 600ms, transform 400ms;
+    -ms-transition: opacity 600ms, transform 400ms;
+    -o-transition: opacity 600ms, transform 400ms;
+    transition: opacity 600ms, transform 400ms;
 }
 .anime-mod-show {
     opacity: 1;
