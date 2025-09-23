@@ -132,4 +132,13 @@ $('body').on('click', '.js-documents-open', function(){
     }
 });
 
+/* --- Scroll to  --- */
+
+$('body').on('click', '.js-scroll-form', function(){
+    var element = $('.main-contacts');
+    if (!element.length) return;
+    var scrollTop = element.offset().top - 80;
+    $('html, body').animate({scrollTop: scrollTop}, 300);
+});
+
 /* --- // --- */

@@ -76,6 +76,7 @@ else: ?>
                     <?= Form::makeInput('Заголовок перед блоком с ссылками', 'head6', $obj->head6) ?>
                     <?= Form::makeInput('Заголовок перед блоком с ссылками (красный)', 'head7', $obj->head7) ?>
                 </div>
+                <?= Form::makeInput('Заголовок перед партнерами', 'head8', $obj->head8) ?>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>

@@ -150,49 +150,43 @@
                 </div>
             <? endif; ?>
 
-            <div class="medication-wrap">
-                <h2 class="h2"><?= $this->settings->head6 ?> <span><?= $this->settings->head7 ?></span></h2>
-                <div class="medication">
-                    <?= $this->edit_medication ?>
-                    <div class="swiper-container swiper4">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="medication-head dots">Лечение<br> и реабилитация</div>
-                                <div class="medication-items">
-                                    <span>лечение для военнослужащих</span>
-                                    <span>медицинское обслуживание</span>
-                                </div>
-                                <img class="medication-img" src="/public/src/images/medication/medication1.png" alt="">
-                                <div class="medication-link js-scroll-form">Отправить помощь</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="medication-head">Передаем<br> гуманитарную помощь</div>
-                                <div class="medication-items">
-                                    <span>строительные материалы</span>
-                                    <span>оптика</span>
-                                    <span>генераторы</span>
-                                    <span>технические средства</span>
-                                    <span>технические средства</span>
-                                    <span>технические средства</span>
-                                </div>
-                                <img class="medication-img" src="/public/src/images/medication/medication2.png" alt="">
-                                <div class="medication-link js-scroll-form">Отправить помощь</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="medication-head">Лечение и реабилитация</div>
-                                <img class="medication-img" src="/public/src/images/medication/medication1.png" alt="">
-                                <div class="medication-link js-scroll-form">Отправить помощь</div>
+            <? if (!empty($this->medication)) : ?>
+                <div class="medication-wrap">
+                    <h2 class="h2"><?= $this->settings->head6 ?> <span><?= $this->settings->head7 ?></span></h2>
+                    <div class="medication">
+                        <?= $this->edit_medication ?>
+                        <div class="swiper-container swiper4">
+                            <div class="swiper-wrapper">
+                                <? foreach ($this->medication AS $item) : ?>
+                                    <div class="swiper-slide">
+                                        <div class="medication-head dots"><?= nl2br($item->name) ?></div>
+                                        <div class="medication-items">
+                                            <? for ($i = 1; $i <= 5; $i++) : ?>
+                                                <? if (empty($item->{'item'.$i})) continue; ?>
+                                                <span><?= $item->{'item'.$i} ?></span>
+                                            <? endfor; ?>
+                                        </div>
+                                        <? if (!empty($item->image)) : ?>
+                                            <img class="medication-img" src="<?= $item->image ?>" alt="<?= $item->name ?>">
+                                        <? endif; ?>
+                                        <? if (!empty($item->link)) : ?>
+                                            <a href="<?= $item->link ?>" target="_blank" rel="nofollow" class="medication-link"><?= $item->link_name ?></a>
+                                        <? else: ?>
+                                            <div class="medication-link js-scroll-form"><?= $item->link_name ?></div>
+                                        <? endif; ?>
+                                    </div>
+                                <? endforeach; ?>
                             </div>
                         </div>
+                        <div class="swiper-button-prev swiper-button-prev-swiper4"></div>
+                        <div class="swiper-button-next swiper-button-next-swiper4"></div>
+                        <div class="swiper-pagination swiper-pagination-swiper4"></div>
                     </div>
-                    <div class="swiper-button-prev swiper-button-prev-swiper4"></div>
-                    <div class="swiper-button-next swiper-button-next-swiper4"></div>
-                    <div class="swiper-pagination swiper-pagination-swiper4"></div>
                 </div>
-            </div>
+            <? endif; ?>
 
             <div class="partners-wrap">
-                <h2 class="h2">Наши партнеры</h2>
+                <h2 class="h2"><?= $this->settings->head8 ?></h2>
                 <div class="partners">
                     <div class="swiper-container swiper5">
                         <div class="swiper-wrapper">

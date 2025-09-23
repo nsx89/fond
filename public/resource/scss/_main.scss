@@ -864,7 +864,6 @@ img {
         height: 100%;
         padding: 45px 36px 0px 40px;
         transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-        cursor: pointer;
         &:hover {
             background: #3973B2;
             box-shadow: 0px 10px 15px 0px #0000004D;
@@ -916,11 +915,14 @@ img {
         color: $hover;
         font-size: 18px;
         line-height: 20px;
+        cursor: pointer;
     }
     &-img {
         position: absolute;
         bottom: 0px;
         right: 0px;
+        max-width: 240px;
+        max-height: 332px;
     }
 }
 .partners-wrap {
