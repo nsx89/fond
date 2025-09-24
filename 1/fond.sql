@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 23 2025 г., 02:54
+-- Время создания: Сен 24 2025 г., 03:45
 -- Версия сервера: 5.7.33
 -- Версия PHP: 8.1.1
 
@@ -50,7 +50,7 @@ CREATE TABLE `articles` (
 
 INSERT INTO `articles` (`id`, `name`, `h1`, `url`, `show`, `rate`, `image`, `image2`, `short`, `text`, `date`, `views`, `author`, `other`) VALUES
 (1, 'Важность помощи ближнему', 'Гуманитарная помощь участникам военных действий: необходимость, формы и вызовы', 'vazhnost-pomoschi-blizhnemu', 1, 0, '/public/src/images/articles/68ce01806878d.jpg', '/public/src/images/articles/68cf14e4cd5eb.jpg', 'Помощь другим — это одна из основных человеческих ценностей. Она играет ключевую роль в укреплении социальных связей и создании сплоченного общества.', '<p><strong>Военные конфликты оставляют глубокие раны как на теле, так и на душе людей, которые стали их жертвами. Участники военных действий, а также их семьи часто нуждаются в серьезной помощи, чтобы справиться с физическими и психологическими последствиями войны. Гуманитарная помощь в данном контексте становится важным элементом восстановления и реинтеграции в мирную жизнь.</strong></p>\r\n<p>Военные действия приводят не только к непосредственной потере жизней, но и к разнообразным нарушениям прав человека. Участники конфликтов часто сталкиваются с травмами, увечьями,<br />и посттравматическим стрессовым расстройством (ПТСР). Гуманитарная помощь необходима для:</p>\r\n<p>Физического восстановления: Открытая помощь включает медицинские услуги, реабилитацию<br />и предоставление протезов для раненых бойцов.&nbsp; Психологической поддержки: Участники конфликтов зачастую испытывают психоэмоциональные травмы. Психологическая поддержка, терапия и группы поддержки помогают людям справляться с последствиями стресса и травмы.</p>\r\n<p>Социальной реабилитации: Помощь в поиске работы, жильё, профессиональное обучение и другие ресурсы могут сыграть важную роль в возвращении участников военных действий к нормальной жизни.</p>', 1755348300, 1681, 'Ливанов Сергей', '|5|7|9|2|'),
-(2, 'Социальная ответственность', NULL, 'social-naya-otvetstvennost', 1, 0, '/public/src/images/articles/68cec7d522483.jpg', NULL, 'Помощь другим способствует развитию чувства социальной ответственности. Когда мы помогаем другим, что заботимся о благополучии нашего общества.', '', 1755205200, NULL, NULL, NULL),
+(2, 'Социальная ответственность', NULL, 'social-naya-otvetstvennost', 1, 0, '/public/src/images/articles/68cec7d522483.jpg', NULL, 'Помощь другим способствует развитию чувства социальной ответственности. Когда мы помогаем другим, что заботимся о благополучии нашего общества.', '', 1755205200, 1, NULL, NULL),
 (3, 'Вызовы гуманитарной помощи', NULL, 'vyzovy-gumanitarnoy-pomoschi', 1, 0, '/public/src/images/articles/68cedda66c9cc.jpg', NULL, 'Несмотря на важность гуманитарной помощи, существует множество вызовов, с которыми сталкиваются  государства, предоставляющие такую помощь', '', 1755118800, NULL, NULL, NULL),
 (4, 'Гуманитарная помощь участникам военных действий', NULL, 'gumanitarnaya-pomosch-uchastnikam-voennyh-deystviy', 1, 0, '/public/src/images/articles/68cec99945f74.jpg', NULL, 'Эффективная помощь может изменить жизнь людей', '', 1754946000, 1, NULL, NULL),
 (5, 'Важность помощи ближнему', NULL, 'vazhnost-pomoschi-blizhnemu-5', 1, 0, '/public/src/images/articles/68cf03124f094.jpg', NULL, 'Помощь другим — это одна из основных человеческих ценностей. Она играет ключевую роль в укреплении социальных связей и создании сплоченного общества.', '', 1754859600, 1, NULL, NULL),
@@ -94,15 +94,15 @@ CREATE TABLE `documents` (
   `show` int(1) DEFAULT NULL,
   `rate` int(11) DEFAULT NULL,
   `image` varchar(100) DEFAULT NULL,
-  `image_big` varchar(100) DEFAULT NULL
+  `image_small` varchar(100) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `documents`
 --
 
-INSERT INTO `documents` (`id`, `name`, `short`, `show`, `rate`, `image`, `image_big`) VALUES
-(1, 'Документ о регистрации фонда', 'Смотреть', 1, 0, '/public/src/images/documents/68d1df7a68340.jpg', '/public/src/images/documents/68d1df7a68340_big.jpg'),
+INSERT INTO `documents` (`id`, `name`, `short`, `show`, `rate`, `image`, `image_small`) VALUES
+(1, 'Документ о регистрации фонда', 'Смотреть', 1, 0, '/public/src/images/documents/68d31f4d6fa1b.jpg', '/public/src/images/documents/68d31f4d6fa1b_copy.jpg'),
 (2, 'Благодарственное письмо волонтерам фонда агодарственное письмо волонтерам фонда', 'От СГБУ «Центр содействия семейному воспитанию №15» >От СГБУ «Центр содействия семейному воспитанию №15»', 1, 0, '/public/src/images/documents/68d1dfcd6f668.jpg', '/public/src/images/documents/68d1dfcd6f668_big.jpg'),
 (3, 'Благодарственное письмо волонтерам фонда', 'От ЛОГБУ «Волосовский ПНИ»', 1, 0, '/public/src/images/documents/68d1dfe2d1395.jpg', '/public/src/images/documents/68d1dfe2d1395_big.jpg'),
 (4, 'Документ о регистрации фонда', 'Смотреть', 1, 0, '/public/src/images/documents/68d1dff44a28a.jpg', '/public/src/images/documents/68d1dff44a28a_big.jpg');
@@ -199,6 +199,36 @@ INSERT INTO `medals` (`id`, `show`, `name`, `rate`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `medication`
+--
+
+CREATE TABLE `medication` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `show` int(1) DEFAULT NULL,
+  `rate` int(11) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
+  `item1` varchar(255) DEFAULT NULL,
+  `item2` varchar(255) DEFAULT NULL,
+  `item3` varchar(255) DEFAULT NULL,
+  `item4` varchar(255) DEFAULT NULL,
+  `item5` varchar(255) DEFAULT NULL,
+  `link` varchar(500) DEFAULT NULL,
+  `link_name` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `medication`
+--
+
+INSERT INTO `medication` (`id`, `name`, `show`, `rate`, `image`, `item1`, `item2`, `item3`, `item4`, `item5`, `link`, `link_name`) VALUES
+(1, 'Лечение \r\nи реабилитация', 1, 0, '/public/src/images/medication/68d32562a8860.png', 'лечение для военнослужащих', 'медицинское обслуживание', '', '', '', '/', 'Отправить помощь'),
+(2, 'Передаем \r\nгуманитарную помощь', 1, 0, '/public/src/images/medication/68d32af187190.png', 'строительные материалы', 'оптика', 'генераторы', 'технические средства', '', '/', 'Отправить помощь'),
+(3, 'Лечение \r\nи реабилитация 2', 1, 0, '/public/src/images/medication/68d32b0a0a389.png', '', '', '', '', '', '', 'Отправить помощь');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `pages`
 --
 
@@ -231,6 +261,34 @@ INSERT INTO `pages` (`id`, `name`, `url`, `parent`, `show`, `menu`, `menu_footer
 (7, 'Волонтеры', 'volontery', 0, 1, 1, 1, 0, 40, NULL, NULL, '', NULL),
 (8, 'Партнеры', 'partnery', 0, 1, 1, 1, 0, 30, NULL, NULL, '', NULL),
 (9, 'Контакты', 'kontakty', 0, 1, 1, 1, 0, 60, NULL, NULL, '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `partners`
+--
+
+CREATE TABLE `partners` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `show` int(1) DEFAULT NULL,
+  `rate` int(11) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `partners`
+--
+
+INSERT INTO `partners` (`id`, `name`, `show`, `rate`, `image`, `link`) VALUES
+(1, 'AR', 1, 0, '/public/src/files/partners/68d334ac44322.svg', '/'),
+(2, 'LMS', 1, 0, '/public/src/files/partners/68d334f44ab64.svg', NULL),
+(3, 'Rucenter', 1, 0, '/public/src/files/partners/68d335045d9a8.svg', NULL),
+(4, 'Донстрой', 1, 0, '/public/src/files/partners/68d33511f417d.svg', NULL),
+(5, 'Роскосмос', 1, 0, '/public/src/files/partners/68d33520eb4ea.svg', ''),
+(6, 'AR 2', 1, 0, '/public/src/files/partners/68d3352d266ba.svg', NULL),
+(7, 'LMS 2', 1, 0, '/public/src/files/partners/68d337daf3852.svg', '');
 
 -- --------------------------------------------------------
 
@@ -285,6 +343,13 @@ CREATE TABLE `settings` (
   `head3` varchar(255) DEFAULT NULL,
   `head4` varchar(255) DEFAULT NULL,
   `head5` varchar(255) DEFAULT NULL,
+  `head6` varchar(255) DEFAULT NULL,
+  `head7` varchar(255) DEFAULT NULL,
+  `head8` varchar(255) DEFAULT NULL,
+  `head9` varchar(255) DEFAULT NULL,
+  `head10` varchar(255) DEFAULT NULL,
+  `head11` varchar(255) DEFAULT NULL,
+  `head12` varchar(255) DEFAULT NULL,
   `short` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -292,8 +357,8 @@ CREATE TABLE `settings` (
 -- Дамп данных таблицы `settings`
 --
 
-INSERT INTO `settings` (`id`, `title`, `email`, `email_send`, `phone`, `phone2`, `address`, `logo`, `logo2`, `soc1`, `soc2`, `soc_name1`, `soc_name2`, `copy`, `copy2`, `image`, `image2`, `link`, `link2`, `head`, `head2`, `head3`, `head4`, `head5`, `short`) VALUES
-(1, 'Фонд поддержки ветеранов боевых действий', 'veec@bk.ru', 'veec@bk.ru', '+7 (911) 136 80 05', NULL, NULL, '/public/src/files/settings/68d06b87171b1.svg', '/public/src/files/settings/68d1d88ce53f8.svg', 'https://t.me/volonterspb777', 'https://vk.com/club227952307', '@volonterspb777', 'Фонд «Северный Легион»', 'ООО Фонд поддержки ветеранов боевых действий,', 'Все права защищены.', '/public/src/images/settings/68d05d3524df6.png', '/public/src/images/settings/68d1bf57e302c.jpg', '/?pay=1', '/?requiresites=1', 'Благодаря вам они получили помощь', 'Как внести вклад', 'в общее дело', 'Помогаем как делом', 'так и словом', 'Официально ведем благотворительную деятельность и имеем все необходимые документы, чтобы ежедневно быть рядом с теми, кто защищает страну и рискует жизнями ради ее безопасности');
+INSERT INTO `settings` (`id`, `title`, `email`, `email_send`, `phone`, `phone2`, `address`, `logo`, `logo2`, `soc1`, `soc2`, `soc_name1`, `soc_name2`, `copy`, `copy2`, `image`, `image2`, `link`, `link2`, `head`, `head2`, `head3`, `head4`, `head5`, `head6`, `head7`, `head8`, `head9`, `head10`, `head11`, `head12`, `short`) VALUES
+(1, 'Фонд поддержки ветеранов боевых действий', 'veec@bk.ru', 'veec@bk.ru', '+7 (911) 136 80 05', NULL, NULL, '/public/src/files/settings/68d06b87171b1.svg', '/public/src/files/settings/68d1d88ce53f8.svg', 'https://t.me/volonterspb777', 'https://vk.com/club227952307', '@volonterspb777', 'Фонд «Северный Легион»', 'ООО Фонд поддержки ветеранов боевых действий,', 'Все права защищены.', '/public/src/images/settings/68d05d3524df6.png', '/public/src/images/settings/68d1bf57e302c.jpg', '/?pay=1', '/?requiresites=1', 'Благодаря вам они получили помощь', 'Как внести вклад', 'в общее дело', 'Помогаем как делом', 'так и словом', 'На благо героев', 'и будущего страны', 'Наши партнеры', 'Приближаем победу', 'вместе', 'Контакты', 'Поддержите тех, кто стоит на защите Родины', 'Официально ведем благотворительную деятельность и имеем все необходимые документы, чтобы ежедневно быть рядом с теми, кто защищает страну и рискует жизнями ради ее безопасности');
 
 -- --------------------------------------------------------
 
@@ -319,7 +384,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `hash`, `hash_forgot`, `class`, `date`, `date_visit`, `name`, `phone`) VALUES
-(1, 'test@test.ru', '$2y$10$XtyDvJE9Hj35l9r2uSDhWOQVg9Ad5HVNa27gTrizl2KSwBM/EiKlq', '1a2d7230e9de1a3de34464cc1bcf12d7', NULL, 1, 1748093726, 1758585010, 'Тест Тестов', '+7 (111) 111-11-39');
+(1, 'test@test.ru', '$2y$10$XtyDvJE9Hj35l9r2uSDhWOQVg9Ad5HVNa27gTrizl2KSwBM/EiKlq', '1a2d7230e9de1a3de34464cc1bcf12d7', NULL, 1, 1748093726, 1758674724, 'Тест Тестов', '+7 (111) 111-11-39');
 
 -- --------------------------------------------------------
 
@@ -468,6 +533,12 @@ ALTER TABLE `medals`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `medication`
+--
+ALTER TABLE `medication`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `pages`
 --
 ALTER TABLE `pages`
@@ -475,6 +546,12 @@ ALTER TABLE `pages`
   ADD KEY `menu` (`menu`),
   ADD KEY `menu_footer` (`menu_footer`),
   ADD KEY `parent` (`parent`) USING BTREE;
+
+--
+-- Индексы таблицы `partners`
+--
+ALTER TABLE `partners`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `seo`
@@ -544,7 +621,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT для таблицы `documents`
 --
 ALTER TABLE `documents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `forms`
@@ -571,10 +648,22 @@ ALTER TABLE `medals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT для таблицы `medication`
+--
+ALTER TABLE `medication`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT для таблицы `partners`
+--
+ALTER TABLE `partners`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `seo`

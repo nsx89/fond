@@ -62,25 +62,47 @@ else: ?>
             <fieldset class="input_block">
                 <legend>Блоки на главной</legend>
                 <?= Form::makeInput('Заголовок перед Видео', 'head', $obj->head) ?>
-                <?= Form::makeImage('Фото слева от блока оплаты (957x953px)', 'image2', $obj) ?>
-                <div class="columns">
-                    <?= Form::makeInput('Заголовок справа в блоке оплаты', 'head2', $obj->head2) ?>
-                    <?= Form::makeInput('Заголовок справа в блоке оплаты (красный)', 'head3', $obj->head3) ?>
-                </div>
-                <div class="columns">
-                    <?= Form::makeInput('Заголовок перед документами', 'head4', $obj->head4) ?>
-                    <?= Form::makeInput('Заголовок перед документами (красный)', 'head5', $obj->head5) ?>
-                </div>
-                <?= Form::makeTextarea('Краткое описание перед документами', 'short', $obj->short, 80) ?>
-                <div class="columns">
-                    <?= Form::makeInput('Заголовок перед блоком с ссылками', 'head6', $obj->head6) ?>
-                    <?= Form::makeInput('Заголовок перед блоком с ссылками (красный)', 'head7', $obj->head7) ?>
-                </div>
-                <?= Form::makeInput('Заголовок перед партнерами', 'head8', $obj->head8) ?>
-                <div class="columns">
-                    <?= Form::makeInput('Заголовок перед статьями', 'head9', $obj->head9) ?>
-                    <?= Form::makeInput('Заголовок перед статьями', 'head10', $obj->head10) ?>
-                </div>
+                <fieldset class="input_block">
+                    <legend>Блок оплаты</legend>
+                    <?= Form::makeImage('Фото слева от блока оплаты (957x953px)', 'image2', $obj) ?>
+                    <div class="columns">
+                        <?= Form::makeInput('Заголовок справа в блоке оплаты', 'head2', $obj->head2) ?>
+                        <?= Form::makeInput('Заголовок справа в блоке оплаты (красный)', 'head3', $obj->head3) ?>
+                    </div>
+                </fieldset>
+                <fieldset class="input_block">
+                    <legend>Блок документы</legend>
+                    <div class="columns">
+                        <?= Form::makeInput('Заголовок перед документами', 'head4', $obj->head4) ?>
+                        <?= Form::makeInput('Заголовок перед документами (красный)', 'head5', $obj->head5) ?>
+                    </div>
+                    <?= Form::makeTextarea('Краткое описание перед документами', 'short', $obj->short, 80) ?>
+                </fieldset>
+                <fieldset class="input_block">
+                    <legend>Блок ссылок</legend>
+                    <div class="columns">
+                        <?= Form::makeInput('Заголовок перед блоком с ссылками', 'head6', $obj->head6) ?>
+                        <?= Form::makeInput('Заголовок перед блоком с ссылками (красный)', 'head7', $obj->head7) ?>
+                    </div>
+                </fieldset>
+                <fieldset class="input_block">
+                    <legend>Блок партнеры</legend>
+                    <?= Form::makeInput('Заголовок перед партнерами', 'head8', $obj->head8) ?>
+                </fieldset>
+                <fieldset class="input_block">
+                    <legend>Статьи</legend>
+                    <div class="columns">
+                        <?= Form::makeInput('Заголовок перед статьями', 'head9', $obj->head9) ?>
+                        <?= Form::makeInput('Заголовок перед статьями', 'head10', $obj->head10) ?>
+                    </div>
+                </fieldset>
+                <fieldset class="input_block">
+                    <legend>Контакты</legend>
+                    <div class="columns">
+                        <?= Form::makeInput('Заголовок перед контактами', 'head11', $obj->head11) ?>
+                        <?= Form::makeInput('Подзаголовок перед контактами', 'head12', $obj->head12) ?>
+                    </div>
+                </fieldset>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Ссылки на социальные сети</legend>

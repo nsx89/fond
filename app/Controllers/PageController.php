@@ -69,6 +69,7 @@ class PageController extends Controller {
         $view->edit_documents = Users::edit("documents");
         $view->edit_medication = Users::edit("medication");
         $view->edit_partners = Users::edit("partners");
+        $view->edit_articles = Users::edit("articles");
 
         return $view->show('main.php');
     }

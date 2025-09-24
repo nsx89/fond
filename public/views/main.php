@@ -189,6 +189,7 @@
                 <div class="partners-wrap">
                     <h2 class="h2"><?= $this->settings->head8 ?></h2>
                     <div class="partners">
+                        <?= $this->edit_partners ?>
                         <div class="swiper-container swiper5">
                             <div class="swiper-wrapper">
                                 <? foreach ($this->partners AS $item) : ?>
@@ -219,6 +220,7 @@
     <? if (!empty($this->articles)) : ?>
         <section class="main-articles">
             <div class="container">
+                <?= $this->edit_articles ?>
                 <div class="h2-wrap">
                     <h2 class="h2"><?= $this->settings->head9 ?> <span><?= $this->settings->head10 ?></span></h2>
                     <a href="/<?= $this->pages[6]->url ?>" class="h2-link">
@@ -246,8 +248,8 @@
     <section class="main-contacts">
          <div class="contacts">
              <div class="container">
-                 <h2 class="h2">Контакты</h2>
-                 <div class="contacts-text">Поддержите тех, кто стоит на защите Родины</div>
+                 <h2 class="h2"><?= $this->settings->head11 ?></h2>
+                 <div class="contacts-text"><?= $this->settings->head12 ?></div>
                  <div class="contacts-box">
                      <? if (!empty($this->settings->phone)) : ?>
      					<a href="tel:<?= app\Helpers::clearPhone($this->settings->phone) ?>" class="contacts-box-item">
