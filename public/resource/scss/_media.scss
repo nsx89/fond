@@ -1,6 +1,128 @@
+@media (max-width: 1680px) {
+    .header-logo {
+        left: 1%;
+        margin-top: -6px;
+    }
+}
+@media (max-width: 1580px) {
+    .logo {
+        width: 130px;
+        height: 170px;
+    }
+    .container {
+        width: 1160px;
+    }
+    .header-nav-item {
+        font-size: 16px;
+    }
+    .header-info .phone {
+        font-size: 17px;
+    }
+    .main-text {
+        font-size: 88px;
+        line-height: 80px;
+    }
+    .button {
+        font-size: 17px;
+        letter-spacing: 0.2px;
+    }
+    .h2 {
+        font-size: 72px;
+        line-height: 68px;
+    }
+    .main-projects-text p {
+        font-size: 17px;
+    }
+    .main-projects-text strong {
+        font-size: 19px;
+        line-height: 25px;
+    }
+    .pay-form {
+        width: 550px;
+        padding-left: 75px;
+    }
+    .pay-box-head {
+        font-size: 37px;
+    }
+    .main-back-text {
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .main-back-logo {
+        width: 301px;
+        height: 290px;
+    }
+    .documents-head {
+        font-size: 36px;
+        line-height: 34px;
+        max-height: 103px;
+    }
+    .documents-text {
+        font-size: 16px;
+    }
+    .medication {
+        .swiper-slide {
+            padding: 35px 35px 0px 30px;
+        }
+        &-img {
+            max-width: 225px;
+            max-height: 285px;
+        }
+        &-head {
+            font-size: 37px;
+            line-height: 38px;
+            max-width: 66%;
+        }
+        &-items {
+            > span {
+                font-size: 15px;
+                line-height: 16px;
+            }
+        }
+    }
+    .articles {
+        &-head {
+            font-size: 37px;
+        }
+        &-text {
+            font-size: 16.5px;
+        }
+    }
+    .main-contacts {
+        .contacts-text {
+            font-size: 17px;
+        }
+        .contacts-phone {
+            font-size: 22px;
+        }
+        .contacts-email, .contacts-soc {
+            font-size: 19px;
+        }
+    }
+    .footer {
+        .logo {
+            margin: -12px 10px -29px 0px;
+        }
+        &-menu-item {
+            font-size: 17px;
+        }
+        &-copy {
+            font-size: 13.5px;
+        }
+    }
+}
+@media (max-width: 1440px) {
+
+}
+@media (max-width: 1280px) {
+
+}
+@media (max-width: 1024px) {
+
+}
 @media (max-width: 768px) {
 
 }
 @media (max-width: 480px) {
-    
+
 }

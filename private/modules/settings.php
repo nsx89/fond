@@ -51,8 +51,8 @@ else: ?>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Логотип</legend>
-                <?= Form::makeFile('Логотип', 'logo', $obj, '') ?>
-                <?= Form::makeFile('Логотип крупный', 'logo2', $obj, '') ?>
+                <?= Form::makeFile('Логотип (211x202px)', 'logo', $obj, '') ?>
+                <?= Form::makeFile('Логотип крупный (332x318px)', 'logo2', $obj, '') ?>
             </fieldset>
             <fieldset class="input_block">
                 <legend>Оплата</legend>

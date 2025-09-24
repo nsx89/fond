@@ -36,9 +36,15 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
             <? /* Form::makeSelect('Родительская страница', 'parent', Page::findWhere("WHERE `parent` = 0 AND `id` <> ".intval($id)." ORDER BY name ASC"), $obj->parent, true, '' , '') */ ?>
             <? switch ($obj->id) {
                 case 3: ?>
-                    <?= Form::makeTextbox('Краткое описание', 'short', $obj->short) ?>
-                    <?= Form::makeGallery('Галерея фото (600x542px)', 'gallery', Gallery::findGallery('page', $obj->id)) ?>
-                    <?= Form::makeTextbox('Текст', 'text', $obj->text) ?>
+                    <fieldset>
+                        <legend>Для главной</legend>
+                        <?= Form::makeTextbox('Краткое описание', 'short', $obj->short) ?>
+                        <?= Form::makeGallery('Галерея фото (600x542px)', 'gallery', Gallery::findGallery('page', $obj->id)) ?>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Детальная страница</legend>
+                        <?= Form::makeTextbox('Текст', 'text', $obj->text) ?>
+                    </fieldset>
                     <? break;
                 default: ?>
                     <?= Form::makeTextbox('Текст', 'text', $obj->text) ?>

@@ -24,7 +24,7 @@
             </div>
         <? endif; ?>
 
-        <div class="article-text">
+        <div class="article-text texts">
             <?= $article->text ?>
         </div>
 

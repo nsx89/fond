@@ -123,8 +123,8 @@ img {
 }
 .logo {
     display: inline-block;
-    width: 147px;
-    height: 157px;
+    width: 165px;
+    height: 202px;
     z-index: 150;
     background: url(/public/src/images/svg/logo.svg) no-repeat center center;
     &:active {
@@ -134,9 +134,10 @@ img {
 .header-logo {
     position: absolute;
     left: 48px;
-    left: 2.5%;
-    top: 40px;
+    left: 1.8%;
+    top: 20px;
     z-index: 150;
+    background-size: cover !important;
 }
 .header {
     position: fixed;
@@ -474,6 +475,9 @@ img {
         letter-spacing: 0.4px;
         font-size: 14.4px;
     }
+    .logo {
+        margin: -23px 0px -29px -10px;
+    }
 }
 .videos {
     position: relative;
@@ -711,8 +715,9 @@ img {
         align-items: center;
     }
     &-logo {
-        width: 262px;
-        height: 262px;
+        width: 332px;
+        height: 318px;
+        margin: -30px 7% -35px 0px;
         /*background: url(/public/src/images/svg/logo-big.svg) no-repeat center center;*/
     }
 }
@@ -1363,6 +1368,33 @@ img {
 }
 .page {
     padding: 187px 0px 70px;
+    &-text {
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 300;
+        min-height: 100px;
+        p, ul, ol {
+            margin-bottom: 24px;
+        }
+        strong, b {
+            color: #fff;
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 34px;
+            display: block;
+        }
+    }
+}
+.texts {
+    ul {
+        list-style: disc;
+         margin-left: 19px;
+    }
+    ol {
+        list-style: auto;
+         margin-left: 20px;
+    }
 }
 .page-404 {
     color: #fff;
