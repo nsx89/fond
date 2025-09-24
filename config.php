@@ -25,6 +25,7 @@ return [
             'documents' => 'Документы',
             'medals' => 'Медали',
             'medication' => 'Блоки с ссылками на главной',
+            'partners' => 'Партнёры',
         ],
         'articles' => 'Статьи',
         'users' => [

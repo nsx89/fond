@@ -185,63 +185,33 @@
                 </div>
             <? endif; ?>
 
-            <div class="partners-wrap">
-                <h2 class="h2"><?= $this->settings->head8 ?></h2>
-                <div class="partners">
-                    <div class="swiper-container swiper5">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner1.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner2.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner3.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner4.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner2.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner1.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner5.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner3.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="partners-img">
-                                    <img src="/public/src/images/partners/partner4.svg" alt="">
-                                </a>
+            <? if (!empty($this->partners)) : ?>
+                <div class="partners-wrap">
+                    <h2 class="h2"><?= $this->settings->head8 ?></h2>
+                    <div class="partners">
+                        <div class="swiper-container swiper5">
+                            <div class="swiper-wrapper">
+                                <? foreach ($this->partners AS $item) : ?>
+                                    <div class="swiper-slide">
+                                        <? if (!empty($item->link)) : ?>
+                                            <a href="<?= $item->link ?>" target="_blank" rel="nofollow" class="partners-img">
+                                                <img src="<?= $item->image ?>" alt="<?= $item->name ?>" title="<?= $item->name ?>">
+                                            </a>
+                                        <? else: ?>
+                                            <div class="partners-img">
+                                                <img src="<?= $item->image ?>" alt="<?= $item->name ?>" title="<?= $item->name ?>">
+                                            </div>
+                                        <? endif; ?>
+                                    </div>
+                                <? endforeach; ?>
                             </div>
                         </div>
+                        <div class="swiper-button-prev swiper-button-prev-swiper5"></div>
+                        <div class="swiper-button-next swiper-button-next-swiper5"></div>
+                        <div class="swiper-pagination swiper-pagination-swiper5"></div>
                     </div>
-                    <div class="swiper-button-prev swiper-button-prev-swiper5"></div>
-                    <div class="swiper-button-next swiper-button-next-swiper5"></div>
-                    <div class="swiper-pagination swiper-pagination-swiper5"></div>
                 </div>
-            </div>
+            <? endif; ?>
 
         </div>
     </section>
