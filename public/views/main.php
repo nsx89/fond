@@ -246,7 +246,7 @@
     <? endif; ?>
 
     <section class="main-contacts">
-         <div class="contacts">
+         <div class="contacts" style="<?= !empty($this->settings->image3) ? "background: url(".$this->settings->image3.") no-repeat center top; background-size: cover;" : '' ?>">
              <div class="container">
                  <h2 class="h2"><?= $this->settings->head11 ?></h2>
                  <div class="contacts-text"><?= $this->settings->head12 ?></div>
@@ -276,8 +276,12 @@
                         </a>
     				<? endif; ?>
                     <div class="contacts-button-wrap">
-                        <button class="button">Пожертвования</button>
-                        <img class="contacts-qr" src="/public/src/images/qr.png" alt=">Поддержать">
+                        <? if (!empty($this->settings->link)) : ?>
+                            <a href="<?= $this->settings->link ?>" target="_blank" rel="nofollow" class="button">Пожертвования</a>
+                        <? endif; ?>
+                        <? if (!empty($this->settings->image)) : ?>
+                            <img class="contacts-qr" src="<?= $this->settings->image ?>" alt=">Поддержать">
+                        <? endif; ?>
                     </div>
                  </div>
              </div>

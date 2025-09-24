@@ -28,6 +28,7 @@ if (isset($_POST['edit'])) :
 
     FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 108, 108, '/public/src/images/settings/', 0);
     FileUpload::uploadImage('image2', get_class($obj), 'image2', $obj->id, 957, 953, '/public/src/images/settings/', 0);
+    FileUpload::uploadImage('image3', get_class($obj), 'image3', $obj->id, 1920, 818, '/public/src/images/settings/', 1);
     FileUpload::uploadFile('logo', get_class($obj), 'logo', $obj->id, '/public/src/files/settings/');
     FileUpload::uploadFile('logo2', get_class($obj), 'logo2', $obj->id, '/public/src/files/settings/');
 
@@ -102,6 +103,7 @@ else: ?>
                         <?= Form::makeInput('Заголовок перед контактами', 'head11', $obj->head11) ?>
                         <?= Form::makeInput('Подзаголовок перед контактами', 'head12', $obj->head12) ?>
                     </div>
+                    <?= Form::makeImage('Картинка фона (1920x818px)', 'image3', $obj) ?>
                 </fieldset>
             </fieldset>
             <fieldset class="input_block">
