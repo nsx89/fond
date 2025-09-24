@@ -220,7 +220,7 @@
         <section class="main-articles">
             <div class="container">
                 <div class="h2-wrap">
-                    <h2 class="h2">Приближаем победу <span>вместе</span></h2>
+                    <h2 class="h2"><?= $this->settings->head9 ?> <span><?= $this->settings->head10 ?></span></h2>
                     <a href="/<?= $this->pages[6]->url ?>" class="h2-link">
                         Смотреть все
                     </a>

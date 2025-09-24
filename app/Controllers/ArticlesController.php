@@ -40,6 +40,8 @@ class ArticlesController extends Controller {
         $view->paginate = $data['paginate'];
         $view->articles = $data['list'];
 
+        $view = Seo::default($view, $page->name);
+
         $view->edit = Users::edit("articles", $view->edit_seo);
 
         return $view->show('articles/list.php');
@@ -67,11 +69,7 @@ class ArticlesController extends Controller {
             $_SESSION['views'] = $views;
         }
 
-        /* --- SEO --- */
-
         $view = Seo::default($view, $article->name);
-
-        /* --- // --- */
 
         $breadcrumbs = [];
         $breadcrumbs[] = array('Главная', '/');

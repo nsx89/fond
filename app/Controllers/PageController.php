@@ -42,6 +42,8 @@ class PageController extends Controller {
             $breadcrumbs[] = array($page->name);
             $view->breadcrumbs = $breadcrumbs;
 
+            $view = Seo::default($view, $page->name);
+
             switch ($page->id) {
                 case 7: return self::volunteers($view); break; //волонтеры
                 default: return $view->show('page.php'); break; //страницы

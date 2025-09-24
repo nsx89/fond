@@ -55,19 +55,12 @@ class Seo extends Model
 
        $name = strip_tags($name);
 
-       $seo = $view->seo;
-       if (empty($seo)) $seo = (object)[];
+       $settings = Settings::findById(1);
+       $title = $keywords = $description = $settings->title;
 
-       if (empty($seo->title) || empty($seo->keywords) || empty($seo->description)) {
-           $settings = Settings::findById(1);
-           $title = $keywords = $description = $settings->title;
-       }
-
-       if (empty($seo->title)) $seo->title = $name.' | '.$title;
-       if (empty($seo->keywords)) $seo->keywords = $name.' | '.$keywords;
-       if (empty($seo->description)) $seo->description = $name.' | '.$description;
-
-       $view->seo = $seo;
+       if (empty($view->title) || $view->title == $title) $view->title = $name.' | '.$title;
+       if (empty($view->keywords)) $view->keywords = $name.' | '.$keywords;
+       if (empty($view->description)) $view->description = $name.' | '.$description;
 
        return $view;
    }
