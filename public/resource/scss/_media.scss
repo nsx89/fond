@@ -18,6 +18,12 @@
     .header-info .phone {
         font-size: 17px;
     }
+    .header-menu {
+        .soc {
+            width: 38px;
+            height: 38px;
+        }
+    }
     .main-text {
         font-size: 88px;
         line-height: 80px;
@@ -110,9 +116,246 @@
             font-size: 13.5px;
         }
     }
+    .pay-box-item {
+        font-size: 17px;
+    }
+    .pay-box-item-input input {
+        font-size: 19px;
+    }
+    .placeholder-wrap {
+        .placeholder {
+            font-size: 17px;
+            &-act {
+                font-size: 10px;
+            }
+        }
+    }
+    .h1 {
+        font-size: 76px;
+        line-height: 65px;
+    }
+    .articles {
+        .swiper-slide {
+            width: 48.55%;
+        }
+    }
+    .breadcrumbs {
+        font-size: 13.5px;
+    }
+    .article {
+        &-h1 {
+            font-size: 57px;
+            line-height: 57px;
+        }
+        &-date {
+            font-size: 14px;
+            letter-spacing: 0.1px;
+        }
+        &-text {
+            font-size: 17px;
+            line-height: 23px;
+            strong, b {
+                font-size: 18px;
+            }
+        }
+        &-author {
+            font-size: 15.5px;
+        }
+        &-other {
+            .h2 {
+                font-size: 66px;
+            }
+            .h2-wrap .h2-link {
+                font-size: 17px;
+            }
+        }
+    }
+    .page {
+        &-text {
+            font-size: 17px;
+            line-height: 23px;
+            strong, b {
+                font-size: 18px;
+            }
+        }
+    }
+    .article-socs {
+        font-size: 17px;
+    }
+    .volunteers {
+        &-medals {
+            padding: 21px 14px 21px 30px;
+        }
+        &-name {
+            font-size: 35px;
+            line-height: 35px;
+        }
+        &-short {
+            font-size: 16px;
+            line-height: 21px;
+        }
+        &-box {
+            padding: 30px 15px 20px 30px;
+        }
+        &-medal {
+            font-size: 15px;
+            line-height: 19px;
+            &:before {
+                width: 18px;
+                height: 18px;
+                background-size: contain;
+            }
+        }
+    }
+    .header-nav {
+        gap: 25px;
+    }
 }
 @media (max-width: 1440px) {
-
+    .container {
+        width: 1060px;
+    }
+    .header-nav {
+        gap: 20px;
+    }
+    .header-nav-item {
+        font-size: 15.5px;
+    }
+    .header-info .phone {
+        font-size: 16.5px;
+    }
+    .logo {
+        width: 100px;
+        height: 141px;
+    }
+    .header-logo {
+        margin-top: -6px;
+    }
+    .header-menu .soc {
+        width: 33px;
+        height: 34px;
+    }
+    .header-info {
+        gap: 13px;
+    }
+    .header.active {
+        height: 65px;
+    }
+    .main-text {
+        font-size: 78px;
+        line-height: 70px;
+    }
+    .button {
+        font-size: 16px;
+        padding: 15px 27px 14px;
+    }
+    .h2 {
+        font-size: 60px;
+        line-height: 58px;
+    }
+    .main-projects-text {
+        p, strong, ul {
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 15.5px;
+        }
+        strong {
+            font-size: 17px;
+            line-height: 24px;
+        }
+    }
+    .main-back-text {
+        font-size: 15.5px;
+        line-height: 24px;
+    }
+    .main-back-logo {
+        width: 280px;
+        height: 260px;
+    }
+    .pay {
+        height: 780px;
+    }
+    .pay-box-link {
+        min-height: 100px;
+    }
+    .pay-form {
+        width: 500px;
+        padding-left: 48px;
+    }
+    .pay-box-head {
+        font-size: 35px;
+    }
+    .pay-form .button {
+        font-size: 17px;
+        padding: 15px 25px 14px;
+    }
+    .documents {
+        height: 430px;
+        &-img {
+            max-height: 230px;
+            max-width: 230px;
+            left: 27px;
+        }
+        &-arrow {
+            right: 21px;
+        }
+        &-head {
+            font-size: 32px;
+            line-height: 32px;
+            max-height: 97px;
+        }
+        &-text {
+            font-size: 15px;
+            line-height: 22px;
+            max-height: 45px;
+        }
+        .swiper-slide {
+            padding: 31px 22px 0px 25px;
+        }
+    }
+    .medication {
+        height: 322px;
+        &-head {
+            font-size: 32px;
+            line-height: 33px;
+            max-width: 70%;
+        }
+        &-items {
+            > span {
+                font-size: 14px;
+                line-height: 11px;
+            }
+        }
+        &-img {
+            max-width: 207px;
+            max-height: 267px;
+        }
+        &-link {
+            left: 32px;
+            bottom: 34px;
+            font-size: 16px;
+        }
+    }
+    .main-articles .h2-wrap .h2-link {
+        font-size: 17px;
+    }
+    .articles {
+        &-head {
+            font-size: 35px;
+            line-height: 36px;
+        }
+        &-text {
+            font-size: 15px;
+            line-height: 22px;
+        }
+        &-date {
+            font-size: 15px;
+        }
+        &-box {
+            padding: 27px 27px 27px 30px;
+        }
+    }
 }
 @media (max-width: 1280px) {
 

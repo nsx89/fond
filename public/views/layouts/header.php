@@ -32,12 +32,12 @@
 			<div class="container">
 				<div class="header-menu">
 					<nav class="header-nav">
-						<? foreach ($this->pages AS $page) : ?>
-				            <? if ($page->menu <> 1 || !empty($page->parent)) continue; ?>
+						<? $i = 1; foreach ($this->pages AS $page) : ?>
+				            <? if ($page->menu <> 1 || !empty($page->parent) || $i > 7) continue; ?>
 							<a href="/<?= $page->url ?>" class="header-nav-item <?= URI == $page->url ? 'active' : '' ?>">
 								<?= $page->name ?>
 							</a>
-				        <? endforeach; ?>
+				        <? $i++; endforeach; ?>
 					</nav>
 					<div class="header-info">
 						<? if (!empty($this->settings->phone)) : ?>

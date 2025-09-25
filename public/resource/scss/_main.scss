@@ -495,7 +495,7 @@ img {
         border-radius: 10px;
         overflow: hidden;
         position: relative;
-        width: auto;
+        width: 48.5%;
         cursor: pointer;
         img {
             display: block;
@@ -724,7 +724,7 @@ img {
 .documents {
     position: relative;
     margin: 48px 0px 144px;
-    height: 450px;
+    height: 454px;
     .swiper-container {
         margin: -20px;
         width: calc(100% + 40px);
@@ -1054,6 +1054,7 @@ img {
             display: block;
             object-fit: cover;
             transition: all 0.15s ease-in-out;
+            width: 100%;
         }
     }
     .swiper-pagination.swiper-pagination-bullets {
@@ -1529,7 +1530,7 @@ img {
 .volunteers {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 2.45%;
     margin-bottom: 17px;
     &-item {
         background: #1D242D;
