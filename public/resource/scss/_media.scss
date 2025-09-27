@@ -36,7 +36,7 @@
         font-size: 72px;
         line-height: 68px;
     }
-    .main-projects-text p {
+    .main-projects-text, .main-projects-text p {
         font-size: 17px;
     }
     .main-projects-text strong {
@@ -219,7 +219,7 @@
         gap: 20px;
     }
     .header-nav-item {
-        font-size: 15.5px;
+        font-size: 15px;
     }
     .header-info .phone {
         font-size: 16.5px;
@@ -254,6 +254,7 @@
         line-height: 58px;
     }
     .main-projects-text {
+        font-size: 15.5px;
         p, strong, ul {
             margin-bottom: 15px;
         }
@@ -355,10 +356,421 @@
         &-box {
             padding: 27px 27px 27px 30px;
         }
+        .swiper-slide {
+            width: 48.4%;
+        }
+    }
+    .main-contacts {
+        .contacts-text {
+            font-size: 16px;
+        }
+        .contacts-phone {
+            font-size: 21px;
+        }
+        .contacts-email, .contacts-soc {
+            font-size: 18px;
+        }
+        .contacts {
+            height: 700px;
+        }
+    }
+    .volunteers {
+        &-box {
+            padding: 21px 11px 14px 23px;
+        }
+        &-medals {
+            padding: 19px 12px 19px 22px;
+        }
+        &-name {
+            line-height: 32px;
+            font-size: 32px;
+        }
+        &-short {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &-medal {
+            font-size: 14px;
+            line-height: 17px;
+            padding-left: 23px;
+            &:before {
+                width: 15px;
+                height: 15px;
+                margin-top: 2px;
+            }
+        }
+    }
+    .pay {
+        height: 740px;
+    }
+    .breadcrumbs {
+        font-size: 13px;
+        margin-bottom: 23px;
+    }
+    .article {
+        &-h1 {
+            font-size: 50px;
+            line-height: 48px;
+        }
+        &-date {
+            font-size: 13.5px;
+        }
+        &-text {
+            font-size: 15.5px;
+            line-height: 22px;
+            strong, b {
+                font-size: 16.5px;
+                line-height: 24px;
+            }
+        }
+        &-socs {
+            font-size: 16px;
+        }
+        &-author {
+            font-size: 14.5px;
+        }
+        &-other {
+            h2 {
+                font-size: 60px;
+            }
+        }
+    }
+    .container-small {
+        width: 960px;
     }
 }
 @media (max-width: 1280px) {
-
+    .container {
+        width: 860px;
+    }
+    .logo {
+        width: 70px;
+        height: 108px;
+        left: 1.7%;
+    }
+    .header-nav {
+        gap: 15px;
+    }
+    .header-nav-item {
+        font-size: 13px;
+        letter-spacing: -0.2px;
+    }
+    .header-info {
+        gap: 7px;
+        .phone {
+            font-size: 13.5px;
+            margin-right: 6px;
+        }
+        .soc {
+            width: 25px;
+            height: 25px;
+            min-width: 25px;
+            border-radius: 2px;
+        }
+    }
+    .main-text {
+        font-size: 66px;
+        line-height: 58px;
+    }
+    .main-qr {
+        max-width: 75px;
+        margin: 17px 0px 11px;
+    }
+    .button {
+        font-size: 14.5px;
+        padding: 10px 21px 11px;
+    }
+    .h2 {
+        font-size: 52px;
+        line-height: 48px;
+    }
+    .main-projects {
+        padding: 128px 0px 122px;
+        .h2 {
+            margin-bottom: 22px;
+        }
+        .button-wrap {
+            margin-top: 26px;
+        }
+        &-eagle {
+            padding-right: 2%;
+            &:before {
+                width: 200px;
+                height: 192px;
+                left: -95px;
+                top: -74px;
+                background-size: contain;
+            }
+        }
+    }
+    .main-projects-text, .main-projects-text p {
+        font-size: 13.5px;
+        line-height: 20px;
+    }
+    .main-projects-text {
+        strong {
+            font-size: 14.5px;
+            line-height: 21px;
+        }
+        p, strong, ul {
+            margin-bottom: 10px;
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 22px;
+        height: 42px;
+        margin-top: -20px;
+        left: -33px;
+        &:after {
+            background-size: 42%;
+        }
+    }
+    .swiper-button-next {
+        left: auto;
+        right: -33px;
+    }
+    .videos {
+        .video-play {
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+        }
+    }
+    .modal-video {
+        max-width: 89vw;
+    }
+    .pay {
+        height: 660px;
+    }
+    .pay-form {
+        width: 402px;
+        padding-left: 33px;
+        .h2 {
+            font-size: 50px;
+            line-height: 47px;
+            margin-bottom: 23px;
+        }
+        .button {
+            font-size: 15px;
+            padding: 11px 22px 11px;
+        }
+    }
+    .pay-box {
+        padding: 16px 14px 16px 16px;
+        &-items {
+            margin-bottom: 15px;
+        }
+        &-item {
+            width: 22.5%;
+            font-size: 15.5px;
+            letter-spacing: -0.1px;
+            i {
+                font-size: 15.5px;
+                margin-top: 0px;
+                margin-left: 1px;
+            }
+            input {
+                font-size: 15.5px;
+            }
+        }
+        &-item-input {
+            width: 48.5%;
+        }
+        &-head {
+            font-size: 31px;
+        }
+    }
+    .placeholder-wrap {
+        .placeholder {
+            font-size: 16px;
+            &-act {
+                font-size: 10px;
+            }
+        }
+    }
+    .main-back {
+        padding: 92px 0px 120px;
+        &-text {
+            font-size: 14.5px;
+            line-height: 22px;
+        }
+    }
+    .documents {
+        height: 360px;
+        margin-bottom: 130px;
+        .swiper-slide {
+            padding: 21px 19px 0px 19px;
+            width: 31.42%;
+        }
+        .swiper-button-prev, .swiper-button-next {
+            margin-top: 0px;
+        }
+        &-img {
+            max-height: 204px;
+            max-width: 175px;
+            left: 20px;
+        }
+        &-head {
+            font-size: 27px;
+            line-height: 26px;
+            max-height: 80px;
+            margin-bottom: 7px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 19px;
+            max-height: 40px;
+        }
+        &-arrow {
+            width: 36px;
+            height: 36px;
+            right: 10px;
+            bottom: 17px;
+            &:after {
+                width: 16px;
+                height: 16px;
+                margin-top: -8px;
+                margin-left: -8px;
+                background-size: contain;
+            }
+        }
+    }
+    .medication-wrap {
+        .h2 {
+            margin-bottom: 35px;
+        }
+    }
+    .medication {
+        height: 280px;
+        &-img {
+            max-width: 166px;
+            max-height: 212px;
+        }
+        &-head {
+            font-size: 29px;
+            line-height: 29px;
+            max-width: 82%;
+            margin-bottom: 16px;
+        }
+        .swiper-slide {
+            padding: 21px 22px 0px 20px;
+        }
+        &-items {
+            > span {
+                font-size: 13px;
+                line-height: 9px;
+            }
+        }
+        .swiper-wrapper {
+            gap: 20px;
+        }
+        &-link {
+            left: 21px;
+            bottom: 25px;
+            font-size: 15px;
+        }
+    }
+    .partners {
+        height: 50px;
+    }
+    .main-articles {
+        padding: 90px 0px 111px;
+        .h2-wrap .h2-link {
+            font-size: 16px;
+        }
+    }
+    .articles {
+        &-box {
+            padding: 21px 21px 21px 25px;
+        }
+        &-head {
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 7px;
+        }
+        &-date {
+            font-size: 14px;
+        }
+    }
+    .main-contacts {
+        .contacts-phone {
+            font-size: 19px;
+        }
+        .contacts-email, .contacts-soc {
+            font-size: 17px;
+        }
+        .contacts-box-icon {
+            width: 40px;
+            height: 40px;
+        }
+        .contacts-box {
+            width: 380px;
+            padding: 43px 37px 34px 34px;
+        }
+        .contacts {
+            height: 620px;
+        }
+    }
+    .footer {
+        padding: 56px 0px 60px;
+        .logo {
+            width: 100px;
+            height: 117px;
+            margin: -7px 25px 0px 0px;
+            background-size: cover !important;
+        }
+        &-menu {
+            gap: 30px;
+        }
+        .footer-menu-item {
+            font-size: 14px;
+            letter-spacing: -0.1px;
+        }
+        &-info {
+            white-space: nowrap;
+            .phone {
+                font-size: 16px;
+                margin-bottom: 17px;
+            }
+            .socs {
+                .soc {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        &-copy {
+            font-size: 13px;
+        }
+        &-center {
+            padding-right: 5%;
+        }
+    }
+    .page {
+        padding-top: 160px;
+    }
+    .breadcrumbs {
+        font-size: 12px;
+        margin-bottom: 17px;
+    }
+    .h1 {
+        font-size: 60px;
+        line-height: 52px;
+        margin-bottom: 36px;
+    }
+    .articles {
+        .swiper-wrapper {
+            gap: 25px;
+        }
+        .swiper-slide {
+            width: 48%;
+        }
+    }
 }
 @media (max-width: 1024px) {
 
@@ -367,5 +779,8 @@
 
 }
 @media (max-width: 480px) {
+
+}
+@media (max-width: 320px) {
 
 }

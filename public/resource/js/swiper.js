@@ -62,7 +62,15 @@ var swiper4 = new Swiper(".swiper4", {
     spaceBetween: 30,
     loop: false,
     breakpoints: {
-
+        1280: {
+          spaceBetween: 30
+        },
+        1024: {
+          spaceBetween: 30
+        },
+        768: {
+          spaceBetween: 20
+        }
     }
 });
 
