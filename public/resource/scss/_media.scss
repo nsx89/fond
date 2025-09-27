@@ -958,9 +958,57 @@
         line-height: 26px;
         font-size: 25px;
     }
+    .pay-box-head {
+        font-size: 28px;
+    }
 }
 @media (max-width: 960px) {
-
+    .header-nav {
+        display: none;
+    }
+    .header-logo {
+        display: none;
+    }
+    .header-info-logo {
+        display: block;
+        background-size: cover !important;
+        width: 94px;
+        height: 125px;
+        margin: 33px 0px 0px
+    }
+    .header-info {
+        gap: 15px;
+        .phone {
+            display: none;
+        }
+    }
+    .container, .container-small {
+        width: 820px;
+        padding: 0px 18px;
+        width: 100%;
+    }
+    .header-info {
+        .soc {
+            width: 35px;
+            height: 35px;
+        }
+    }
+    .mobile-menu-btn {
+        background: #FF3434;
+        background: linear-gradient(124.25deg, #FF3434 20.06%, #C20909 78.98%);
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        position: relative;
+        &:after {
+            content: '';
+            
+        }
+    }
 }
 @media (max-width: 768px) {
 

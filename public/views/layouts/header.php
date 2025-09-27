@@ -31,6 +31,7 @@
 		<header class="header">
 			<div class="container">
 				<div class="header-menu">
+					<a href="/" class="logo header-info-logo" style="background: url(<?= $this->settings->logo ?>) no-repeat center center;"></a>
 					<nav class="header-nav">
 						<? $i = 1; foreach ($this->pages AS $page) : ?>
 				            <? if ($page->menu <> 1 || !empty($page->parent) || $i > 7) continue; ?>
@@ -49,6 +50,7 @@
 						<? if (!empty($this->settings->soc2)) : ?>
 							<a class="soc soc2" href="<?= $this->settings->soc2 ?>" target="_blank" rel="nofollow" title="Наш Вконтакте"></a>
 						<? endif; ?>
+						<div class="mobile-menu-btn"><span></span>></div>
 					</div>
 				</div>
 			</div>
