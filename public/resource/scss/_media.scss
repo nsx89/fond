@@ -767,8 +767,71 @@
         .swiper-wrapper {
             gap: 25px;
         }
-        .swiper-slide {
-            width: 48%;
+    }
+    .container-small {
+        width: 860px;
+    }
+    .article {
+        &-h1 {
+            font-size: 48px;
+            line-height: 47px;
+        }
+        &-image {
+            margin-bottom: 37px;
+        }
+        &-text {
+            font-size: 14.5px;
+            strong, b {
+                font-size: 15.5px;
+                margin-bottom: 18px;
+            }
+            p, ul, ol {
+                margin-bottom: 18px;
+            }
+        }
+        &-socs {
+            font-size: 15px;
+        }
+        &-author {
+            font-size: 13.5px;
+        }
+        &-other {
+            .h2 {
+                font-size: 56px;
+            }
+            .h2-wrap {
+                margin-bottom: 30px;
+                .h2-link {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .volunteers {
+        &-name {
+            line-height: 28px;
+            font-size: 27.5px;
+            letter-spacing: -0.2px;
+        }
+        &-short {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &-box {
+            padding: 17px 10px 14px 19px;
+        }
+        &-medal {
+            font-size: 13.4px;
+            line-height: 17px;
+            padding-left: 21px;
+            &:before {
+                width: 13px;
+                height: 13px;
+                margin-top: 2px;
+            }
+        }
+        &-medals {
+            padding: 16px 12px 17px 18px;
         }
     }
 }
