@@ -752,7 +752,7 @@
         }
     }
     .page {
-        padding-top: 160px;
+        padding: 160px 0px 45px;
     }
     .breadcrumbs {
         font-size: 12px;
@@ -807,6 +807,14 @@
             }
         }
     }
+    .page-text {
+        font-size: 15px;
+        line-height: 22px;
+        strong, b {
+            font-size: 15.5px;
+            line-height: 25px;
+        }
+    }
     .volunteers {
         &-name {
             line-height: 28px;
@@ -836,14 +844,127 @@
     }
 }
 @media (max-width: 1024px) {
+    .container, .container-small {
+        width: 820px;
+    }
+    .h2 {
+        font-size: 50px;
+        line-height: 46px;
+    }
+    .logo {
+        width: 64px;
+        height: 100px;
+        left: 1.5%;
+        margin-top: -18px;
+    }
+    .header-logo {
+        margin-top: -15px;
+    }
+    .header-nav {
+        gap: 10px;
+    }
+    .header-info .phone {
+        font-size: 13.5px;
+        margin-right: 4px;
+        letter-spacing: -0.3px;
+    }
+    .main-text {
+        font-size: 62px;
+        line-height: 54px;
+    }
+    .main-projects-text {
+        strong {
+            font-size: 14px;
+        }
+    }
+    .pay-form {
+        width: 380px;
+        padding-left: 30px;
+        .h2 {
+            font-size: 48px;
+            line-height: 44px;
+        }
+    }
+    .pay-box-item {
+        height: 44px;
+        font-size: 14px;
+        i {
+            font-size: 14px;
+        }
+        input {
+            font-size: 15px;
+        }
+    }
+    .placeholder-wrap {
+        .placeholder {
+            font-size: 15px;
+            bottom: 13px;
+            &-act {
+                font-size: 10px;
+                bottom: 34px;
+            }
+        }
+    }
+    .medication-items > span {
+        font-size: 12px;
+    }
+    .articles {
+        .swiper-slide {
+            width: 48.3%;
+        }
+        &-head {
+            font-size: 28px;
+        }
+        &-text {
+            font-size: 13.5px;
+            line-height: 19px;
+        }
+    }
+    .breadcrumbs {
+        font-size: 11px;
+    }
+    .article {
+        &-h1 {
+            font-size: 44px;
+            line-height: 43px;
+        }
+        &-text {
+            font-size: 14px;
+            strong, b {
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+        &-socs {
+            font-size: 14px;
+        }
+    }
+    .page-text {
+        font-size: 14px;
+        strong, b {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+    .article-other {
+        .h2 {
+            font-size: 52px;
+        }
+        .h2-wrap .h2-link {
+            font-size: 15px;
+        }
+    }
+    .volunteers-name {
+        line-height: 26px;
+        font-size: 25px;
+    }
+}
+@media (max-width: 960px) {
 
 }
 @media (max-width: 768px) {
 
 }
 @media (max-width: 480px) {
-
-}
-@media (max-width: 320px) {
 
 }
