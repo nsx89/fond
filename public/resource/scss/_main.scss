@@ -48,6 +48,7 @@ strong, b {
 }
 .wrapper {
     overflow: hidden;
+    width: 100%;
     max-width: 2700px;
     margin: 0px auto;
     position: relative;
@@ -102,6 +103,9 @@ img {
         margin: 25px 0px 20px;
         display: block;
     }
+}
+.main-mobile {
+    display: none;
 }
 .button-wrap {
     background: #20374D;

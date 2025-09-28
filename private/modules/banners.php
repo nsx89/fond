@@ -29,6 +29,7 @@ if (isset($_GET['add']) || isset($_GET['edit'])) :
             <?= Form::makeTextarea('Заголовок', 'name', $obj->name, 60) ?>
             <?= Form::makeTextarea('Заголовок2', 'name2', $obj->name2, 60) ?>
             <?= Form::makeImage('Баннер (1920x901px)', 'image', $obj) ?>
+            <?= Form::makeImage('Баннер для мобильной (750x1410px)', 'image_mobile', $obj) ?>
             <?= Form::makeInput('Рейтинг', 'rate', !empty($obj->rate) ? $obj->rate : '') ?>
             <?= Form::makeSubmit($id, $obj->id, 'Сохранить','') ?>
         </form>
@@ -57,6 +58,7 @@ elseif (isset($_POST['add']) || isset($_POST['edit'])) :
     $obj->save();
 
     FileUpload::uploadImage('image', get_class($obj), 'image', $obj->id, 1920, 901, '/public/src/images/banners/', 0);
+    FileUpload::uploadImage('image_mobile', get_class($obj), 'image_mobile', $obj->id, 750, 1410, '/public/src/images/banners/', 0);
 
     header("Location: {$_SERVER['REQUEST_URI']}?edit={$obj->id}");
     exit;
@@ -64,6 +66,7 @@ elseif (isset($_GET['delete'])) :
 
     $obj = Banners::findById($_GET['delete']);
     unlink(ROOT.$obj->image);
+    unlink(ROOT.$obj->image_mobile);
 
     $obj->delete();
 

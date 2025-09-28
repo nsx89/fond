@@ -3,7 +3,23 @@
 <main>
 
     <? foreach ($this->banners AS $banner) : ?>
-        <section class="main" style="background: url(<?= $banner->image ?>) no-repeat top center; background-size: cover;">
+        <section class="main main-desktop" style="background: url(<?= $banner->image ?>) no-repeat top center; background-size: cover;">
+            <div class="container">
+                <div class="main-text">
+                    <?= $this->edit_banners ?>
+                    <?= nl2br($banner->name) ?><br> <span><?= nl2br($banner->name2) ?></span>
+                </div>
+                <? if (!empty($this->settings->link)) : ?>
+                    <div class="button-wrap">
+                        <a href="<?= $this->settings->link ?>" target="_blank" rel="nofollow" class="button">Поддержать</a>
+                        <? if (!empty($this->settings->image)) : ?>
+                            <img class="main-qr" src="<?= $this->settings->image ?>" alt=">Поддержать">
+                        <? endif; ?>
+                    </div>
+                <? endif; ?>
+            </div>
+        </section>
+        <section class="main main-mobile" style="background: url(<?= !empty($banner->image_mobile) ? $banner->image_mobile : $banner->image ?>) no-repeat top center; background-size: cover;">
             <div class="container">
                 <div class="main-text">
                     <?= $this->edit_banners ?>

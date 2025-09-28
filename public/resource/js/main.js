@@ -142,3 +142,14 @@ $('body').on('click', '.js-scroll-form', function(){
 });
 
 /* --- // --- */
+
+$('body').on('click', '.js-mobile-menu-btn', function(){
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+    }
+    else {
+        $(this).addClass('active');
+    }
+});
+
+/* --- // --- */

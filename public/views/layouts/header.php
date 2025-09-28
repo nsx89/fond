@@ -50,7 +50,7 @@
 						<? if (!empty($this->settings->soc2)) : ?>
 							<a class="soc soc2" href="<?= $this->settings->soc2 ?>" target="_blank" rel="nofollow" title="Наш Вконтакте"></a>
 						<? endif; ?>
-						<div class="mobile-menu-btn"><span></span>></div>
+						<div class="mobile-menu-btn js-mobile-menu-btn"><span></span></div>
 					</div>
 				</div>
 			</div>
