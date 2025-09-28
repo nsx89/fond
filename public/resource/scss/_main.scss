@@ -307,6 +307,7 @@ img {
         img {
             display: block;
             object-fit: cover;
+            border-radius: 10px;
         }
     }
 }
@@ -666,6 +667,9 @@ img {
         }
         &-arrow {
             transform: rotate(180deg);
+            &-mobile {
+                display: none;
+            }
         }
     }
 }

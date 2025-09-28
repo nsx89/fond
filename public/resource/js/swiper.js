@@ -11,7 +11,14 @@ var swiper1 = new Swiper(".swiper1", {
     spaceBetween: 0,
     loop: false,
     breakpoints: {
-
+        960: {
+            slidesPerView: '1',
+            spaceBetween: 0,
+        },
+        275: {
+            slidesPerView: '1.25',
+            spaceBetween: 10,
+        },
     }
 });
 
@@ -28,7 +35,14 @@ var swiper2 = new Swiper(".swiper2", {
     spaceBetween: 30,
     loop: false,
     breakpoints: {
-
+        960: {
+            slidesPerView: '2',
+            spaceBetween: 30,
+        },
+        275: {
+            slidesPerView: '1.25',
+            spaceBetween: 10,
+        },
     }
 });
 
@@ -45,7 +59,14 @@ var swiper3 = new Swiper(".swiper3", {
     spaceBetween: 22,
     loop: false,
     breakpoints: {
-
+        960: {
+            slidesPerView: '3',
+            spaceBetween: 22,
+        },
+        275: {
+            slidesPerView: '1.25',
+            spaceBetween: 10,
+        },
     }
 });
 
@@ -69,8 +90,13 @@ var swiper4 = new Swiper(".swiper4", {
           spaceBetween: 20
         },
         768: {
-          spaceBetween: 20
-        }
+          spaceBetween: 20,
+          slidesPerView: '2'
+        },
+        275: {
+          spaceBetween: 10,
+          slidesPerView: '1.14'
+        },
     }
 });
 

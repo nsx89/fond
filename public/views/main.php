@@ -119,6 +119,7 @@
                 <div class="pay-box pay-box-link">
                     <div class="pay-box-head">Оплата по <span>qr</span></div>
                     <img class="pay-box-qr" src="/public/src/images/qr.png" alt=">Оплата по qr">
+                    <img class="pay-box-arrow pay-box-arrow-mobile" src="/public/src/images/svg/arrow-left.svg" alt=">Оплата по qr">
                 </div>
                 <a href="<?= $this->settings->link2 ?>" target="_blank" rel="nofollow" class="pay-box pay-box-link pay-box-link-href">
                     <div class="pay-box-head">Оплата <span>по реквизитам</span></div>
