@@ -27,6 +27,7 @@
                 <? if (!empty($this->settings->email)) : ?>
 					<div><a href="mailto:<?= $this->settings->email ?>" class="email"><?= $this->settings->email ?></a></div>
 				<? endif; ?>
+                <div class="mobile-footer-copy">© <?= $this->settings->copy ?> <?= date('Y') ?>. <?= $this->settings->copy2 ?></div>
                 <div class="socs">
     				<? if (!empty($this->settings->soc1)) : ?>
     					<a class="soc soc1" href="<?= $this->settings->soc1 ?>" target="_blank" rel="nofollow" title="Наш Telegram"></a>

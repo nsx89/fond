@@ -227,6 +227,7 @@
     .logo {
         width: 100px;
         height: 141px;
+        background-size: cover !important;
     }
     .header-logo {
         margin-top: -6px;
@@ -732,7 +733,9 @@
             letter-spacing: -0.1px;
         }
         &-info {
-            white-space: nowrap;
+            > a {
+                white-space: nowrap;
+            }
             .phone {
                 font-size: 16px;
                 margin-bottom: 17px;
@@ -1259,7 +1262,7 @@
         }
     }
     .main-back {
-        padding: 65px 0px 107px;
+        padding: 65px 0px 90px;
         .h2-back {
             margin-bottom: 21px;
             &:before {
@@ -1309,14 +1312,16 @@
         }
     }
     .medication-wrap {
+        margin-bottom: 105px;
         .h2 {
             margin-bottom: 23px;
         }
     }
     .medication {
+        height: 235px;
         .swiper-slide {
             width: 100%;
-            padding: 21px 13px 0px 20px;
+            padding: 25px 13px 0px 20px;
         }
         &-head {
             max-width: 100%;
@@ -1328,9 +1333,171 @@
         &-img {
             display: none;
         }
+        &-items {
+            max-width: 100%;
+            > span {
+                font-size: 14px;
+                padding: 7px 9px 9px;
+            }
+        }
+        &-link {
+            bottom: 17px;
+        }
+        .swiper-pagination.swiper-pagination-bullets {
+            bottom: -53px;
+        }
+    }
+    .partners-wrap {
+        .h2 {
+            margin-bottom: 28px;
+        }
+    }
+    .partners {
+        .swiper-pagination.swiper-pagination-bullets {
+            bottom: -36px;
+        }
+    }
+    .main-articles {
+        padding: 65px 0px 80px;
+        .h2-wrap {
+            margin-bottom: 23px;
+        }
+        .h2 {
+            padding-right: 2%;
+        }
+        .h2-link {
+            display: none;
+        }
+    }
+    .articles {
+        .swiper-slide {
+            width: 100%;
+        }
+        &-box {
+            padding: 28px 21px 22px 20px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .swiper-pagination.swiper-pagination-bullets {
+            bottom: -12px;
+        }
+    }
+    .contacts {
+        background-position: 28.5% 100% !important;
+    }
+    .main-contacts {
+        .h2 {
+            margin-bottom: 9px;
+        }
+        .contacts {
+            height: 550px;
+            &-text {
+                font-size: 15px;
+            }
+            &-box {
+                width: 100%;
+                margin: 16px 0px 0px;
+                padding: 33px 20px 38px 20px;
+                &-icon {
+                    width: 35px;
+                    height: 35px;
+                    &-phone {
+                        &:after {
+                            margin-top: -12px;
+                        }
+                    }
+                    &-email {
+                        &:after {
+                            width: 20px;
+                            height: 18px;
+                            margin-top: -11px;
+                            margin-left: -10px;
+                        }
+                    }
+                    &-soc1, &-soc2 {
+                        &:after {
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+            &-phone {
+                font-size: 20px;
+            }
+            &-email, &-soc {
+                font-size: 16px;
+                letter-spacing: -0.2px;
+            }
+            &-qr {
+                display: none;
+            }
+        }
+        .contacts-button-wrap {
+            margin-top: 30px;
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .footer {
+        padding: 40px 0px 40px;
+        .container {
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .logo {
+            width: 180px;
+            height: 150px;
+            margin: 0px 0px 0px 0px;
+            background-size: cover !important;
+        }
+        &-menu {
+            display: none;
+        }
+        .socs {
+            display: none;
+        }
+        &-info {
+            align-items: center;
+            &:before {
+                display: none;
+            }
+            .phone {
+                font-size: 20px;
+                margin-bottom: 12px;
+                letter-spacing: -0.2px;
+                font-weight: 500;
+            }
+            .email {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        &-copy {
+            display: none;
+        }
+    }
+    .mobile-footer-copy {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        opacity: 0.5;
+        font-weight: 200;
+        letter-spacing: 0.4px;
+        width: 100%;
+        padding: 0px 9%;
+        line-height: 18px;
     }
 }
 @media (max-width: 768px) {
+    .edit {
+        display: none;
+    }
     .container, .container-small {
         padding: 0px 20px;
     }

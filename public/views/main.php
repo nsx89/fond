@@ -19,7 +19,7 @@
                 <? endif; ?>
             </div>
         </section>
-        <section class="main main-mobile" style="background: url(<?= !empty($banner->image_mobile) ? $banner->image_mobile : $banner->image ?>) no-repeat top center; background-size: cover;">
+        <section class="main main-mobile" style="background: url(<?= !empty($banner->image_mobile) ? $banner->image_mobile : $banner->image ?>) no-repeat center center; background-size: cover;">
             <div class="container">
                 <div class="main-text">
                     <?= $this->edit_banners ?>

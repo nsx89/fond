@@ -113,7 +113,14 @@ var swiper5 = new Swiper(".swiper5", {
     spaceBetween: 30,
     loop: false,
     breakpoints: {
-
+        960: {
+            slidesPerView: '6',
+            spaceBetween: 30,
+        },
+        275: {
+            slidesPerView: '4',
+            spaceBetween: 20,
+        },
     }
 });
 
@@ -137,7 +144,12 @@ var swiper5 = new Swiper(".swiper6", {
           spaceBetween: 25
         },
         768: {
+          slidesPerView: '2',
           spaceBetween: 20
+        },
+        275: {
+          slidesPerView: '1.14',
+          spaceBetween: 10
         }
     }
 });
