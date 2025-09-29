@@ -159,6 +159,12 @@ img {
 .header-info-logo {
     display: none;
 }
+.mobile-menu {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+}
 .mobile-menu-btn {
     display: none;
 }

@@ -55,3 +55,41 @@
 				</div>
 			</div>
 		</header>
+		<div class="mobile-menu">
+			<div class="mobile-menu-content">
+				<div class="container mobile-menu-header">
+					<div class="header-menu">
+						<a href="/" class="logo header-info-logo" style="background: url(<?= $this->settings->logo ?>) no-repeat center center;"></a>
+						<div class="header-info">
+							<? if (!empty($this->settings->phone)) : ?>
+								<a href="tel:<?= app\Helpers::clearPhone($this->settings->phone) ?>" class="phone"><?= $this->settings->phone ?></a>
+							<? endif; ?>
+							<? if (!empty($this->settings->soc1)) : ?>
+								<a class="soc soc1" href="<?= $this->settings->soc1 ?>" target="_blank" rel="nofollow" title="Наш Telegram"></a>
+							<? endif; ?>
+							<? if (!empty($this->settings->soc2)) : ?>
+								<a class="soc soc2" href="<?= $this->settings->soc2 ?>" target="_blank" rel="nofollow" title="Наш Вконтакте"></a>
+							<? endif; ?>
+							<div class="mobile-menu-btn active js-mobile-menu-btn"><span></span></div>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-menu-links">
+					<? $i = 1; foreach ($this->pages AS $page) : ?>
+						<? if ($page->menu <> 1 || !empty($page->parent) || $i > 7) continue; ?>
+						<a href="/<?= $page->url ?>" class="mobile-menu-link <?= URI == $page->url ? 'active' : '' ?>">
+							<?= $page->name ?>
+						</a>
+					<? $i++; endforeach; ?>
+				</div>
+				<div class="footer-info">
+					<? if (!empty($this->settings->phone)) : ?>
+						<a href="tel:<?= app\Helpers::clearPhone($this->settings->phone) ?>" class="phone"><?= $this->settings->phone ?></a>
+					<? endif; ?>
+					<? if (!empty($this->settings->email)) : ?>
+						<div><a href="mailto:<?= $this->settings->email ?>" class="email"><?= $this->settings->email ?></a></div>
+					<? endif; ?>
+					<div class="mobile-footer-copy">© <?= $this->settings->copy ?> <?= date('Y') ?>. <?= $this->settings->copy2 ?></div>
+				</div>
+			</div>
+		</div>

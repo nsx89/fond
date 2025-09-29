@@ -144,11 +144,18 @@ $('body').on('click', '.js-scroll-form', function(){
 /* --- // --- */
 
 $('body').on('click', '.js-mobile-menu-btn', function(){
-    if ($(this).hasClass('active')) {
-        $(this).removeClass('active');
+    var menu = $('.mobile-menu');
+    if (!menu.hasClass('active')) {
+        menu.fadeIn(300, function() {
+            menu.addClass('active');
+            $('body').css('overflow', 'hidden');
+        });
     }
     else {
-        $(this).addClass('active');
+        menu.fadeOut(100, function() {
+            menu.removeClass('active');
+            $('body').css('overflow', 'auto');
+        });
     }
 });
 

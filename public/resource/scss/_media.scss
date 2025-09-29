@@ -1493,6 +1493,49 @@
         padding: 0px 9%;
         line-height: 18px;
     }
+    .mobile-menu {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: #1E2444;
+        background: url(/public/src/images/back/mobile-menu.jpg) no-repeat center center;
+        background-size: cover;
+        z-index: 100000;
+        display: none;
+        overflow: auto;
+        visibility: visible;
+        &-header {
+            height: 90px;
+        }
+        &-content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .footer-info {
+            border-top: 1px solid #434F79;
+            padding: 32px 20px 39px;
+            .email {
+                margin-bottom: 23px;
+                margin-top: 3px;
+            }
+        }
+        &-links {
+            color: #fff;
+            opacity: 0.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 300;
+            padding: 33px 0px;
+            gap: 37px;
+            font-size: 17px;
+        }
+    }
 }
 @media (max-width: 768px) {
     .edit {
@@ -1519,6 +1562,14 @@
     }
     .main-projects {
         padding: 66px 0px 86px;
+    }
+}
+@media (max-width: 480px) {
+    .mobile-menu {
+        &-links {
+            gap: 30px;
+            font-size: 16px;
+        }
     }
 }
 @media (max-width: 375px) {
