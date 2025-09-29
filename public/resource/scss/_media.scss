@@ -1535,6 +1535,108 @@
             gap: 37px;
             font-size: 17px;
         }
+        &-link {
+            &.active {
+                color: $hover;
+            }
+        }
+    }
+    .header.active {
+        height: 68px;
+    }
+    .body-page {
+        .header {
+            border-bottom: 1px solid #333F4F;
+            height: 90px;
+            &-info {
+                &-logo {
+                    width: 72px;
+                    height: 97px;
+                    margin: 0px 0px 0px;
+                }
+            }
+            &.active {
+                height: 68px;
+            }
+            &-menu {
+                border: none;
+            }
+        }
+        .page {
+            padding: 118px 0px 18px;
+        }
+    }
+    .breadcrumbs {
+        display: block;
+        font-size: 12.4px;
+        line-height: 1.8em;
+        margin-bottom: 26px;
+        &-item {
+            display: inline;
+            padding-right: 16px;
+            &:after {
+                right: 5px;
+            }
+        }
+    }
+    .article {
+        &-h1 {
+            font-size: 42px;
+            line-height: 38px;
+        }
+        &-date {
+            font-size: 13px;
+            letter-spacing: 0px;
+        }
+        &-other {
+            margin-top: 70px;
+            .h2 {
+                font-size: 46px;
+            }
+            .h2-link {
+                display: none;
+            }
+        }
+        &-bottom {
+            flex-wrap: wrap;
+        }
+        &-author {
+            font-size: 13.5px;
+            padding: 0px;
+            margin: 32px 0px 0px;
+            width: 100%;
+        }
+    }
+    .volunteers {
+        flex-wrap: wrap;
+        &-item {
+            width: 48.65%;
+        }
+        &-name {
+            font-size: 38px;
+            line-height: 38px;
+            margin-bottom: 9px;
+        }
+        &-short {
+            font-size: 15px;
+            line-height: 20px;
+            padding: 0px;
+        }
+        &-medals {
+            padding: 18px 12px 20px 18px;
+        }
+        &-box {
+            padding: 19px 10px 17px 19px;
+        }
+        &-medal {
+            font-size: 15px;
+            line-height: 21px;
+            padding-left: 29px;
+            &:before {
+                width: 18px;
+                height: 18px;
+            }
+        }
     }
 }
 @media (max-width: 768px) {
@@ -1562,6 +1664,12 @@
     }
     .main-projects {
         padding: 66px 0px 86px;
+    }
+    .volunteers {
+        display: block;
+        &-item {
+            width: 100%;
+        }
     }
 }
 @media (max-width: 480px) {
