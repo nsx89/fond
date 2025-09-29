@@ -1,6 +1,0 @@
-# Выключаем исполнение php из этой папки  
-php_flag engine 0
- 
-# для всех опасных файлов сделаем тип html 
-RemoveHandler .* 
-AddType "text/html" .php .cgi .pl .fcgi .fpl .phtml .shtml .php2 .php3 .php4 .php5 .asp .jsp
