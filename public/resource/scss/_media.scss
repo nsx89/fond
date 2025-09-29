@@ -964,6 +964,13 @@
     .pay-box-head {
         font-size: 28px;
     }
+    #modal-modbox {
+        padding: 34px 30px 30px 26px;
+    }
+    #modal-close {
+        top: -4px;
+        right: -5px;
+    }
 }
 @media (max-width: 960px) {
     .header-nav {
@@ -1638,6 +1645,13 @@
             }
         }
     }
+    #modal-modbox {
+        padding: 33px 13px 27px 13px;
+    }
+    #modal-close {
+        top: -7px;
+        right: -1px;
+    }
 }
 @media (max-width: 768px) {
     .edit {
@@ -1684,5 +1698,14 @@
     .main-text {
         font-size: 53px;
         line-height: 48px;
+    }
+    #modal-modbox img, .modal-video {
+        max-width: 85vw;
+    }
+    #modal-modbox {
+        padding: 31px 9px 24px 8px;
+    }
+    #modal-close {
+        right: -4px;
     }
 }
