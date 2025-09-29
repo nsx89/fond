@@ -29,20 +29,15 @@
         </div>
 
         <div class="article-bottom">
-            <? if (!empty($article->date)) : ?>
-                <div class="article-socs">
-                    <div class="article-socs-name">Поделиться:</div>
-                    <div class="soc soc1 js-share-telegram" onclick="btn = document.querySelector('.ya-share2__item_service_telegram'); if (btn) btn.click();"></div>
-                    <div class="soc soc2 js-share-vk" onclick="btn = document.querySelector('.ya-share2__item_service_vkontakte'); if (btn) btn.click();"></div>
-                </div>
-            <? endif; ?>
+            <div class="article-socs">
+                <div class="article-socs-name">Поделиться:</div>
+                <script src="https://yastatic.net/share2/share.js" defer></script>
+                <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="whiteblack" data-services="telegram,vkontakte"></div>
+            </div>
             <? if (!empty($article->author)) : ?>
                 <div class="article-author">Автор: <span><?= $article->author ?></span></div>
             <? endif; ?>
         </div>
-        <script src="https://yastatic.net/share2/share.js" defer></script>
-        <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-color-scheme="whiteblack" data-services="telegram,vkontakte" style="display: none;"></div>
-
     </div>
 
     <div class="article-other">

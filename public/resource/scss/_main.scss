@@ -1644,3 +1644,26 @@ img {
      width: 90vw;
      max-width: 1120px;
 }
+
+.ya-share2__list.ya-share2__list_direction_horizontal {
+    display: flex !important;
+    gap: 10px !important;
+}
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_telegram .ya-share2__icon {
+    background: url(/public/src/images/svg/tg.svg) no-repeat center center !important;
+    background-size: cover !important;
+}
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_vkontakte .ya-share2__icon {
+    background: url(/public/src/images/svg/vk.svg) no-repeat center center !important;
+    background-size: cover !important;
+}
+.ya-share2__container_shape_round .ya-share2__badge {
+    border-radius: 10px !important;
+}
+.ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__badge, .ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__mobile-popup-badge {
+    background-color: transparent !important;
+}
+.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
+    width: 35px !important;
+    height: 35px !important;
+}
