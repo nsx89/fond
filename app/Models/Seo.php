@@ -47,7 +47,7 @@ class Seo extends Model
         if($seo) $link = "/admin/seo?edit={$seo->id}";
         else $link = "/admin/seo?add&url={$url}";
 
-        return "<a href='/admin/seo?add&url={$url}' target='_blank'>SEO</a>";
+        return "<a href='{$link}' target='_blank'>SEO</a>";
     }
 
     //SEO META по умолчанию
